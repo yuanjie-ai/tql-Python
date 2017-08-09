@@ -1,8 +1,13 @@
 # :rocket: PopularAlgorithm :facepunch:
 ---
 
-## [LogisticRegession][1]
-
+## LogisticRegession
+- Python实现
+- Sklearn实现
+- Spark实现
+- Keras实现
+- Tensorflow实现
+- Pytorch实现
 
 
 
