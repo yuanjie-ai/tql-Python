@@ -15,8 +15,8 @@ def iv(df):
     """
     仅支持离散型特征
     """
-    Y_true = df.label.sum()
-    N_true = df.label.count() - Y_true
+    Y_true = (df.label==1).sum()
+    N_true = (df.label==0).sum()
     features = df.columns.tolist()
     features.remove('label')
     iv = []
