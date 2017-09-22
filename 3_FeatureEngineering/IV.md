@@ -10,16 +10,22 @@ a = np.array([['A', 1.],
               ['B', 0.],
               ['B', 0.]])
 df = pd.DataFrame(a, columns=['sex', 'label'])
-df['n'] = 1
 
-df = df.groupby('sex').agg({'n': 'count', 'label': 'sum'}).reset_index()
-
-Y_true = 5.
-N_true = 3.
-y_i = df.label.values
-n_i =(df.n-df.label).values
-
-IV = np.sum((y_i/Y_true - n_i/N_true)*np.log(y_i/n_i/(Y_true/N_true)))
+def iv(df):
+    """
+    仅支持离散型特征
+    """
+    Y_true = df.label.sum()
+    N_true = df.label.count() - Y_true
+    features = df.columns.tolist()
+    features.remove('label')
+    iv = []
+    for i in features:
+        data = df.groupby(i)['label'].agg(['count', 'sum']).reset_index()
+        y_i = data['sum'].values
+        n_i =(data['count']-data['sum']).values
+        iv.append(np.sum((y_i/Y_true - n_i/N_true)*np.log(y_i/n_i/(Y_true/N_true))))
+    return sorted(zip(iv, features), reverse=True)
 ```
 - pyspark
 ```
