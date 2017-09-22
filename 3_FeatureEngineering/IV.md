@@ -17,15 +17,15 @@ def iv(df):
     """
     Y_true = (df.label==1).sum()
     N_true = (df.label==0).sum()
-    features = df.columns.tolist()
-    features.remove('label')
+    strColName = df.columns.tolist()
+    strColName.remove('label')
     iv = []
-    for i in features:
+    for i in strColName:
         data = df.groupby(i)['label'].agg(['count', 'sum']).reset_index()
         y_i = data['sum'].values
         n_i =(data['count']-data['sum']).values
         iv.append(np.sum((y_i/Y_true - n_i/N_true)*np.log(y_i/n_i/(Y_true/N_true))))
-    return sorted(zip(iv, features), reverse=True)
+    return sorted(zip(iv, strColName), reverse=True)
 ```
 - pyspark
 ```
