@@ -1,5 +1,6 @@
-# :rocket: Xgboost :facepunch:
+# :rocket: Xgboost参数解释 :facepunch:
 ---
+- Objective
 |objective|定义学习任务及相应的学习目标|
 |:--|:--|
 |reg:linear|线性回归
