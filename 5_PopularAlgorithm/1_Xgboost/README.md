@@ -30,3 +30,9 @@
 ---
 - alpha [default=0] L1正则的惩罚系数
 - lambda [default=0] L2正则的惩罚系数
+- lambda_bias 在偏置上的L2正则。缺省值为0（在L1上没有偏置项的正则，因为L1时偏置不重要）
+- eta [default=0.3] 步长/学习率
+- max_depth [default=6] 数的最大深度
+- min_child_weight [default=1]
+- min_child_weight [default=1] ：孩子节点中最小的样本权重和。如果一个叶子节点的样本权重和小于min_child_weight则拆分过程结束。在现行回归模型中，这个参数是指建立每个模型所需要的最小样本数。该成熟越大算法越conservative 
+取值范围为: [0,∞]
