@@ -39,7 +39,7 @@ def iv(df):
     strColName.remove('label_temp')
     iv = []
     for i in strColName:
-        data = df.groupBy('sex').agg({'label_temp': 'count', 'label': 'sum'})
+        data = df.groupBy(i).agg({'label_temp': 'count', 'label': 'sum'})
         y_i = col('sum(label)')
         n_i = col('count(label_temp)') - col('sum(label)')
         iv.append(data.agg(sum((y_i/Y_true - n_i/N_true)*log(y_i/n_i/(Y_true/N_true)))))
