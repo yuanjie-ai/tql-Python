@@ -63,7 +63,7 @@ deviating_of_mean                                                          21
 deviating_of_mean_perc                                                  0.36%
 deviating_of_median                                                        21
 deviating_of_median_perc                                                0.36%
-top_correlations                         {u'D': 0.702240243124, u'E': -0.663}
+top_correlations                                         c: 87.18%, d: 81.80%
 counts                                                                   5781
 uniques                                                                  5771
 missing                                                                    21
