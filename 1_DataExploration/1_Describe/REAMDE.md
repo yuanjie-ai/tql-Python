@@ -21,12 +21,12 @@ dtype: int64
 - 列统计: dfs.columns_stats
 
 ```python
-                      A            B        C           D           E 
-counts             5802         5794     5781        5781        4617   
-uniques            5802            3     5771         128         121   
-missing               0            8       21          21        1185   
-missing_perc         0%        0.14%    0.36%       0.36%      20.42%   
-types            unique  categorical  numeric     numeric     numeric 
+                      A            B        C          D          E 
+counts             5802         5794     5781       5781       4617   
+uniques            5802            3     5771        128        121   
+missing               0            8       21         21       1185   
+missing_perc         0%        0.14%    0.36%      0.36%     20.42%   
+types            unique  categorical  numeric    numeric    numeric 
 ```
 
 - 相关系数矩阵: dfs.corr
