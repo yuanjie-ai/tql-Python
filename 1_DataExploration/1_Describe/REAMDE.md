@@ -5,7 +5,7 @@ import DataFrameSummary # from pandas_summary import DataFrameSummary
 dfs = DataFrameSummary(df)
 ```
 
-- 类型: dfs.columns_types
+- 列类型: dfs.columns_types
 ```python
 numeric     9
 bool        3
@@ -16,7 +16,7 @@ constant    1
 dtype: int64
 ```
 
-- 描述性统计: dfs.columns_stats
+- 列统计: dfs.columns_stats
 
 ```python
                       A            B        C              D              E 
@@ -27,7 +27,17 @@ missing_perc         0%        0.14%    0.36%          0.36%         20.42%
 types            unique  categorical  numeric        numeric        numeric 
 ```
 
-- 汇总: dfs['A']. dfs.summary()
+- 相关系数矩阵: dfs.corr
+```
+|cor|a|b|c|d|
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|a	|1.000000	|-0.109369  |0.871754	|0.817954|
+|b	|-0.109369  |1.000000   |-0.420516  |-0.356544|
+|c	|0.871754	|-0.420516  |1.000000	|0.962757|
+|d	|0.817954	|-0.356544  |0.962757	|1.000000|
+```
+
+- 列汇总: 单列dfs['a'] 所有列dfs.summary()
 ```python
 std                                                                 0.2827146
 max                                                                  1.072792
