@@ -5,11 +5,8 @@ import DataFrameSummary # from pandas_summary import DataFrameSummary
 dfs = DataFrameSummary(df)
 ```
 
-- getting the columns types
+- 类型: dfs.columns_types
 ```python
-dfs.columns_types
-
-
 numeric     9
 bool        3
 categorical 2
@@ -19,12 +16,9 @@ constant    1
 dtype: int64
 ```
 
-- getting the columns stats
+- 描述性统计: dfs.columns_stats
 
 ```python
-dfs.columns_stats
-
-
                       A            B        C              D              E 
 counts             5802         5794     5781           5781           4617   
 uniques            5802            3     5771            128            121   
@@ -33,11 +27,8 @@ missing_perc         0%        0.14%    0.36%          0.36%         20.42%
 types            unique  categorical  numeric        numeric        numeric 
 ```
 
-- getting a single column summary, e.g. numerical column
+- 汇总: dfs['A']. dfs.summary()
 ```python
-# we can also access the column using numbers A[1]
-dfs['A']
-
 std                                                                 0.2827146
 max                                                                  1.072792
 min                                                                         0
