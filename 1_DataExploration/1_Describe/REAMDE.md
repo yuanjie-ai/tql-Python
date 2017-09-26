@@ -1,6 +1,6 @@
-:rocket: 描述性统计 :facepunch:
-<h1 align = "center">这是居中标题</h1>
+<h1 align = "center">:rocket: 描述性统计 :facepunch:</h1>
 ---
+
 ```python
 import DataFrameSummary # from pandas_summary import DataFrameSummary
 dfs = DataFrameSummary(df)
