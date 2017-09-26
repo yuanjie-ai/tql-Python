@@ -28,7 +28,6 @@ types            unique  categorical  numeric        numeric        numeric
 ```
 
 - 相关系数矩阵: dfs.corr
-
 |cor|a|b|c|d|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |a	|1.000000	|-0.109369  |0.871754	|0.817954|
