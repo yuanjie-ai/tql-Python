@@ -39,7 +39,7 @@ types            unique  categorical  numeric    numeric    numeric
 |d	|0.817954	|-0.356544  |0.962757	|1.000000|
 
 
-- 列汇总: 单列dfs['a'] 所有列dfs.summary()
+- 列汇总: 单列dfs['a'], 所有列dfs.summary()
 ```python
 std                                                                 0.2827146
 max                                                                  1.072792
