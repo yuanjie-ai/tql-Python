@@ -1,7 +1,7 @@
-<h1 align = "center">:rocket: 数据预处理 :facepunch:</h1>
+<h1 align = "center">:rocket: 特征工程 :facepunch:</h1>
 
 ---
-- [数据预处理: sklearn_pandas][1]
+- [特征工程: sklearn_pandas][1]
 - [类编码][2]: [category_encoders][3]
 
 
