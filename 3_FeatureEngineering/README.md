@@ -2,8 +2,7 @@
 
 ---
 ## [常用特征变换][1]
----
-## [类编码][2]: [category_encoders][3]
+- [类编码][2]: [category_encoders][3]
 
 
 
