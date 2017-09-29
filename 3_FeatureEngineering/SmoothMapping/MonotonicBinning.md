@@ -4,6 +4,9 @@
 import numpy as np
 import pandas as pd
 import scipy.stats.stats as stats
+from sklearn.datasets import load_iris
+iris = load_iris()
+X, y = iris.data, iris.target
 
 # define a binning function
 def mono_bin(Y, X, n = 20):
