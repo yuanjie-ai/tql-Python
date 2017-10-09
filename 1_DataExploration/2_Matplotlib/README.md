@@ -23,19 +23,20 @@ plt.style.use('ggplot')
 plt.rcParams['font.sans-serif'] =['Microsoft YaHei']
 plt.rcParams['axes.unicode_minus'] = False
 ```
-```
-'line' : line plot (default)
-'bar' : vertical bar plot
-'barh' : horizontal bar plot
-'hist' : histogram
-'box' : boxplot
-'kde' : Kernel Density Estimation plot
-'density' : same as 'kde'
-'area' : area plot
-'pie' : pie plot
-'scatter' : scatter plot
-'hexbin' : hexbin plot
-```
+
+- 'line' : line plot (default)
+- 'bar' : vertical bar plot
+- 'barh' : horizontal bar plot
+- 'hist' : histogram
+- 'box' : boxplot
+- 'kde' : Kernel Density Estimation plot
+- 'density' : same as 'kde'
+- 'area' : area plot
+- 'pie' : pie plot
+- 'scatter' : scatter plot
+- 'hexbin' : hexbin plot
+
+
 ---
 - [matplotlib(条形图)][1]
 - [matplotlib(饼图)][2]
@@ -43,7 +44,6 @@ plt.rcParams['axes.unicode_minus'] = False
 - [matplotlib(直方图)][4]
 - [matplotlib(折线图)][5]
 - [matplotlib(散点图)][6]
----
 
 
 
