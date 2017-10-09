@@ -19,7 +19,8 @@
 ## 特征衍生技巧
 
 
-
+---
+[网友的一些总结][10]
 
 
 
@@ -39,5 +40,7 @@
 [0]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/sklearn_pandas.ipynb
 [1]: http://contrib.scikit-learn.org/categorical-encoding/backward_difference.html
 [2]: https://github.com/scikit-learn-contrib/categorical-encoding
+
+[10]: http://www.cnblogs.com/weibao/p/6252280.html
 
 [20]: https://github.com/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/SmoothMapping/BayesianSmoothing.py
