@@ -1,12 +1,7 @@
 <h1 align = "center">:rocket: Matplotlib :facepunch:</h1>
 
 ---
-```
-%matplotlib inline
-import numpy as np
-import matplotlib.pyplot as plt
-plt.style.use('ggplot')
-```
+
 ---
 - [matplotlib(条形图)][1]
 - [matplotlib(饼图)][2]
@@ -27,7 +22,15 @@ plt.style.use('ggplot')
     - 位置：layout
     - 标题：title
     - 大小：figsize
-    - 图例：legend
+    - 图例：legend
+```
+```
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+```
+```
 ---
 [1]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435778&idx=1&sn=df430bcbaf2b285b47bdaf3fa6168405&chksm=8c73abd5bb0422c3c1b15639d63eb8677163a54f314059959edbe5340a19411ac8fcdd4f0f61&scene=21#wechat_redirect
 [2]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435782&idx=1&sn=56283c740c5f7b091abbde874061ece6&chksm=8c73abd1bb0422c720915adc56cc21b46a3433526946e82357f01799c0c6bc954bc756f42122&scene=21#wechat_redirect
