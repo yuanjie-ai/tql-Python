@@ -44,6 +44,7 @@ plt.rcParams['axes.unicode_minus'] = False
 - [matplotlib(直方图)][4]
 - [matplotlib(折线图)][5]
 - [matplotlib(散点图)][6]
+- [matplotlib(雷达图)][7]
 
 
 
@@ -54,3 +55,4 @@ plt.rcParams['axes.unicode_minus'] = False
 [4]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435794&idx=1&sn=7dc745b1c4a732af1a05fdc7fb008f26&chksm=8c73abc5bb0422d35468036de663bb62abfaf04aca9224af0b5f028f3febf78b5c3f876733a4&scene=21#wechat_redirect
 [5]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435807&idx=1&sn=788a8baee32b69ad181a06557642ed2a&chksm=8c73abc8bb0422de3319686c3ea8b8fcc8bf9786e4ece52d063afe54ecbdcfa230623dfeb4b1&scene=21#wechat_redirect
 [6]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435814&idx=1&sn=c12e3113023f05e0cfafe637401923d6&chksm=8c73abf1bb0422e7c86f30de8249d53ed4b7d1be6bf7f52abc26d28985b40a48e330176d4d4b&scene=21#wechat_redirect
+[7]: https://mp.weixin.qq.com/s/FnKnDk_e6PzVxyiJkyrnpg
