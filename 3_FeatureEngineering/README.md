@@ -12,7 +12,7 @@
   - 指数平滑
   - 对数平滑
   - [贝叶斯平滑][20]
-
+- [Box-Cox][21]
 ---
 ## 特征重要性
 ---
@@ -47,3 +47,4 @@
 [10]: http://www.cnblogs.com/weibao/p/6252280.html
 
 [20]: https://github.com/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/SmoothMapping/BayesianSmoothing.py
+[21]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/Box-Cox/Box-Cox.ipynb
