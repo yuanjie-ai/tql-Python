@@ -13,7 +13,7 @@
     - 位置：layout
     - 标题：title
     - 大小：figsize
-    - 图例：legend
+	- 图例：legend
 ```
 %matplotlib inline
 import matplotlib.pyplot as plt
