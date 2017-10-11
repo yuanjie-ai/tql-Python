@@ -24,7 +24,7 @@ def iv(df):
         data = df.groupby(i)['label'].agg(['count', 'sum']).reset_index()
         y_i = data['sum'].values
         n_i =(data['count']-data['sum']).values
-        iv.append(np.sum((y_i/Y_true - n_i/N_true)*np.log(y_i/n_i/(Y_true/N_true))))
+        iv.append(np.sum((y_i/Y_true - n_i/N_true)*np.log((y_i+0.000001)/(n_i+0.000001)/(Y_true/N_true))))
     return sorted(zip(iv, strColName), reverse=True)
 ```
 - pyspark
