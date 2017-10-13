@@ -1,4 +1,5 @@
-```
+
+```python
 def auc(actual, posterior):
     import pandas as pd
     r = pd.Series(posterior).rank().values
