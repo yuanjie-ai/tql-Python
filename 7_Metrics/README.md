@@ -1,8 +1,8 @@
-<h1 align = "center">:rocket: [Metrics][0] :facepunch:</h1>
+<h1 align = "center">:rocket: Metrics :facepunch:</h1>
 
 ---
 
-|EvaluationMetric|
+|[EvaluationMetric][0]|
 |:--|
 |AbsoluteError (AE)
 |Average Precision at K (APK, AP@K)	 
