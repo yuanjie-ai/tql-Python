@@ -6,7 +6,7 @@
 |:--|:--:|
 |AbsoluteError (AE)|
 |Average Precision at K (APK, AP@K)|
-|Area Under the ROC (AUC)|
+|Area Under the ROC (AUC) | ![AUC][1]
 |Classification Error (CE)| 
 |F1 Score (F1)|
 |Gini|
@@ -31,3 +31,4 @@
 ---
 
  [0]: https://github.com/benhamner/Metrics/tree/master/Python
+ [1]: https://pic3.zhimg.com/a84974778b7d3c1387971c181876c4e2_r.jpg
