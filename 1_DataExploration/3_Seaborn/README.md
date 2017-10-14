@@ -1,9 +1,8 @@
 <h1 align = "center">:rocket: Seaborn :facepunch:</h1>
 
 ---
-- 
 
-- Seaborn
+## Seaborn
 	- 1.管理图表样式
 	- 2.选择配色方案
 	- 3.可视化数据集的分布
