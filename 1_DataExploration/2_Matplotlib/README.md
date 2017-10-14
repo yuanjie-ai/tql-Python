@@ -38,6 +38,7 @@ plt.rcParams['axes.unicode_minus'] = False
 
 
 ---
+## [Matplotlib][0]
 - [matplotlib(条形图)][1]
 - [matplotlib(饼图)][2]
 - [matplotlib(箱线图)][3]
@@ -58,3 +59,5 @@ plt.rcParams['axes.unicode_minus'] = False
 [7]: https://mp.weixin.qq.com/s/FnKnDk_e6PzVxyiJkyrnpg
 [8]: https://mp.weixin.qq.com/s/neQTcJhTCl60vDOaHcElHQ
 [9]: https://mp.weixin.qq.com/s/L8TYeAknyLG4mzVYyMSiEw
+
+[0]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/blob/master/1_DataExploration/2_Matplotlib/1_Matplotlib.ipynb
