@@ -46,7 +46,7 @@ plt.rcParams['axes.unicode_minus'] = False
 - [matplotlib(散点图)][6]
 - [matplotlib(雷达图)][7]
 - [matplotlib(面积图)][8]
-
+- [matplotlib(热力图)][9]
 
 ---
 [1]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435778&idx=1&sn=df430bcbaf2b285b47bdaf3fa6168405&chksm=8c73abd5bb0422c3c1b15639d63eb8677163a54f314059959edbe5340a19411ac8fcdd4f0f61&scene=21#wechat_redirect
@@ -57,3 +57,4 @@ plt.rcParams['axes.unicode_minus'] = False
 [6]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435814&idx=1&sn=c12e3113023f05e0cfafe637401923d6&chksm=8c73abf1bb0422e7c86f30de8249d53ed4b7d1be6bf7f52abc26d28985b40a48e330176d4d4b&scene=21#wechat_redirect
 [7]: https://mp.weixin.qq.com/s/FnKnDk_e6PzVxyiJkyrnpg
 [8]: https://mp.weixin.qq.com/s/neQTcJhTCl60vDOaHcElHQ
+[9]: https://mp.weixin.qq.com/s/L8TYeAknyLG4mzVYyMSiEw
