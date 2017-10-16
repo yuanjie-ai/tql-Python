@@ -48,7 +48,7 @@ plt.rcParams['axes.unicode_minus'] = False
 - [matplotlib(雷达图)][7]
 - [matplotlib(面积图)][8]
 - [matplotlib(热力图)][9]
-
+- [matplotlib(树地图)][10]
 ---
 [1]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435778&idx=1&sn=df430bcbaf2b285b47bdaf3fa6168405&chksm=8c73abd5bb0422c3c1b15639d63eb8677163a54f314059959edbe5340a19411ac8fcdd4f0f61&scene=21#wechat_redirect
 [2]: https://mp.weixin.qq.com/s?__biz=MzIxNjA2ODUzNg==&mid=2651435782&idx=1&sn=56283c740c5f7b091abbde874061ece6&chksm=8c73abd1bb0422c720915adc56cc21b46a3433526946e82357f01799c0c6bc954bc756f42122&scene=21#wechat_redirect
@@ -59,5 +59,6 @@ plt.rcParams['axes.unicode_minus'] = False
 [7]: https://mp.weixin.qq.com/s/FnKnDk_e6PzVxyiJkyrnpg
 [8]: https://mp.weixin.qq.com/s/neQTcJhTCl60vDOaHcElHQ
 [9]: https://mp.weixin.qq.com/s/L8TYeAknyLG4mzVYyMSiEw
+[10]: https://mp.weixin.qq.com/s/KiElfDtrkfJu8eIyYNu3Dw
 
 [0]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/blob/master/1_DataExploration/2_Matplotlib/1_Matplotlib.ipynb
