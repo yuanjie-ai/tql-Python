@@ -9,7 +9,7 @@
 	- [4.可视化线性关系][4]
 	- [5.绘制类别型数据][5]
 	- [6.绘制网格图表][6]
-
+http://seaborn.pydata.org/tutorial.html
 ---
 [0]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/tree/master/1_DataExploration/3_Seaborn/
 [1]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/blob/master/1_DataExploration/3_Seaborn/1_Controlling%20figure%20aesthetics.ipynb
