@@ -31,7 +31,8 @@ clf.fit(X_train, y_train,
         eval_metric='logloss', 
         early_stopping_rounds=None, 
         verbose=50, 
-        feature_name='auto', categorical_feature='auto') # 只支持int类型的categorical且索引从0开始
+        feature_name='auto', 
+	categorical_feature='auto') # 只支持int类型的categorical且索引从0开始data.xx.astype('category')【参数默认即可，不告警】
 ```
 ---
 ## xgb
