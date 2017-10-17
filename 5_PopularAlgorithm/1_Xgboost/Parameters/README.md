@@ -67,4 +67,4 @@ clf.fit(X_train, y_train,
 
 ---
 [1]: https://lightgbm.readthedocs.io/en/latest/Parameters.html
-[2]: 
+[2]: https://github.com/dmlc/xgboost/tree/master/demo
