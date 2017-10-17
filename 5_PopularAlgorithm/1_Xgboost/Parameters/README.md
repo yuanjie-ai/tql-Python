@@ -1,7 +1,7 @@
 <h1 align = "center">:rocket: 参数 :facepunch:</h1>
 
 ---
-## lgb
+## [lgb][1]
 ```python
 clf = LGBMClassifier(boosting_type='gbdt', 
                      objective='binary', # objective='multiclass', num_class = 3【多分类要指定类别数】
@@ -35,7 +35,7 @@ clf.fit(X_train, y_train,
 	categorical_feature='auto') # 只支持int类型的categorical且索引从0开始data.xx.astype('category')【参数默认即可，不告警】
 ```
 ---
-## xgb
+## [xgb][2]
 ```python
 clf = XGBClassifier(booster='gbtree', 
                     objective='binary:logistic', 
@@ -64,3 +64,7 @@ clf.fit(X_train, y_train,
         early_stopping_rounds=None, 
         verbose=50)
 ```
+
+---
+[1]: https://lightgbm.readthedocs.io/en/latest/Parameters.html
+[2]: 
