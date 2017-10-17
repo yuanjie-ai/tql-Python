@@ -18,7 +18,10 @@ clf = LGBMClassifier(boosting_type='gbdt',
                      colsample_bytree=1.0, 
                      
                      reg_alpha=0.0, 
-                     reg_lambda=0.0, 
+                     reg_lambda=0.0,
+                     
+										 scale_pos_weight=1, # sklearn是否奏效
+                     is_unbalance=True,
                      
                      random_state=888,
                      n_jobs=4)
@@ -48,6 +51,7 @@ clf = XGBClassifier(booster='gbtree',
                     
                     reg_alpha=0, 
                     reg_lambda=1, 
+										
                     scale_pos_weight=1, 
       
                     random_state=888, 
