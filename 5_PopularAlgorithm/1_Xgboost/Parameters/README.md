@@ -31,6 +31,7 @@ clf.fit(X_train, y_train,
         verbose=50, 
         feature_name='auto', categorical_feature='auto') # 同时指定
 ```
+---
 ## xgb
 ```python
 clf = XGBClassifier(booster='gbtree', 
