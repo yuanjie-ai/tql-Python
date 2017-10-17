@@ -21,7 +21,6 @@ clf = LGBMClassifier(boosting_type='gbdt',
                      reg_lambda=0.0, 
                      
                      random_state=888,
-                     silent=False,
                      n_jobs=4)
 
 clf.fit(X_train, y_train, 
@@ -52,7 +51,6 @@ clf = XGBClassifier(booster='gbtree',
                     scale_pos_weight=1, 
       
                     random_state=888, 
-                    silent=True,
                     n_jobs=4)
 
 clf.fit(X_train, y_train, 
