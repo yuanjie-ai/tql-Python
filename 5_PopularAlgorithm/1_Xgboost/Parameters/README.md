@@ -1,7 +1,7 @@
 <h1 align = "center">:rocket: 参数 :facepunch:</h1>
 
 ---
-- ## lgb
+## lgb
 ```python
 clf = LGBMClassifier(boosting_type='gbdt', 
                      objective='binary',
