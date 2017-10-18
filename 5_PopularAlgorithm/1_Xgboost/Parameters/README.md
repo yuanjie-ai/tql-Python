@@ -20,9 +20,8 @@ clf = LGBMClassifier(boosting_type='gbdt',
                      reg_alpha=0.0, 
                      reg_lambda=0.0,
                      
-		     scale_pos_weight=1, # sklearn是否奏效
-                     is_unbalance=True,
-                     
+		     scale_pos_weight=1, # is_unbalance=True 不能同时设
+
                      random_state=888,
                      n_jobs=4)
 
