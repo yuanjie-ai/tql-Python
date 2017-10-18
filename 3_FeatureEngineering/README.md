@@ -2,6 +2,11 @@
 
 ---
 ## [常用特征变换][0]
+```
+# 参数要满足：
+# if (df_out and (sparse or default)):
+#     raise ValueError("Can not use df_out with sparse or default")
+``
 ---
 ## 类别型特征
 - [类编码][1]: [category_encoders][2]
