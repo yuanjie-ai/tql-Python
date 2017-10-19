@@ -4,8 +4,8 @@
 ## [lgb][1]
 ```python
 clf = LGBMClassifier(boosting_type='gbdt', 
-                     objective='binary', # objective='multiclass', num_class = 3【多分类要指定类别数】
-                     max_depth=-1,
+                     objective='binary', # objective='multiclass', num_class = 3【多分类要指定类别数】
+                     max_depth=-1,
                      num_leaves=31, 
                      learning_rate=0.1, 
                      n_estimators=10,  
@@ -20,7 +20,7 @@ clf = LGBMClassifier(boosting_type='gbdt',
                      reg_alpha=0.0, 
                      reg_lambda=0.0,
                      
-		     scale_pos_weight=1, # is_unbalance=True 不能同时设
+                     scale_pos_weight=1, # is_unbalance=True 不能同时设
 
                      random_state=888,
                      n_jobs=4)
