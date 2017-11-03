@@ -46,3 +46,4 @@ id	col_explode
 1	2	b
 2	3	NaN
 ```
+- 一列变多列: df.a.str.split('|', expand=True)
