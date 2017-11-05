@@ -6,7 +6,7 @@
 - [LightGBM][2]
 ---
 ## 常用参数速查
-|[**xgb**][3]|[**lgb**][4]|[**xgb.sklearn**][5]|[**lgb.sklearn**][6]|
+|[**xgb**][3]|[**lgb**][5]|[**xgb.sklearn**][4]|[**lgb.sklearn**][6]|
 |:--|:--|:--|:--|
 |booster='gbtree'|boosting='gbdt'|booster='gbtree'|boosting_type='gbdt'|
 |objective='binary:logistic'|application='binary'|objective='binary:logistic'|objective='binary'|
