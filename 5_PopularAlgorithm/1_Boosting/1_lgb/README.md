@@ -33,6 +33,21 @@ lgb.train(params,
 
           early_stopping_rounds=None,
           verbose_eval=True)
+
+lgb.cv(params,
+       train_set,
+       num_boost_round=10,
+
+       nfold=5,
+       stratified=True,
+
+       metrics=None,
+       feval=None,
+
+       early_stopping_rounds=None,
+       verbose_eval=None,
+       show_stdv=True,
+       seed=0)
 ```
 
 ## lgb.sklearn
