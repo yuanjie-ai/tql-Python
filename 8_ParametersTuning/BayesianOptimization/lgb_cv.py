@@ -39,7 +39,7 @@ def evaluator(max_depth, min_split_gain, min_child_weight, bagging_fraction, fea
         'lambda_l1': lambda_l1,
         'lambda_l2': lambda_l2,
         'scale_pos_weight': 1,
-        'num_threads': 8,
+        'num_threads': -1,
     }
 
     metrics = 'auc'  # 定义评估函数
