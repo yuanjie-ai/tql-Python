@@ -39,12 +39,12 @@ def evaluator(max_depth, min_split_gain, min_child_weight, bagging_fraction, fea
     metrics = 'auc'  # 定义评估函数
     cv_result = xgb.cv(params,
                        train_set,
-                       num_boost_round=20,
+                       num_boost_round=1000,
                        nfold=3,
                        stratified=True,
                        metrics=metrics,
-                       early_stopping_rounds=5,
-                       verbose_eval=5,
+                       early_stopping_rounds=10,
+                       verbose_eval=50,
                        show_stdv=True,
                        seed=0)
     return cv_result['test-' + metrics + '-mean'].mean()
