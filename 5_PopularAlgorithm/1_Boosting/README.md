@@ -2,8 +2,8 @@
 
 ---
 ## Parameters
-- [xgb][1]
-- [lgb][2]
+- [Xgboost][1]
+- [LightGBM][2]
 ---
 ## 常用参数速查
 |[**xgb**][3]|[**lgb**][4]|[**xgb.sklearn**][5]|[**lgb.sklearn**][6]|
