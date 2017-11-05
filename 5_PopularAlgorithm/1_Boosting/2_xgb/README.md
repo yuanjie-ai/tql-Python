@@ -35,6 +35,22 @@ xgb.train(params,
 
           early_stopping_rounds=None,
           verbose_eval=True)
+
+xgb.cv(params,
+       dtrain,
+       num_boost_round=10,
+
+       nfold=3,
+       stratified=False,
+
+       metrics=(),
+       feval=None,
+       maximize=False,
+
+       early_stopping_rounds=None,
+       verbose_eval=None,
+       show_stdv=True,
+       seed=0)
 ```
 ---
 ## xgb.sklearn
