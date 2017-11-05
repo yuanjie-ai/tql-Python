@@ -19,7 +19,7 @@ params = {
     'lambda_l2': 1,
 
     'scale_pos_weight': 1,
-    'eval_metric': 'auc',
+    'metric': 'auc',
     'verbose_eval': 10,
     'num_threads': -1,
 }
