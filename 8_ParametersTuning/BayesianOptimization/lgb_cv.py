@@ -3,11 +3,6 @@ __title__ = 'xgboost_cv'
 __author__ = 'JieYuan'
 __mtime__ = '2017/11/5'
 
-# coding: utf-8
-__title__ = 'xgboost_cv'
-__author__ = 'JieYuan'
-__mtime__ = '2017/11/5'
-
 import warnings
 
 warnings.filterwarnings('ignore')
