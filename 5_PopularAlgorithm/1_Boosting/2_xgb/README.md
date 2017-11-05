@@ -28,7 +28,7 @@ params = {
 xgb.train(params,
           dtrain,
           num_boost_round=10,
-          evals=(),
+          evals=[(dtrain, 'train'), (dval, 'val')],
           
           feval=None,
           maximize=False,
