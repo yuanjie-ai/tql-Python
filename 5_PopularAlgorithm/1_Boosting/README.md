@@ -1,7 +1,7 @@
 <h1 align = "center">:rocket: 提升算法 :facepunch:</h1>
 
 ---
-## 参数对比
+## 常用参数速查
 |xgb|lgb|xgb.sklearn|lgb.sklearn|
 |:--|:--|:--|:--|
 |booster='gbtree'|boosting='gbdt'|booster='gbtree'|boosting_type='gbdt'|
@@ -23,3 +23,4 @@
 |eval_metric|metric|eval_metric|eval_metric|
 |early_stopping_rounds|early_stopping_rounds|early_stopping_rounds|early_stopping_rounds|
 |verbose_eval|verbose_eval|verbose|verbose|
+---
