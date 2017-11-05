@@ -1,8 +1,12 @@
 <h1 align = "center">:rocket: 提升算法 :facepunch:</h1>
 
 ---
+## Parameters
+- [xgb][1]: [1]
+- [lgb][2]: [2]
+---
 ## 常用参数速查
-|[**xgb**][1]|[**lgb**][2]|**xgb.sklearn**|**lgb.sklearn**|
+|[**xgb**][3]|[**lgb**][4]|[**xgb.sklearn**][5]|[**lgb.sklearn**][6]|
 |:--|:--|:--|:--|
 |booster='gbtree'|boosting='gbdt'|booster='gbtree'|boosting_type='gbdt'|
 |objective='binary:logistic'|application='binary'|objective='binary:logistic'|objective='binary'|
@@ -27,4 +31,9 @@
 ---
 [1]: http://xgboost.readthedocs.io/en/latest/parameter.html#
 [2]: https://lightgbm.readthedocs.io/en/latest/Parameters.html#
-[3]: https://github.com/Microsoft/LightGBM/blob/master/docs/Parameters.rst
+
+[3]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/2_xgb/README.md#xgb
+[4]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/2_xgb/README.md#xgbsklearn
+[5]: https://github.com/Jie-Yuan/DataMining/tree/master/5_PopularAlgorithm/1_Boosting/1_lgb#lgb
+[6]: https://github.com/Jie-Yuan/DataMining/tree/master/5_PopularAlgorithm/1_Boosting/1_lgb#lgbsklearn
+
