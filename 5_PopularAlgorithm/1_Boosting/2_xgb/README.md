@@ -77,7 +77,8 @@ clf = XGBClassifier(booster='gbtree',
                     n_jobs=4)
 
 clf.fit(X_train, y_train, 
-        eval_set=[(X_train, y_train), (X_val, y_val)], 
+	sample_weight=None, # 可初始化样本权重
+	eval_set=[(X_train, y_train), (X_val, y_val)], 
         eval_metric='auc', 
         early_stopping_rounds=None, 
         verbose=50)
