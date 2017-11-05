@@ -3,6 +3,11 @@ __title__ = 'xgboost_cv'
 __author__ = 'JieYuan'
 __mtime__ = '2017/11/5'
 
+# coding: utf-8
+__title__ = 'xgboost_cv'
+__author__ = 'JieYuan'
+__mtime__ = '2017/11/5'
+
 import warnings
 
 warnings.filterwarnings('ignore')
@@ -34,21 +39,21 @@ def evaluator(max_depth, min_split_gain, min_child_weight, bagging_fraction, fea
         'lambda_l1': lambda_l1,
         'lambda_l2': lambda_l2,
         'scale_pos_weight': 1,
-        'num_threads': -1,
+        'num_threads': 8,
     }
 
     metrics = 'auc'  # 定义评估函数
     cv_result = lgb.cv(params,
                        train_set,
-                       num_boost_round=200,
+                       num_boost_round=1000,
                        nfold=3,
                        stratified=True,
                        metrics=metrics,
-                       early_stopping_rounds=None,
-                       verbose_eval=5,
-                       show_stdv=True,
+                       early_stopping_rounds=10,
+                       verbose_eval=50,
+                       show_stdv=False,
                        seed=0)
-    return np.array(cv_result[metrics + '-mean']).mean()
+    return cv_result[metrics + '-mean'][-1]
 
 # test
 # evaluator(3, 1, 1, 1, 1, 1, 1)
