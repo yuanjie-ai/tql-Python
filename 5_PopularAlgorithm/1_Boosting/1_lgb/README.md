@@ -23,10 +23,20 @@ params = {
     'verbose_eval': 10,
     'num_threads': -1,
 }
+
+lgb.train(params,
+          train_set,
+          num_boost_round=100,
+          valid_sets=None,
+
+          feval=None,
+
+          early_stopping_rounds=None,
+          verbose_eval=True)
 ```
 
 ## lgb.sklearn
-```
+```python
 clf = XGBClassifier(booster='gbtree', 
                     objective='binary:logistic', 
                     max_depth=3, 
