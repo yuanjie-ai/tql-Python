@@ -2,7 +2,7 @@
 
 ---
 ## 常用参数速查
-|xgb|lgb|xgb.sklearn|lgb.sklearn|
+|[**xgb**][1]|[**lgb**][2]|**xgb.sklearn**|**lgb.sklearn**|
 |:--|:--|:--|:--|
 |booster='gbtree'|boosting='gbdt'|booster='gbtree'|boosting_type='gbdt'|
 |objective='binary:logistic'|application='binary'|objective='binary:logistic'|objective='binary'|
@@ -23,4 +23,8 @@
 |eval_metric|metric|eval_metric|eval_metric|
 |early_stopping_rounds|early_stopping_rounds|early_stopping_rounds|early_stopping_rounds|
 |verbose_eval|verbose_eval|verbose|verbose|
+
 ---
+[1]: http://xgboost.readthedocs.io/en/latest/parameter.html#
+[2]: https://lightgbm.readthedocs.io/en/latest/Parameters.html#
+[3]: https://github.com/Microsoft/LightGBM/blob/master/docs/Parameters.rst
