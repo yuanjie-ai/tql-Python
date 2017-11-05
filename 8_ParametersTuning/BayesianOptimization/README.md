@@ -2,8 +2,8 @@
 
 ---
 ## 1. [Usages][1]
-## 2. [Gbdt][2]
-## 3. [Gbdt-CV][3]
+## 2. [Lgb-CV][2]
+## 3. [Xgb-CV][3]
 
 
 
@@ -22,3 +22,5 @@
 
 ---
 [1]: http://nbviewer.jupyter.org/github/Jie-Yuan/DataMining/blob/master/8_ParametersTuning/BayesianOptimization/Usages.ipynb
+[2]: https://github.com/Jie-Yuan/DataMining/blob/master/8_ParametersTuning/BayesianOptimization/lgb_cv.py
+[3]: https://github.com/Jie-Yuan/DataMining/blob/master/8_ParametersTuning/BayesianOptimization/xgb_cv.py
