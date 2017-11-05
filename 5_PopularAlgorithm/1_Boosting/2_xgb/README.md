@@ -37,7 +37,7 @@ xgb.train(params,
 ```
 ---
 ## xgb.sklearn
-```
+```python
 clf = XGBClassifier(booster='gbtree', 
                     objective='binary:logistic', 
                     max_depth=3, 
