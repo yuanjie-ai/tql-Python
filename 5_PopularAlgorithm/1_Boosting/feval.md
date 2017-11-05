@@ -20,7 +20,8 @@ def feval(y_pred, y_true):
     from ml_metrics import auc
     y_true = y_true.get_label()
     return 'auc', auc(y_true, y_pred), True# maximize=False比xgb多返回一项
-    
+
+# LGBMClassifier().fit(X, y,eval_metric=feval) # 待实验
 lgb.train(feval=feval)
 lgb.cv(feval=feval)
 ```
