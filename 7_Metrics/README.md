@@ -3,7 +3,7 @@
 ---
 ## [sklearn.metrics][11]
 
-http://www.cnblogs.com/harvey888/p/6964741.html
+- [自定义评估函数][12]
 ---
 ## [ml_metrics][0]
 
@@ -39,3 +39,4 @@ http://www.cnblogs.com/harvey888/p/6964741.html
  [1]: http://img.blog.csdn.net/20150924153157802
  
  [11]: http://scikit-learn.org/stable/modules/model_evaluation.html#common-cases-predefined-values
+ [12]: http://www.cnblogs.com/harvey888/p/6964741.html
