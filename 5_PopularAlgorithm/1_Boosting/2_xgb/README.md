@@ -83,3 +83,5 @@ clf.fit(X_train, y_train,
         early_stopping_rounds=None, 
         verbose=50)
 ```
+---
+参数 http://www.cnblogs.com/ljygoodgoodstudydaydayup/p/6665239.html
