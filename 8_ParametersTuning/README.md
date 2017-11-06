@@ -1,3 +1,10 @@
 <h1 align = "center">:rocket: 调参大法 :facepunch:</h1>
 
 ---
+[bayes_opt][1]
+[hyperopt][2]
+
+
+---
+[1]: https://github.com/fmfn/BayesianOptimization
+[2]: https://github.com/hyperopt/hyperopt
