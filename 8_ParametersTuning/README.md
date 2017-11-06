@@ -1,8 +1,8 @@
 <h1 align = "center">:rocket: 调参大法 :facepunch:</h1>
 
 ---
-[bayes_opt][1]
-[hyperopt][2]
+## [BayesianOptimization][1]
+## [hyperopt][2]
 
 
 ---
