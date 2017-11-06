@@ -84,4 +84,6 @@ clf.fit(X_train, y_train,
         verbose=50)
 ```
 ---
-参数 http://www.cnblogs.com/ljygoodgoodstudydaydayup/p/6665239.html
+## 参数 
+http://www.cnblogs.com/ljygoodgoodstudydaydayup/p/6665239.html
+http://blog.csdn.net/han_xiaoyang/article/details/52665396
