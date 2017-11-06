@@ -1,8 +1,8 @@
 <h1 align = "center">:rocket: Metrics :facepunch:</h1>
 
 ---
-## sklearn.metrics
-
+## [sklearn.metrics][11]
+http://www.cnblogs.com/harvey888/p/6964741.html
 ---
 ## ml_metrics
 
@@ -36,3 +36,5 @@
 
  [0]: https://github.com/benhamner/Metrics/tree/master/Python
  [1]: http://img.blog.csdn.net/20150924153157802
+ 
+ [11]: http://scikit-learn.org/stable/modules/model_evaluation.html#common-cases-predefined-values
