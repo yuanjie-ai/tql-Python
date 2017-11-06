@@ -4,9 +4,9 @@
 ## [sklearn.metrics][11]
 http://www.cnblogs.com/harvey888/p/6964741.html
 ---
-## ml_metrics
+## [ml_metrics][0]
 
-|[**评估指标**][0]|**公式**|
+|**评估指标**|**公式**|
 |:--|:--:|
 |AbsoluteError (AE)|
 |Average Precision at K (APK, AP@K)|
