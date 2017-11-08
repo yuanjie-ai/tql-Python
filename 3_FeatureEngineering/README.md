@@ -1,6 +1,9 @@
 <h1 align = "center">:rocket: 特征工程 :facepunch:</h1>
 
 ---
+## 特征提取(傻瓜式)
+- [featuretools][4]
+---
 ## [常用特征变换][0]
 
 ```
@@ -51,6 +54,7 @@
 [0]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/sklearn_pandas.ipynb
 [1]: http://contrib.scikit-learn.org/categorical-encoding/backward_difference.html
 [2]: https://github.com/scikit-learn-contrib/categorical-encoding
+[3]: https://github.com/Featuretools/featuretools
 
 [10]: http://www.cnblogs.com/weibao/p/6252280.html
 
