@@ -6,6 +6,8 @@
 - DAE等
 - GBDT
 
+## 特征选择
+- [scikit-feature][4]
 ---
 ## [常用特征变换][0]
 
@@ -58,6 +60,7 @@
 [1]: http://contrib.scikit-learn.org/categorical-encoding/backward_difference.html
 [2]: https://github.com/scikit-learn-contrib/categorical-encoding
 [3]: https://github.com/Featuretools/featuretools
+[4]: https://github.com/jundongl/scikit-feature
 
 [10]: http://www.cnblogs.com/weibao/p/6252280.html
 
