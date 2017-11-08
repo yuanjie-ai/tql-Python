@@ -2,7 +2,10 @@
 
 ---
 ## 特征提取(傻瓜式)
-- [featuretools][4]
+- [featuretools][3]
+- DAE等
+- GBDT
+
 ---
 ## [常用特征变换][0]
 
