@@ -20,7 +20,7 @@ def explode(df, col, pat=None, drop_col=True):
     :return: hive explode
     """
     data = df.copy()
-    data_temp = data.col.str.split(pat=pat, expand=True).stack().reset_index(level=1, drop=True).rename(col+'_explode')
+    data_temp = data[col].str.split(pat=pat, expand=True).stack().reset_index(level=1, drop=True).rename(col+'_explode')
     if drop_col:
         data.drop(col, 1, inplace=True)
     return data.join(data_temp)
