@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import ffm
 from tqdm import tqdm
-from sklearn.metrics import roc_auc_score
+
 class FFM(object):
     _model = None
     def __init__(self, eta=0.1, l2=0.00002, factor=4, n_iter=15):
@@ -49,3 +49,12 @@ class FFM(object):
     def save_model(cls, path):
         cls._model.save_model(path)
         return 'save model'
+
+# X = [[(1, 2, 1), (2, 3, 1), (3, 5, 1)],
+#      [(1, 0, 1), (2, 3, 1), (3, 7, 1)],
+#      [(1, 1, 1), (2, 3, 1), (3, 7, 1), (3, 9, 1)],]
+# 
+# y = [1, 1, 0]
+# _ffm = FFM()
+# _ffm.fit(X, y)
+# _ffm.predict(X, y)
