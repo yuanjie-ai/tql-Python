@@ -18,7 +18,7 @@ class DF2libffm(object):
         features = []
         for i, field in enumerate(self.field_names):
             value = row[i]
-            key = field + '-' + str(value)
+            key = field + '_' + str(value)
             features.append(key)
         return features
     
