@@ -1,5 +1,5 @@
 ```python
-def data_split_block(data, batch_size=128000, n_block=None):
+def data_block_split(data, batch_size=128000, n_block=None):
     from tqdm import tqdm
     block_list = []
     if n_block is None:
