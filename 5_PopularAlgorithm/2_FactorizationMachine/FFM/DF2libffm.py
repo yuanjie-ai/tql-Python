@@ -17,7 +17,7 @@ class DF2libffm(object):
     def _gen_features(self, row):
         features = []
         for i, field in enumerate(self.field_names):
-            value = row[i]  # row[0] is label
+            value = row[i]
             key = field + '-' + str(value)
             features.append(key)
         return features
