@@ -1,4 +1,4 @@
-def df2libffm(df, field_Category, field_Numeric):
+def df2libffm(df, field_Category, field_Numeric=None):
     libffm = []
     csr = OneHotEncoder().fit_transform(df[field_Category])
     for i in range(len(csr.indptr) - 1):
