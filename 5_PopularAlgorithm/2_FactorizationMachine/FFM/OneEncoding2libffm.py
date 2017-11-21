@@ -1,5 +1,6 @@
-def df2libffm(df, field_Category, field_Numeric=None):
+def df2libffm(df, field_Category, field_Numeric=[]):
     libffm = []
+    num_n = len(field_Numeric)
     csr = OneHotEncoder().fit_transform(df[field_Category])
     for i in range(len(csr.indptr) - 1):
         ls = []
