@@ -5,6 +5,7 @@
 - [featuretools][3]
 - DAE等
 - GBDT
+- [spherical k-means][5]
 
 ## 特征选择
 - [scikit-feature][4]
@@ -61,6 +62,7 @@
 [2]: https://github.com/scikit-learn-contrib/categorical-encoding
 [3]: https://github.com/Featuretools/featuretools
 [4]: https://github.com/jundongl/scikit-feature
+[5]: https://github.com/justinsalamon/skm
 
 [10]: http://www.cnblogs.com/weibao/p/6252280.html
 
