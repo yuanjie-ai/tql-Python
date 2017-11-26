@@ -5,7 +5,7 @@
 ## [FFM][1]
 ### [PyFM][2]
 
-
+## [xlearn][3]
 
 
 
@@ -19,3 +19,4 @@
 ---
 [1]: https://tech.meituan.com/deep-understanding-of-ffm-principles-and-practices.html#mjx-eqn-eqpoly
 [2]: https://github.com/coreylynch/pyFM
+[3]: https://github.com/aksnzhy/xlearn
