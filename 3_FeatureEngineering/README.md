@@ -7,8 +7,8 @@
 - GBDT
 - [spherical k-means][5]
 - 时间序列
-  - [tsfresh][6]
-  - [fbprophet ][7]
+    - [tsfresh][6]
+    - [fbprophet ][7]
 ## 特征选择
 - [scikit-feature][4]
 ---
