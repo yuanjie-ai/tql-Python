@@ -6,7 +6,9 @@
 - DAE等
 - GBDT
 - [spherical k-means][5]
-
+- 时间序列
+  - [tsfresh][6]
+  - [fbprophet ][7]
 ## 特征选择
 - [scikit-feature][4]
 ---
@@ -63,6 +65,9 @@
 [3]: https://github.com/Featuretools/featuretools
 [4]: https://github.com/jundongl/scikit-feature
 [5]: https://github.com/justinsalamon/skm
+[6]: https://github.com/blue-yonder/tsfresh
+[7]: https://github.com/facebook/prophet
+
 
 [10]: http://www.cnblogs.com/weibao/p/6252280.html
 
