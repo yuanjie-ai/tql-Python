@@ -1,6 +1,9 @@
 # :rocket: PopularAlgorithm :facepunch:
 ---
 
+[PRML算法实现][1]
+
+---
 ## LogisticRegession
 - Python实现
 - Sklearn实现
@@ -8,6 +11,11 @@
 - Keras实现
 - Tensorflow实现
 - Pytorch实现
+
+
+
+---
+[1]: https://github.com/ctgk/PRML
 
 
 
