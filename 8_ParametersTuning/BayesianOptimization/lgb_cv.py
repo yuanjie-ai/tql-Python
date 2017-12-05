@@ -64,6 +64,6 @@ BoParams = {
 }
 BO = BayesianOptimization(evaluator, BoParams)
 gp_params = {"alpha": 1e-5, "n_restarts_optimizer": 2}
-BO.maximize(init_points=5, n_iter=25, acq='ucb', kappa=2.576, xi=0.0, **gp_params) # kappa???
+BO.maximize(init_points=5, n_iter=25, acq='ucb', kappa=2.576, xi=0.0, **gp_params) # kappa??? **gp_params可能报错
 BO.res['max']
 
