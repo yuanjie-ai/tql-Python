@@ -1,6 +1,7 @@
 ## 通用
 ```python
 import numpy as np
+from sklearn.datasets import load_iris
 from sklearn import model_selection
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
@@ -14,6 +15,10 @@ from lightgbm.sklearn import LGBMClassifier
 
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
+
+iris = load_iris()
+X = iris.data
+y = iris.target
 
 # clf11 = RadiusNeighborsClassifier() # not proba
 # clf12 = SVC() # not proba
