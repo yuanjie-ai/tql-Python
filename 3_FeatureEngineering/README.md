@@ -11,6 +11,7 @@
     - [fbprophet ][7]
 ## 特征选择
 - [scikit-feature][4]
+- SequentialFeatureSelector
 ---
 ## [常用特征变换][0]
 
