@@ -13,7 +13,7 @@ clf3 = GaussianNB()
 lr = LogisticRegression()
 sclf = StackingClassifier(classifiers=[clf1, clf2, clf3], meta_classifier=lr, 
                           use_probas=True,
-                          average_probas=True,
+                          average_probas=False,
                           verbose=1,
                           use_features_in_secondary=True)
 
