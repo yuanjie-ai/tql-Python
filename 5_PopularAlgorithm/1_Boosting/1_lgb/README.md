@@ -20,23 +20,24 @@ params = {
 
     'scale_pos_weight': 1,
     'metric': 'auc',
-    'verbose_eval': 10,
     'num_threads': -1,
 }
 
+train_set = lgb.Dataset(X, y)
+
 lgb.train(params,
           train_set,
-          num_boost_round=100,
+          num_boost_round=2000,
           valid_sets=None,
 
           feval=None,
 
-          early_stopping_rounds=None,
-          verbose_eval=True)
+          early_stopping_rounds=20,
+          verbose_eval=50)
 
 lgb.cv(params,
        train_set,
-       num_boost_round=10,
+       num_boost_round=2000,
 
        nfold=5,
        stratified=True,
@@ -44,8 +45,8 @@ lgb.cv(params,
        metrics=None,
        feval=None,
 
-       early_stopping_rounds=None,
-       verbose_eval=None,
+       early_stopping_rounds=20,
+       verbose_eval=50,
        show_stdv=True,
        seed=0)
 ```
