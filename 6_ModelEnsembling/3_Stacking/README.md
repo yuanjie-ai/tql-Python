@@ -2,7 +2,7 @@
 ```python
 import numpy as np
 from sklearn.datasets import load_iris
-from sklearn import model_selection
+from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -45,7 +45,7 @@ sclf = StackingClassifier(classifiers=clfs,
                           verbose=1,
                           use_features_in_secondary=True)
 
-scores = model_selection.cross_val_score(sclf, X, y, cv=3, scoring='accuracy')
+scores = cross_val_score(sclf, X, y, cv=3, scoring='accuracy')
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
 ```
 
@@ -60,13 +60,13 @@ sclf = StackingCVClassifier(classifiers=clfs,
                             shuffle=True, 
                             verbose=1)
                             
-scores = model_selection.cross_val_score(sclf, X, y, cv=3, scoring='accuracy') 
+scores = cross_val_score(sclf, X, y, cv=3, scoring='accuracy') 
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
 ```
 
 ## EnsembleVoteClassifier
 ```python
 eclf = EnsembleVoteClassifier(clfs=clfs, voting='hard', weights=[1]*len(clfs))
-scores = model_selection.cross_val_score(eclf, X, y, cv=3, scoring='accuracy')
+scores = cross_val_score(eclf, X, y, cv=3, scoring='accuracy')
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
 ```
