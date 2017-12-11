@@ -4,6 +4,7 @@
 ## Parameters
 - [Xgboost][1]
 - [LightGBM][2]
+ http://dwz.cn/74863J
 ---
 ## 常用参数速查
 |[**xgb**][3]|[**lgb**][5]|[**xgb.sklearn**][4]|[**lgb.sklearn**][6]|
