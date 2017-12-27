@@ -77,7 +77,7 @@ clf = LGBMClassifier(boosting_type='gbdt',
 
 clf.fit(X_train, y_train, 
 	sample_weight=None, # 可初始化样本权重
-        eval_set=[(X_train, y_train), (X_val, y_val)], 
+        eval_set=[(X_train, y_train), (X_test, y_test)], 
         eval_metric='logloss', 
         early_stopping_rounds=100, 
         verbose=50, 
