@@ -9,7 +9,7 @@
 - 时间序列
     - [tsfresh][6]
     - [fbprophet][7]
-    - [pyflux][8]
+    - [pyflux][8]
 ## 特征选择
 - [scikit-feature][4]
 - SequentialFeatureSelector
