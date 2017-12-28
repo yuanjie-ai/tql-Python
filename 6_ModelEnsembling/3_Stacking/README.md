@@ -42,8 +42,7 @@ sclf = StackingClassifier(classifiers=clfs,
                           meta_classifier=lr, 
                           use_probas=True,
                           average_probas=False,
-                          verbose=1,
-                          use_features_in_secondary=True)
+                          verbose=1)
 
 scores = cross_val_score(sclf, X, y, cv=3, scoring='accuracy')
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
@@ -55,9 +54,6 @@ sclf = StackingCVClassifier(classifiers=clfs,
                             meta_classifier=lr,
                             use_probas=True, 
                             cv=3, 
-                            use_features_in_secondary=True, 
-                            stratify=True, 
-                            shuffle=True, 
                             verbose=1)
                             
 scores = cross_val_score(sclf, X, y, cv=3, scoring='accuracy') 
