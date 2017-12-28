@@ -50,13 +50,16 @@ print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
 
 ## StackingCVClassifier
 ```python
+
+
 sclf = StackingCVClassifier(classifiers=clfs, 
                             meta_classifier=lr,
                             use_probas=True, 
                             cv=3, 
                             verbose=1)
-                            
-scores = cross_val_score(sclf, X, y, cv=3, scoring='accuracy') 
+
+skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42).split(X, y)
+scores = cross_val_score(sclf, X, y, cv=skf, scoring='accuracy') 
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
 ```
 
