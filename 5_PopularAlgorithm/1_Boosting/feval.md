@@ -35,3 +35,4 @@ from sklearn.model_selection import cross_val_score
 cross_val_score(scoring) # 自定义评估函数需要make_scorer包装一下
 ```
 ---
+https://www.cnblogs.com/silence-gtx/p/5812012.html
