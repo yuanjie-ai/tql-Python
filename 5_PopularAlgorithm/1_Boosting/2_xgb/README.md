@@ -52,23 +52,27 @@ params = {
 ```python
 xgb_data = xgb.DMatrix(X, y)
 
-xgb.cv(params,
-       xgb_data,
-       num_boost_round=2000,
-       nfold=3,
-       stratified=True,
-       metrics=(),
-       early_stopping_rounds=50,
-       verbose_eval=50,
-       show_stdv=True,
-       seed=0)
+xgb.cv(
+    params,
+    xgb_data,
+    num_boost_round=2000,
+    nfold=3,
+    stratified=True,
+    metrics=(),
+    early_stopping_rounds=50,
+    verbose_eval=50,
+    show_stdv=True,
+    seed=0
+)
        
-xgb.train(params,
-          dtrain,
-          num_boost_round=2000,
-          evals=[(dtrain, 'train'), (dval, 'val')],
-          early_stopping_rounds=50,
-          verbose_eval=50)
+xgb.train(
+    params,
+    dtrain,
+    num_boost_round=2000,
+    evals=[(dtrain, 'train'), (dval, 'val')],
+    early_stopping_rounds=50,
+    verbose_eval=50
+)
 ```
 
 ---
@@ -100,7 +104,7 @@ clf = XGBClassifier(
 ```
 - 回归
 ```python
-clf = XGBClassifier(
+clf = XGBRegressor(
     booster='gbtree', # 'dart', 'gblinear' 
     objective='reg:linear', # 'reg:tweedie', 'reg:gamma'
     max_depth=7,
@@ -125,12 +129,15 @@ clf = XGBClassifier(
 ```
 ---
 ```python
-clf.fit(X_train, y_train, 
-	sample_weight=None, # 可初始化样本权重
-	eval_set=[(X_train, y_train), (X_val, y_val)], 
-        eval_metric='auc', 
-        early_stopping_rounds=None, 
-        verbose=50)
+clf.fit(
+    X_train, 
+    y_train,
+    sample_weight=None,  # 可初始化样本权重
+    eval_set=[(X_train, y_train), (X_val, y_val)],
+    eval_metric='auc',
+    early_stopping_rounds=None,
+    verbose=50
+)
 ```
 ---
 ## 参数 
