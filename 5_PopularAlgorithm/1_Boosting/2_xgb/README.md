@@ -6,8 +6,8 @@
 - 分类
 ```python
 params = {
-    'booster': 'gbtree',
-    'objective': 'binary:logistic', # 'objective': 'multi:softmax', 'num_class': 3,
+    'booster': 'gbtree', #  'dart'
+    'objective': 'binary:logistic', # 'objective': 'multi:softmax', 'num_class': 3,
     'eta': 0.1,
     'max_depth': 7,
 
@@ -28,7 +28,7 @@ params = {
 - 回归
 ```python
 params = {
-    'booster': 'gbtree',
+    'booster': 'gbtree', # 'dart', 'gblinear'
     'objective': 'reg:gamma',
     'gamma': 0.1,
     'max_depth': 5,
