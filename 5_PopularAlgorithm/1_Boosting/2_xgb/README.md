@@ -75,28 +75,55 @@ xgb.train(params,
 ### 2. SK接口
 - 分类
 ```python
-clf = XGBClassifier(booster='gbtree', 
-                    objective='binary:logistic', 
-                    max_depth=7, 
-                    learning_rate=0.1, 
-                    n_estimators=100, 
-                    
-                    gamma=0, 
-                    min_child_weight=1, 
-                    
-                    subsample=1, 
-                    colsample_bytree=1, 
-                    colsample_bylevel=1, 
-                    
-                    reg_alpha=0, 
-                    reg_lambda=1, 
-										
-                    scale_pos_weight=1, 
-      
-                    random_state=888, 
-                    n_jobs=4)
+clf = XGBClassifier(
+    booster='gbtree', #  'dart' # 'rank:pairwise'对排序友好
+    objective='binary:logistic',  # 'multi:softmax', 
+    max_depth=7,
+    learning_rate=0.1,
+    n_estimators=100,
+
+    gamma=0,
+    min_child_weight=1,
+
+    subsample=1,
+    colsample_bytree=1,
+    colsample_bylevel=1,
+
+    reg_alpha=0,
+    reg_lambda=1,
+
+    scale_pos_weight=1,
+
+    random_state=888,
+    n_jobs=-1
+)
 ```
 - 回归
+```python
+clf = XGBClassifier(
+    booster='gbtree', #  'dart' # 'rank:pairwise'对排序友好
+    objective='reg:linear', # 'reg:tweedie', 'reg:gamma'
+    max_depth=7,
+    learning_rate=0.1,
+    n_estimators=100,
+
+    gamma=0,
+    min_child_weight=1,
+
+    subsample=1,
+    colsample_bytree=1,
+    colsample_bylevel=1,
+
+    reg_alpha=0,
+    reg_lambda=1,
+
+    scale_pos_weight=1,
+
+    random_state=888,
+    n_jobs=-1
+)
+```
+---
 ```python
 clf.fit(X_train, y_train, 
 	sample_weight=None, # 可初始化样本权重
