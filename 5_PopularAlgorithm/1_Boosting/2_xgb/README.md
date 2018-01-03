@@ -7,7 +7,7 @@
 ```python
 params = {
     'booster': 'gbtree',
-    'objective': 'binary:logistic',
+    'objective': 'binary:logistic', # 'objective': 'multi:softmax', 'num_class': 3,
     'eta': 0.1,
     'max_depth': 7,
 
