@@ -1,7 +1,6 @@
 <h1 align = "center">:rocket: xgb常用参数 :facepunch:</h1>
 
 ---
-## XGB
 ### 1. 原生接口
 - 分类
 ```python
