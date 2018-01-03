@@ -27,6 +27,23 @@ params = {
 ```
 - 回归
 ```python
+params = {
+    'booster': 'gbtree',
+    'objective': 'reg:gamma',
+    'gamma': 0.1,
+    'max_depth': 5,
+    'lambda': 3,
+    'subsample': 0.7,
+    'colsample_bytree': 0.7,
+    'min_child_weight': 3,
+    'silent': 1,
+    'eta': 0.1,
+    'seed': 1000,
+    'nthread': 4,
+}
+```
+---
+```python
 xgb_data = xgb.DMatrix(X, y)
 
 xgb.train(params,
