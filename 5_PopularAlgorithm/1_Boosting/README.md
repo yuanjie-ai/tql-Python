@@ -34,8 +34,7 @@
 [1]: http://xgboost.readthedocs.io/en/latest/parameter.html#
 [2]: https://lightgbm.readthedocs.io/en/latest/Parameters.html#
 
-[3]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/2_xgb/README.md#xgb
-[4]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/2_xgb/README.md#xgbsklearn
-[5]: https://github.com/Jie-Yuan/DataMining/tree/master/5_PopularAlgorithm/1_Boosting/1_lgb#lgb
-[6]: https://github.com/Jie-Yuan/DataMining/tree/master/5_PopularAlgorithm/1_Boosting/1_lgb#lgbsklearn
-
+[3]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/2_xgb/README.md#1-%E5%8E%9F%E7%94%9F%E6%8E%A5%E5%8F%A3
+[4]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/2_xgb/README.md#2-sk%E6%8E%A5%E5%8F%A3
+[5]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/1_lgb/README.md#1-%E5%8E%9F%E7%94%9F%E6%8E%A5%E5%8F%A3
+[6]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/1_lgb/README.md#2-sk%E6%8E%A5%E5%8F%A3
