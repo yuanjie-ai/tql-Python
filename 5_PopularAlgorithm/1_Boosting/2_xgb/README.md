@@ -27,6 +27,8 @@ params = {
 ```
 - 回归
 ```python
+xgb_data = xgb.DMatrix(X, y)
+
 xgb.train(params,
           dtrain,
           num_boost_round=10,
