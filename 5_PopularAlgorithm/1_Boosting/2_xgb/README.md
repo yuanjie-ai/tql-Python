@@ -41,7 +41,7 @@ params = {
     'lambda': 1,
 
     'scale_pos_weight': 1,
-    'eval_metric': 'auc',
+    'eval_metric': 'rmse',
     'nthread': -1,
     'seed': 888
 }
