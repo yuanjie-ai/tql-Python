@@ -101,7 +101,7 @@ clf = XGBClassifier(
 - 回归
 ```python
 clf = XGBClassifier(
-    booster='gbtree', #  'dart' # 'rank:pairwise'对排序友好
+    booster='gbtree', # 'dart', 'gblinear' 
     objective='reg:linear', # 'reg:tweedie', 'reg:gamma'
     max_depth=7,
     learning_rate=0.1,
