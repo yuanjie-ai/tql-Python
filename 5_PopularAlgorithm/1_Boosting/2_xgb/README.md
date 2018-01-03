@@ -51,15 +51,8 @@ params = {
 ```python
 xgb_data = xgb.DMatrix(X, y)
 
-xgb.train(params,
-          dtrain,
-          num_boost_round=2000,
-          evals=[(dtrain, 'train'), (dval, 'val')],
-          early_stopping_rounds=50,
-          verbose_eval=50)
-
 xgb.cv(params,
-       dtrain,
+       xgb_data,
        num_boost_round=2000,
        nfold=3,
        stratified=True,
@@ -68,6 +61,15 @@ xgb.cv(params,
        verbose_eval=50,
        show_stdv=True,
        seed=0)
+       
+xgb.train(params,
+          dtrain,
+          num_boost_round=2000,
+          evals=[(dtrain, 'train'), (dval, 'val')],
+          early_stopping_rounds=50,
+          verbose_eval=50)
+
+
 ```
 ---
 ### 2. SK接口
