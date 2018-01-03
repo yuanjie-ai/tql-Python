@@ -5,8 +5,8 @@
 - 分类
 ```python
 params = {
-    'boosting': 'gbdt',
-    'application': 'binary',
+    'boosting': 'gbdt', # 'rf', 'dart', 'goss'
+    'application': 'binary', # 'application': 'multi:softmax', 'num_class': 3,
     'learning_rate': 0.01,
     'max_depth': -1,
     'num_leaves': 2 ** 7 - 1,
@@ -24,11 +24,12 @@ params = {
     'num_threads': -1,
 }
 ```
+
 - 回归
 ```python
 params = {
-    'boosting': 'gbdt',
-    'application': 'binary',
+    'boosting': 'gbdt', # 'rf', 'dart', 'goss'
+    'application': 'regression',
     'learning_rate': 0.01,
     'max_depth': -1,
     'num_leaves': 2 ** 7 - 1,
@@ -46,33 +47,32 @@ params = {
     'num_threads': -1,
 }
 ```
+
+---
 ```python
-train_set = lgb.Dataset(X, y)
+lgb_data = lgb.Dataset(X, y)
 
-lgb.train(params,
-          train_set,
-          num_boost_round=2000,
-          valid_sets=None,
-
-          feval=None,
-
-          early_stopping_rounds=20,
-          verbose_eval=50)
-
-lgb.cv(params,
-       train_set,
-       num_boost_round=2000,
-
-       nfold=5,
-       stratified=True,
-
-       metrics=None,
-       feval=None,
-
-       early_stopping_rounds=20,
-       verbose_eval=50,
-       show_stdv=True,
-       seed=0)
+lgb.cv(
+    params,
+    lgb_data,
+    num_boost_round=2000,
+    nfold=5,
+    stratified=True,
+    metrics=None,
+    early_stopping_rounds=50,
+    verbose_eval=50,
+    show_stdv=True,
+    seed=0
+)
+       
+lgb.train(
+    params,
+    lgb_data,
+    num_boost_round=2000,
+    valid_sets=None,
+    early_stopping_rounds=50,
+    verbose_eval=50
+)
 ```
 ---
 ## 2. SK接口
