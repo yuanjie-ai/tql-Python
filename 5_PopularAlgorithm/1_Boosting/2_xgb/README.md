@@ -21,10 +21,8 @@ params = {
 
     'scale_pos_weight': 1,
     'eval_metric': 'auc',
-    'verbose_eval': 10,
     'nthread': -1,
     'seed': 888,
-    'missing': -888
 }
 ```
 - 回归
