@@ -1,7 +1,10 @@
 <h1 align = "center">:rocket: xgb常用参数 :facepunch:</h1>
 
 ---
-## xgb
+## XGB
+### 1. 原生接口
+- 分类
+- 回归
 ```python
 params = {
     'booster': 'gbtree',
@@ -53,7 +56,9 @@ xgb.cv(params,
        seed=0)
 ```
 ---
-## xgb.sklearn
+### 2. SK接口
+- 分类
+- 回归
 ```python
 clf = XGBClassifier(booster='gbtree', 
                     objective='binary:logistic', 
