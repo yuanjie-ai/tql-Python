@@ -1,14 +1,15 @@
 <h1 align = "center">:rocket: lgb常用参数 :facepunch:</h1>
 
 ---
-## lgb
+## 1. 原生接口
+- 分类
 ```python
 params = {
     'boosting': 'gbdt',
     'application': 'binary',
-    'learning_rate': 0.1,
+    'learning_rate': 0.01,
     'max_depth': -1,
-    'num_leaves': 2 ** 7,
+    'num_leaves': 2 ** 7 - 1,
 
     'min_split_gain': 0,
     'min_child_weight': 1,
@@ -22,7 +23,30 @@ params = {
     'metric': 'auc',
     'num_threads': -1,
 }
+```
+- 回归
+```python
+params = {
+    'boosting': 'gbdt',
+    'application': 'binary',
+    'learning_rate': 0.01,
+    'max_depth': -1,
+    'num_leaves': 2 ** 7 - 1,
 
+    'min_split_gain': 0,
+    'min_child_weight': 1,
+
+    'bagging_fraction': 0.8,
+    'feature_fraction': 0.8,
+    'lambda_l1': 0,
+    'lambda_l2': 1,
+
+    'scale_pos_weight': 1,
+    'metric': 'auc',
+    'num_threads': -1,
+}
+```
+```python
 train_set = lgb.Dataset(X, y)
 
 lgb.train(params,
@@ -50,7 +74,7 @@ lgb.cv(params,
        show_stdv=True,
        seed=0)
 ```
-
+---
 ## lgb.sklearn
 ```python
 clf = LGBMClassifier(boosting_type='gbdt', 
