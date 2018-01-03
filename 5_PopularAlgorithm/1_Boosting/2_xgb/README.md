@@ -57,11 +57,10 @@ xgb.cv(params,
 ---
 ### 2. SK接口
 - 分类
-- 回归
 ```python
 clf = XGBClassifier(booster='gbtree', 
                     objective='binary:logistic', 
-                    max_depth=3, 
+                    max_depth=7, 
                     learning_rate=0.1, 
                     n_estimators=100, 
                     
@@ -79,7 +78,9 @@ clf = XGBClassifier(booster='gbtree',
       
                     random_state=888, 
                     n_jobs=4)
-
+```
+- 回归
+```python
 clf.fit(X_train, y_train, 
 	sample_weight=None, # 可初始化样本权重
 	eval_set=[(X_train, y_train), (X_val, y_val)], 
