@@ -4,7 +4,6 @@
 ## XGB
 ### 1. 原生接口
 - 分类
-- 回归
 ```python
 params = {
     'booster': 'gbtree',
@@ -27,7 +26,9 @@ params = {
     'seed': 888,
     'missing': -888
 }
-
+```
+- 回归
+```python
 xgb.train(params,
           dtrain,
           num_boost_round=10,
