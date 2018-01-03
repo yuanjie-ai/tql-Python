@@ -53,28 +53,19 @@ xgb_data = xgb.DMatrix(X, y)
 
 xgb.train(params,
           dtrain,
-          num_boost_round=10,
+          num_boost_round=2000,
           evals=[(dtrain, 'train'), (dval, 'val')],
-          
-          feval=None,
-          maximize=False,
-
-          early_stopping_rounds=None,
-          verbose_eval=True)
+          early_stopping_rounds=50,
+          verbose_eval=50)
 
 xgb.cv(params,
        dtrain,
-       num_boost_round=10,
-
+       num_boost_round=2000,
        nfold=3,
-       stratified=False,
-
+       stratified=True,
        metrics=(),
-       feval=None,
-       maximize=False,
-
-       early_stopping_rounds=None,
-       verbose_eval=None,
+       early_stopping_rounds=50,
+       verbose_eval=50,
        show_stdv=True,
        seed=0)
 ```
