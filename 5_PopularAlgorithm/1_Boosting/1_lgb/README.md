@@ -43,7 +43,7 @@ params = {
     'lambda_l2': 1,
 
     'scale_pos_weight': 1,
-    'metric': 'auc',
+    'metric': 'rmse',
     'num_threads': -1,
 }
 ```
