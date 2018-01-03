@@ -1,7 +1,7 @@
 <h1 align = "center">:rocket: xgb常用参数 :facepunch:</h1>
 
 ---
-### 1. 原生接口
+## 1. 原生接口
 - 分类
 ```python
 params = {
@@ -75,7 +75,7 @@ xgb.train(
 ```
 
 ---
-### 2. SK接口
+## 2. SK接口
 - 分类
 ```python
 clf = XGBClassifier(
