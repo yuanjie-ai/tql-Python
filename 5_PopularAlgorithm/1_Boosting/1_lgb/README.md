@@ -75,7 +75,8 @@ lgb.cv(params,
        seed=0)
 ```
 ---
-## lgb.sklearn
+## 2. SK接口
+- 分类
 ```python
 clf = LGBMClassifier(boosting_type='gbdt', 
                      objective='binary', # objective='multiclass', num_class = 3【多分类要指定类别数】
@@ -108,3 +109,8 @@ clf.fit(X_train, y_train,
         feature_name='auto', 
         categorical_feature='auto') # 只支持int类型的categorical且索引从0开始data.xx.astype('category')【参数默认即可，不告警】
 ```
+- 回归
+```python
+```
+---
+---
