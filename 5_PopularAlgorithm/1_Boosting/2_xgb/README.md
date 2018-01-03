@@ -47,6 +47,7 @@ params = {
     'seed': 888
 }
 ```
+
 ---
 ```python
 xgb_data = xgb.DMatrix(X, y)
@@ -68,9 +69,8 @@ xgb.train(params,
           evals=[(dtrain, 'train'), (dval, 'val')],
           early_stopping_rounds=50,
           verbose_eval=50)
-
-
 ```
+
 ---
 ### 2. SK接口
 - 分类
