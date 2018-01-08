@@ -57,8 +57,8 @@ lgb.cv(
     lgb_data,
     num_boost_round=2000,
     nfold=5,
-    stratified=True,
-    metrics=None,
+    stratified=False, # 回归一定是False
+    metrics=None,
     early_stopping_rounds=50,
     verbose_eval=50,
     show_stdv=True,
