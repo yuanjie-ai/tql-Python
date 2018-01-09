@@ -56,8 +56,8 @@ xgb.cv(
     xgb_data,
     num_boost_round=2000,
     nfold=3,
-    stratified=True,
-    metrics=(),
+    stratified=True, # stratified=False # 回归
+    metrics=(),
     early_stopping_rounds=50,
     verbose_eval=50,
     show_stdv=True,
