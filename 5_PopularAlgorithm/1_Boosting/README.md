@@ -24,7 +24,6 @@
 |scale_pos_weight=1|scale_pos_weight=1|scale_pos_weight=1|scale_pos_weight=1|
 |seed |bagging_seed<br/>feature_fraction_seed|random_state=888|random_state=888|
 |nthread|num_threads|n_jobs=4|n_jobs=4|
-|||||
 |evals|valid_sets|eval_set|eval_set|
 |eval_metric|metric|eval_metric|eval_metric|
 |early_stopping_rounds|early_stopping_rounds|early_stopping_rounds|early_stopping_rounds|
