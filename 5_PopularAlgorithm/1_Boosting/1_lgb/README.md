@@ -106,7 +106,7 @@ clf = LGBMClassifier(
 
 - 回归
 ```python
-clf = LGBMClassifier(
+clf = LGBMRegressor(
     boosting_type='gbdt',  # 'rf', 'dart', 'goss'
     objective='regression',
     max_depth=-1,
