@@ -20,7 +20,7 @@ params = {
 
     'scale_pos_weight': 1,
     'eval_metric': 'auc',
-    'nthread': -1,
+    'nthread': 16,
     'seed': 888,
 }
 ```
@@ -42,7 +42,7 @@ params = {
 
     'scale_pos_weight': 1,
     'eval_metric': 'rmse',
-    'nthread': -1,
+    'nthread': 16,
     'seed': 888
 }
 ```
