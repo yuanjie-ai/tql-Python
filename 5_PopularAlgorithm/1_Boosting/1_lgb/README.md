@@ -21,7 +21,7 @@ params = {
 
     'scale_pos_weight': 1,
     'metric': 'auc',
-    'num_threads': -1,
+    'num_threads': 32,
 }
 ```
 
@@ -44,7 +44,7 @@ params = {
 
     'scale_pos_weight': 1,
     'metric': 'rmse',
-    'num_threads': -1,
+    'num_threads': 32,
 }
 ```
 
