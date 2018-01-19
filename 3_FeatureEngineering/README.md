@@ -21,7 +21,9 @@
 # if (df_out and (sparse or default)):
 #     raise ValueError("Can not use df_out with sparse or default")
 ```
-
+---
+## [缺失值特征工程][9]
+- missingno
 ---
 ## 类别型特征
 - [类编码][1]: [category_encoders][2]
@@ -70,7 +72,7 @@
 [6]: https://github.com/blue-yonder/tsfresh
 [7]: https://github.com/facebook/prophet
 [8]: http://pyflux.readthedocs.io/en/latest/arima.html
-
+[9]: https://github.com/Jie-Yuan/DataMining/tree/master/3_FeatureEngineering/missingno
 [10]: http://www.cnblogs.com/weibao/p/6252280.html
 
 [20]: https://github.com/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/SmoothMapping/BayesianSmoothing.py
