@@ -58,7 +58,7 @@ sclf = StackingCVClassifier(classifiers=clfs,
                             cv=3, 
                             verbose=1)
 
-skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42).split(X, y)
+skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42) # .split(X, y)
 scores = cross_val_score(sclf, X, y, cv=skf, scoring='accuracy') 
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
 ```
