@@ -10,6 +10,9 @@
     - [tsfresh][6]
     - [fbprophet][7]
     - [pyflux][8]
+    
+http://blog.csdn.net/qq_37195507/article/details/78590637
+
 ## 特征选择
 - [scikit-feature][4]
 - SequentialFeatureSelector
