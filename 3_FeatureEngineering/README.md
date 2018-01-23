@@ -5,7 +5,7 @@
 - Categorical encoding 
     - LeaveOneOutEncoder
     - TargetEncoder
-    - BaseNEncoder
+    - BaseNEncoder: http://www.willmcginnis.com/2016/12/18/basen-encoding-grid-search-category_encoders/
     - OneHotEncoder, 
     - BinaryEncoder,
     - OrdinalEncoder, 
