@@ -3,6 +3,7 @@
 ---
 ## 特征加法
 - Categorical encoding 
+    - LeaveOneOutEncoder
     - TargetEncoder
     - BaseNEncoder
     - OneHotEncoder, 
@@ -13,7 +14,6 @@
     - HelmertEncoder,
     - PolynomialEncoder, 
     - BackwardDifferenceEncoder, 
-    - LeaveOneOutEncoder
     - forward difference encoding, 
     - combination of any of these encodings, self-made encodings
 - Linear combination of features (ex: v1+v2, 0.132882*v1+95.4294829428*v2...)
