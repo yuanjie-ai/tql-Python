@@ -1,5 +1,6 @@
 # [CatBoost][1]
-
+- CatBoostClassifier
+- CatBoostRegressor
 
 
 
