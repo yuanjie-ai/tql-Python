@@ -11,7 +11,7 @@
 |:--|:--:|
 |AbsoluteError (AE)|
 |Average Precision at K (APK, AP@K)|
-|Area Under the ROC (AUC) | ![AUC][1]
+|[Area Under the ROC (AUC)][2] | ![AUC][1]
 |Classification Error (CE)| 
 |F1 Score (F1)|
 |Gini|
@@ -37,6 +37,7 @@
 
  [0]: https://github.com/benhamner/Metrics/tree/master/Python
  [1]: http://img.blog.csdn.net/20150924153157802
+ [2]: http://third.datacastle.cn/pkbigdata/master.other.img/7372d308-8d38-4e45-8ab7-ffab7763096a.png
  
  [11]: http://scikit-learn.org/stable/modules/model_evaluation.html#common-cases-predefined-values
  [12]: http://www.cnblogs.com/harvey888/p/6964741.html
