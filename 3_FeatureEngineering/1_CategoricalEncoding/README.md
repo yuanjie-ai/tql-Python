@@ -1,3 +1,17 @@
+
+
+## 有监督编码
+- TargetEncoder
+- LeaveOneOutEncoder
+```python
+s = cross_val_score(make_pipeline(TargetEncoder(), lr), X.values, y, cv=skf, n_jobs=3)
+s = cross_val_score(make_pipeline(LeaveOneOutEncoder(), lr), X.values, y, cv=skf, n_jobs=3)
+s
+s.mean()
+s.std()
+```
+
+## 非监督编码
 ```python
 import pandas as pd
 import category_encoders
