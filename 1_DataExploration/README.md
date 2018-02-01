@@ -1,5 +1,10 @@
-<h1 align = "center">:rocket: 数据探索性分析 :facepunch:</h1>
+<h1 align = "center">:rocket: EDA :facepunch:</h1>
 
+---
+## 1. [missingno][1] 
+
+---
+## 2. [Seaborn][2]
 ---
 ## 初始化设置
 ```python
@@ -28,14 +33,17 @@ class Matplotlib(object):
         plt.close('all')
         plt.rcdefaults()
 ```
+
+
+
+
+
+
+
+
+
+
 ---
-## [Seaborn][2]
-
-
-
-
-
-
-
----
+[1]: https://github.com/ResidentMario/missingno
 [2]: https://github.com/Jie-Yuan/2_DataMining/tree/master/1_DataExploration/3_Seaborn
+
