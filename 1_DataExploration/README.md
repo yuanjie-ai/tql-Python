@@ -1,8 +1,7 @@
 <h1 align = "center">:rocket: EDA :facepunch:</h1>
 
 ---
-## 1. [missingno][1] 
-
+## 1. [missingno][1]: [Demo][3]
 ---
 ## 2. [Seaborn][2]
 ---
@@ -46,4 +45,5 @@ class Matplotlib(object):
 ---
 [1]: https://github.com/ResidentMario/missingno
 [2]: https://github.com/Jie-Yuan/2_DataMining/tree/master/1_DataExploration/3_Seaborn
+[3]: https://github.com/Jie-Yuan/DataMining/blob/master/1_DataExploration/4_Missingno/README.md
 
