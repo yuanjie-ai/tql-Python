@@ -1,7 +1,7 @@
 <h1 align = "center">:rocket: EDA :facepunch:</h1>
 
 ---
-## 1. [missingno][1]: [Demo][3]
+## 1. [Missingno][1]: [Demo][3]
 ---
 ## 2. [Seaborn][2]
 ---
