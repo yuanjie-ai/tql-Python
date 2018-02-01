@@ -1,5 +1,17 @@
+> Gini = 2*AUC - 1
 ```python
+def ginic(actual, pred):
+    actual = np.asarray(actual)  # In case, someone passes Series or list
+    n = len(actual)
+    a_s = actual[np.argsort(pred)]
+    a_c = a_s.cumsum()
+    giniSum = a_c.sum() / a_s.sum() - (n + 1) / 2.0
+    return giniSum / n
 
+def gini_normalizedc(a, p):
+    if p.ndim == 2:  # Required for sklearn wrapper
+        p = p[:, 1]  # If proba array contains proba for both 0 and 1 classes, just pick class 1
+    return ginic(a, p) / ginic(a, a)
 ```
 
 
