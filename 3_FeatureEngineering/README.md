@@ -16,6 +16,7 @@
     - BackwardDifferenceEncoder, 
     - forward difference encoding, 
     - combination of any of these encodings, self-made encodings
+    - 遗传编码https://www.kaggle.com/aharless/logistic-of-genetic-features/notebook
 - Linear combination of features (ex: v1+v2, 0.132882*v1+95.4294829428*v2...)
 - ICA
 - PLS
@@ -29,6 +30,7 @@
 - Discretization of continuous features (many methods existing)
 - Model output
 - Tree output (features coming from a tree model)
+
 
 ---
 ## 特征提取(傻瓜式)
