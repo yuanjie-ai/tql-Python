@@ -13,7 +13,7 @@ msno.matrix(null_pattern.set_index(pd.period_range('1/1/2011', '2/1/2015', freq=
 msno.bar(null_pattern, color=(1, 0, 0), log=True)
 ```
 
-# 3. Heatmap: 缺失特征相关性
+## 3. Heatmap: 缺失特征相关性
 ```python
 msno.heatmap(null_pattern)
 ```
