@@ -1,4 +1,4 @@
-> Gini = 2*AUC - 1
+> Gini = 2*AUC - 1: `2*roc_auc_score(a, p)-1`
 ```python
 def ginic(actual, pred):
     actual = np.asarray(actual)  # In case, someone passes Series or list
