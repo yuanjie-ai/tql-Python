@@ -111,15 +111,15 @@ clf = LGBMRegressor(
     objective='regression',
     max_depth=-1,
     num_leaves=2 ** 7 - 1,
-    learning_rate=0.1,
+    learning_rate=0.01,
     n_estimators=1000,
 
     min_split_gain=0.0,
-    min_child_weight=5,
+    min_child_weight=0.001,
 
-    subsample=1.0,
+    subsample=0.8,
     subsample_freq=1,
-    colsample_bytree=1.0,
+    colsample_bytree=0.8,
 
     reg_alpha=0.0,
     reg_lambda=0.0,
