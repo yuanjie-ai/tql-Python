@@ -22,6 +22,7 @@ msno.heatmap(null_pattern)
 ```python
 # 缺失率大于0.9
 msno.nullity_filter(_data, filter='bottom', p=1-0.9)
-msno.nullity_filter(_data, filter='top', p=1-0.9)
+
 # 缺失率小于0.9
+msno.nullity_filter(_data, filter='top', p=1-0.9)
 ```
