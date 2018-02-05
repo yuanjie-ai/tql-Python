@@ -20,5 +20,8 @@ msno.heatmap(null_pattern)
 
 ## 4. msno.nullity_filter: 缺失值列筛选
 ```python
-filtered_data = msno.nullity_filter(null_pattern, filter='bottom', n=15, p=0.999) # or filter='top'
+# 缺失率大于0.9
+msno.nullity_filter(_data, filter='bottom', p=1-0.9)
+msno.nullity_filter(_data, filter='top', p=1-0.9)
+# 缺失率小于0.9
 ```
