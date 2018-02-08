@@ -4,6 +4,10 @@
 ## 1. [Missingno][1]: [Demo][3]
 ---
 ## 2. [Seaborn][2]
+```python
+sns.heatmap(corrMatrix.ix[:10, :10], center=0, annot=True, fmt='.2f') #  cmap='rainbow'
+sns.clustermap(corrMatrix.ix[:10, :10], fmt="d",cmap='YlGnBu')
+```
 ---
 ## 初始化设置
 ```python
@@ -33,6 +37,10 @@ class Matplotlib(object):
         plt.rcdefaults()
 ```
 
+---
+## 色系
+[色系][4]
+
 
 
 
@@ -46,4 +54,5 @@ class Matplotlib(object):
 [1]: https://github.com/ResidentMario/missingno
 [2]: https://github.com/Jie-Yuan/2_DataMining/tree/master/1_DataExploration/3_Seaborn
 [3]: https://github.com/Jie-Yuan/DataMining/blob/master/1_DataExploration/4_Missingno/README.md
+[4]: http://image.sciencenet.cn/album/201205/24/174610e77x998p3s3wy9p8.png
 
