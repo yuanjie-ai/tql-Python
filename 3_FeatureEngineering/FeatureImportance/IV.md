@@ -27,21 +27,3 @@ def iv(df):
         iv.append(np.sum((y_i/Y_true - n_i/N_true)*np.log((y_i+0.000001)/(n_i+0.000001)/(Y_true/N_true))))
     return sorted(zip(iv, strColName), reverse=True)
 ```
-- pyspark
-```
-def IV(df):
-    df.cache()
-    df = df.withColumn('label_temp', col('label'))
-    Y_true = df[col('label')==1].count() + 0.0001
-    N_true = df[col('label')==0].count() + 0.0001
-    strColName = df.columns
-    strColName.remove('label')
-    strColName.remove('label_temp')
-    iv = []
-    for i in strColName:
-        data = df.groupBy(i).agg({'label_temp': 'count', 'label': 'sum'})
-        y_i = col('sum(label)')
-        n_i = col('count(label_temp)') - col('sum(label)')
-        iv.append(data.agg(sum((y_i/Y_true - n_i/N_true)*log(y_i/n_i/(Y_true/N_true)))))
-    return sorted(zip([np.array(i.collect()).tolist()[0][0] for i in iv], strColName))
-```
