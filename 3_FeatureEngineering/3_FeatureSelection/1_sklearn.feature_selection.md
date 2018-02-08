@@ -10,3 +10,5 @@ sklearn.feature_selection.SelectKBest
 sklearn.feature_selection.SelectPercentile
 sklearn.feature_selection.VarianceThreshold
 ```
+---
+https://www.kaggle.com/tilii7/recursive-feature-elimination
