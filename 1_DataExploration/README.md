@@ -6,7 +6,7 @@
 ---
 ## 2. [Seaborn][2]
 ```python
-sns.heatmap(corrMatrix.ix[:10, :10], center=0, annot=True, fmt='.2f') #  cmap='rainbow'
+sns.heatmap(corrMatrix.ix[:10, :10], center=0, annot=True, annot_kws={'size': 10}, fmt='.2f', square=True)
 sns.clustermap(corrMatrix.ix[:10, :10], fmt="d",cmap='YlGnBu')
 ```
 ---
