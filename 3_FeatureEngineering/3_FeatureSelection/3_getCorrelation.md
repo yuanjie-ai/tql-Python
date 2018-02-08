@@ -1,4 +1,4 @@
-```
+```python
 def getCorrelation(df, threshold=0.9, method='pearson'):
     corrMatrix = df.corr(method=method)
     ls = []
