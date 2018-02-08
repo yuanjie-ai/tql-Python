@@ -2,6 +2,7 @@
 
 ---
 ## 1. [Missingno][1]: [Demo][3]
+
 ---
 ## 2. [Seaborn][2]
 ```python
@@ -39,7 +40,7 @@ class Matplotlib(object):
 
 ---
 ## 色系
-[色系][4]
+![色系][4]
 
 
 
