@@ -29,11 +29,11 @@ def iv(df):
 ```
 - pyspark
 ```
-def iv(df):
+def IV(df):
     df.cache()
     df = df.withColumn('label_temp', col('label'))
-    Y_true = df[col('label')==1].count()
-    N_true = df[col('label')==0].count()
+    Y_true = df[col('label')==1].count() + 0.0001
+    N_true = df[col('label')==0].count() + 0.0001
     strColName = df.columns
     strColName.remove('label')
     strColName.remove('label_temp')
@@ -43,5 +43,5 @@ def iv(df):
         y_i = col('sum(label)')
         n_i = col('count(label_temp)') - col('sum(label)')
         iv.append(data.agg(sum((y_i/Y_true - n_i/N_true)*log(y_i/n_i/(Y_true/N_true)))))
-    return sorted(zip([np.array(i.collect()).tolist()[0][0] for i in iv], strColName), reverse=True)
+    return sorted(zip([np.array(i.collect()).tolist()[0][0] for i in iv], strColName))
 ```
