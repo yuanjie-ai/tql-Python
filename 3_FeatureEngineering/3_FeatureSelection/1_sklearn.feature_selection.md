@@ -1,0 +1,12 @@
+```python
+sklearn.feature_selection.GenericUnivariateSelect
+sklearn.feature_selection.RFE
+sklearn.feature_selection.RFECV
+sklearn.feature_selection.SelectFdr
+sklearn.feature_selection.SelectFpr
+sklearn.feature_selection.SelectFromModel
+sklearn.feature_selection.SelectFwe
+sklearn.feature_selection.SelectKBest
+sklearn.feature_selection.SelectPercentile
+sklearn.feature_selection.VarianceThreshold
+```
