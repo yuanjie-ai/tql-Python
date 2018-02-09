@@ -1,14 +1,11 @@
 ```python
-def getCorrelation(df, threshold=0.9, method='pearson'):
+def getCorrelationFeatures(df, threshold=0.9, method='pearson'):
     corrMatrix = df.corr(method=method)
-    ls = []
-    _i = []
-    for i in df.columns:
-        _ = corrMatrix[i][lambda x: abs(x) >= threshold][lambda x: x.index!=i].index.tolist()
-        l = list(filter(lambda x: x not in _i, _))
+    _dic = {}
+    for col in df.columns:
+        l = corrMatrix[col][col:][1:][lambda x: abs(x) >= threshold].index.tolist()
         if l:
-            print('{:>22}'.format(i + ': '), l)
-            ls.append(list(zip([i]*len(l), l)))
-        _i.append(i) 
-    return ls
+#             print('{:>22}'.format(col + ': '), l)
+            _dic[col] = l
+    return _dic
 ```
