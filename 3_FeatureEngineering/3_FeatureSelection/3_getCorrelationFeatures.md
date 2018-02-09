@@ -5,7 +5,7 @@ def getCorrelationFeatures(df, threshold=0.9, method='pearson'):
     for col in df.columns:
         l = corrMatrix[col][col:][1:][lambda x: abs(x) >= threshold].index.tolist()
         if l:
-#             print('{:>22}'.format(col + ': '), l)
+            print('{:<22}'.format(col + ': '), l)
             _dic[col] = l
     return _dic
 ```
