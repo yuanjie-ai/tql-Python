@@ -21,7 +21,7 @@ def k_flod_cv(clf, X, y, cv=3, metrics='f1', stratified=True, seed=42):
             loss.append(f1_score(y_test, y_pred))
         else:
             loss.append(roc_auc_score(y_test, y_pred))
-
     print(loss)
     print("CV-Score: %0.5f (+/- %0.3f)" % (np.mean(loss), np.std(loss)))
+    return loss
 ```
