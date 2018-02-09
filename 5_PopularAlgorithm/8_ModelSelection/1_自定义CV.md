@@ -17,7 +17,7 @@ def k_flod_cv(clf, X, y, cv=3, metrics='f1', stratified=True, seed=42):
             threshold = sorted(y_pred)[::-1][y_test.sum()]
             y_pred = np.where(y_pred > threshold, 1, 0)
 
-            print(classification_report(y_test, y_pred))
+            print("%d flod:\n" % i, classification_report(y_test, y_pred))
             loss.append(f1_score(y_test, y_pred))
         else:
             loss.append(roc_auc_score(y_test, y_pred))
