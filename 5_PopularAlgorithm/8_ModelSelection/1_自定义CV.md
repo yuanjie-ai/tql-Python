@@ -1,4 +1,4 @@
-- Auc
+- F1
 ```python
 def k_flod_cv(clf, X, y, cv=3, metrics='f1', stratified=True, seed=42):
     from sklearn.model_selection import KFold, StratifiedKFold
