@@ -5,7 +5,7 @@
 ## [FFM][1]
 - [PyFM][2]
 - [libffm][3]
-- [xlearn][4]
+- [Xlearn][4]
 
 
 
