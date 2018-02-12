@@ -34,7 +34,7 @@ https://www.cnblogs.com/5poi/p/7240601.html
 - Discretization of continuous features (many methods existing)
 - Model output
 - Tree output (features coming from a tree model)
-
+- Wide&Deep
 
 ---
 ## 特征提取(傻瓜式)
