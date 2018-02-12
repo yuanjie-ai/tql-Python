@@ -6,7 +6,7 @@
 ```python
 params = {
     'boosting': 'gbdt', # 'rf', 'dart', 'goss'
-    'application': 'binary', # 'application': 'multi:softmax', 'num_class': 3,
+    'application': 'binary', # 'application': 'multiclass', 'num_class': 3, # multiclass=softmax, multiclassova=ova  One-vs-All
     'learning_rate': 0.01,
     'max_depth': -1,
     'num_leaves': 2 ** 7 - 1,
