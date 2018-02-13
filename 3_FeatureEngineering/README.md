@@ -1,8 +1,9 @@
 <h1 align = "center">:rocket: 特征工程 :facepunch:</h1>
 
 ---
-待总结干活
+待总结干货：
 http://m.sohu.com/a/139981834_116235
+
 https://www.cnblogs.com/5poi/p/7240601.html
 ---
 ## 特征加法
