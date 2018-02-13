@@ -6,12 +6,6 @@ __mtime__ = '2018/2/13'
 
 # 聚合函数
 class Agg(object):
-    """doc"""
-
-    def __init__(self, ):
-        """doc"""
-        pass
-
     @staticmethod
     def mode(x):
         """
@@ -67,6 +61,7 @@ class Agg(object):
         return df.pipe(cls.nsmallest, by_name, '_count', n).drop('_count', 1).rename(
             columns={col_name: col_name + '_nleast'})
 
+
 # 数据变形
 class Reshape(object):
     def __init__(self):
@@ -94,6 +89,7 @@ class Reshape(object):
     def crossJoin(df1, df2):
         __addCol = lambda x: x.assign(__col=1)
         return __addCol(df1).merge(__addCol(df2), on='__col').drop('__col', 1)
+
 
 # lag/lead
 def lag(df, by_name, col_name, n=1):
