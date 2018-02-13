@@ -7,3 +7,6 @@ def startswith(ls, pattern):
     :return: 匹配到的规定开头字符串列表
     """
     return [i for i in ls if re.match(pattern, i)]
+
+get_num = lambda x: ''.join(filter(str.isdigit, x)) # 从字符串中提取数字
+ 
