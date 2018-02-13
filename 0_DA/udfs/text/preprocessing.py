@@ -4,7 +4,7 @@ import jieba
 from snownlp import SnowNLP
 
 
-def get_text_tokens(text, stop_words_path=None):
+def get_text_tokens(text, stop_words_path="./stop_words.txt"):
     text_tokens = jieba.cut(text.strip())
     stop_words = get_stop_words(stop_words_path)
     word_list = []
@@ -15,7 +15,7 @@ def get_text_tokens(text, stop_words_path=None):
     return word_list  # 词频Counter(word_list)
 
 
-def get_stop_words(path):
+def get_stop_words(path="./stop_words.txt"):
     with open(path) as f:
         stop_words = [line.strip() for line in f.readlines()]
     return stop_words
