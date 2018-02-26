@@ -1,25 +1,27 @@
 
 ```python
-from sklearn.feature_selection import SelectPercentile, VarianceThreshold
-from sklearn.feature_selection import chi2, mutual_info_classif
-from sklearn.pipeline import make_pipeline
-
-
 class FeatureSelector(object):
-    def __init__(self, threshold1=0.95, threshold2=90, threshold3=90):
-        self.threshold1 = threshold1
-        self.threshold2 = threshold2
-        self.threshold3 = threshold3
+
+    def __init__(self, *steps):
+        from sklearn.pipeline import make_pipeline
+        from sklearn.feature_selection import SelectPercentile, SelectKBest, VarianceThreshold
+        from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
+        from sklearn.feature_selection import f_regression, mutual_info_regression
+        """
+        :param steps:
+            VarianceThreshold(threshold=0.95 * (1 - 0.95))
+            SelectPercentile(chi2, 90)
+            SelectPercentile(mutual_info_classif, 90)
+            SelectKBest(mutual_info_classif, 1000)
+            ...
+        """
+        self.pipe = make_pipeline(*steps)
 
     def get_features_index(self, X, y):
         from functools import reduce
 
-        step1 = VarianceThreshold(threshold=self.threshold1 * (1 - self.threshold1))
-        step2 = SelectPercentile(chi2, self.threshold2)
-        step3 = SelectPercentile(mutual_info_classif, self.threshold3)
-        pipe = make_pipeline(step1, step2, step3)
-        pipe.fit(X, y)
-        features_index = reduce(lambda x, y: x[y], [i[1].get_support(True) for i in pipe.steps]) # 被选择的特征索引
+        self.pipe.fit(X, y)
+        features_index = reduce(lambda x, y: x[y], [i[1].get_support(True) for i in self.pipe.steps])  # 被选择的特征索引
         return features_index
 ```
 
