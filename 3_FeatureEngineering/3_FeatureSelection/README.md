@@ -15,7 +15,7 @@
 
 ---
 ## 2. Wrapper
-- 递归（特征子集）特征选择
+- [递归（特征子集）特征选择][2]
     - RFE
     - RFECV
 - 树模型特征选择
@@ -32,3 +32,4 @@
 
 ---
 [1]: https://www.cnblogs.com/stevenlk/p/6543628.html
+[2]: https://github.com/Jie-Yuan/DataMining/edit/master/3_FeatureEngineering/3_FeatureSelection/RFE.md
