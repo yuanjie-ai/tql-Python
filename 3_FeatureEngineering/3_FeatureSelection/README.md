@@ -10,14 +10,14 @@
 ## 1. Fillter
 - 去除低方差的特征
 - 单变量特征选择：F检验仅捕获线性依赖性、互信息可以捕捉变量之间的任何依赖关系
-  - 对于回归: f_regression , mutual_info_regression
-  - 对于分类: chi2 , f_classif , mutual_info_classif
+    - 对于回归: f_regression , mutual_info_regression
+    - 对于分类: chi2 , f_classif , mutual_info_classif
 
 ---
 ## 2. Wrapper
 - 递归（特征子集）特征选择
-  - RFE
-  - RFECV
+    - RFE
+    - RFECV
 - 树模型特征选择
 
 ---
