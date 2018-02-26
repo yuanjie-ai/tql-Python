@@ -24,12 +24,12 @@ class FeatureSelector(object):
     @staticmethod
     def polynomial_feature_selector(X, y, *steps, clf_percentile=10):
         """
-        from sklearn.feature_selection import SelectPercentile, mutual_info_classif
         :param steps:
             SelectPercentile(mutual_info_classif, percentile=10)
             RandomForestClassifier()
             # LGBMClassifier(learning_rate=0.03, n_estimators=200, random_state=42, n_jobs=16)
         """
+        
         from sklearn.pipeline import make_pipeline
         pipe = make_pipeline(*steps)
         pipe.fit(X, y)
