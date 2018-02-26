@@ -1,9 +1,26 @@
-- 过滤式
-  - 去除低方差的特征
+
 ```python
-from sklearn.feature_selection import VarianceThreshold
-selector = VarianceThreshold(threshold=0.95*(1-0.95)) # 一般不太会有95%以上都取某个值的特征存在(假如是二项分布p*(1-p))
-selector.fit_transform(X, y)
+from sklearn.feature_selection import SelectPercentile, VarianceThreshold
+from sklearn.feature_selection import chi2, mutual_info_classif
+from sklearn.pipeline import make_pipeline
+
+
+class FeatureSelector(object):
+    def __init__(self, threshold1=0.95, threshold2=90, threshold3=90):
+        self.threshold1 = threshold1
+        self.threshold2 = threshold2
+        self.threshold3 = threshold3
+
+    def get_features_index(self, X, y):
+        from functools import reduce
+
+        step1 = VarianceThreshold(threshold=self.threshold1 * (1 - self.threshold1))
+        step2 = SelectPercentile(chi2, self.threshold2)
+        step3 = SelectPercentile(mutual_info_classif, self.threshold3)
+        pipe = make_pipeline(step1, step2, step3)
+        pipe.fit(X, y)
+        features_index = reduce(lambda x, y: x[y], [i[1].get_support(True) for i in pipe.steps]) # 被选择的特征索引
+        return features_index
 ```
 
 
