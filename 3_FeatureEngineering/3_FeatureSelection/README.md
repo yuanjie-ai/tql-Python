@@ -1,4 +1,4 @@
-<h1 align = "center">:rocket: 特征选择 :facepunch:</h1>
+[<h1 align = "center">:rocket: 特征选择 :facepunch:</h1>][1]
 
 ---
 ## 目标
@@ -30,4 +30,5 @@
 - 降噪编码器
 - 各种降维技术
 
-https://www.cnblogs.com/stevenlk/p/6543628.html
+---
+[1]: https://www.cnblogs.com/stevenlk/p/6543628.html
