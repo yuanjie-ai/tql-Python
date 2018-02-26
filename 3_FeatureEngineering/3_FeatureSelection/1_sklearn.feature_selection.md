@@ -1,4 +1,5 @@
 - 过滤式
+  - 去除低方差的特征
 ```python
 from sklearn.feature_selection import VarianceThreshold
 selector = VarianceThreshold(threshold=0.95*(1-0.95)) # 一般不太会有95%以上都取某个值的特征存在(假如是二项分布p*(1-p))
