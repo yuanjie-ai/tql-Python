@@ -12,7 +12,7 @@
 
 ---
 [1]: https://github.com/ctgk/PRML
-[2]: https://github.com/Jie-Yuan/GithubPicture/blob/raw/ExperienceParameters.jpg
+[2]: https://github.com/Jie-Yuan/GithubPicture/raw/master/ExperienceParameters.jpg
 
 
 
