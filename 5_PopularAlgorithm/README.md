@@ -4,19 +4,15 @@
 [PRML算法实现][1]
 
 ---
-## LogisticRegession
-- Python实现
-- Sklearn实现
-- Spark实现
-- Keras实现
-- Tensorflow实现
-- Pytorch实现
+## 经验参数
+![经验参数][2]
+
 
 
 
 ---
 [1]: https://github.com/ctgk/PRML
-
+[2]: https://github.com/Jie-Yuan/GithubPicture/blob/raw/ExperienceParameters.jpg
 
 
 
