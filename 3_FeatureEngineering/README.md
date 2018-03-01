@@ -8,6 +8,7 @@ https://www.cnblogs.com/5poi/p/7240601.html
 ---
 ## 特征加法
 - [Categorical encoding][11]
+    - [count_encoder][12]
     - LeaveOneOutEncoder
     - TargetEncoder
     - BaseNEncoder: http://www.willmcginnis.com/2016/12/18/basen-encoding-grid-search-category_encoders/
@@ -115,6 +116,7 @@ http://blog.csdn.net/qq_37195507/article/details/78590637
 [9]: https://github.com/Jie-Yuan/DataMining/tree/master/3_FeatureEngineering/missingno
 [10]: http://www.cnblogs.com/weibao/p/6252280.html
 [11]: https://github.com/Jie-Yuan/DataMining/tree/master/3_FeatureEngineering/1_CategoricalEncoding
+[12]: https://github.com/Jie-Yuan/DataMining/blob/master/3_FeatureEngineering/1_CategoricalEncoding/count_encoder.py
 
 [20]: https://github.com/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/SmoothMapping/BayesianSmoothing.py
 [21]: http://nbviewer.jupyter.org/github/Jie-Yuan/2_DataMining/blob/master/3_FeatureEngineering/Box-Cox/Box-Cox.ipynb
