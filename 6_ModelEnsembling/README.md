@@ -14,4 +14,8 @@
     - 输入属性扰动
     - 算法参数扰动
     - 输出表示扰动
+        - 翻转法(Flipping Output)
+        - 输出调制法(Output Smearing)
+        - OVO/ECOC
+
 
