@@ -4,7 +4,8 @@
 ## 1. 结合策略
 - 平均法
 - 投票法
-    - xx
+    - 硬投票：uses predicted class labels for majority rule voting
+    - 软投票：predicts the class label based on the argmax of the sums of the predicted probalities
 - 学习法
 
 ---
