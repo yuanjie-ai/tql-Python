@@ -1,11 +1,10 @@
 <h1 align = "center">:rocket: 模型融合 :facepunch:</h1>
 
 ---
-
 ## 1. 结合策略
 - 平均法
 - 投票法
-    - 硬投票：uses predicted class labels for majority rule voting
+    - 硬投票：uses predicted class labels for majority rule voting
 	- 软投票：predicts the class label based on the argmax of the sums of the predicted probalities
 - 学习法
 
