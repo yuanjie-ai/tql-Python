@@ -4,8 +4,8 @@
 ## 1. 结合策略
 - 平均法
 - 投票法
-    - 硬投票：uses predicted class labels for majority rule voting
-	- 软投票：predicts the class label based on the argmax of the sums of the predicted probalities
+    - 硬投票：每个模型输出它自认为最可能的类别，投票模型从其中选出投票模型数量最多的类别，作为最终分类。
+    - 软投票：每个模型输出一个所有类别的概率矢量(1 * n_classes)，投票模型取其加权平均，得到一个最终的概率矢量。
 - 学习法：Stacking
 
 ---
