@@ -1,6 +1,8 @@
 [<h1 align = "center">:rocket: Bagging :facepunch:</h1>][1]
 
 ---
+![bagging][2]
+
 > Bootstraping，即自助法：它是一种有放回的抽样方法（可能抽到重复的样本）
 
 ## Bagging (bootstrap aggregating)
@@ -15,3 +17,4 @@ C）对分类问题：将上步得到的k个模型采用投票的方式得到分
 
 ---
 [1]: http://blog.csdn.net/good_boyzq/article/details/54730004
+[2]: http://img.blog.csdn.net/20170208160930513
