@@ -1,4 +1,4 @@
-<h1 align = "center">:rocket: Bagging :facepunch:</h1>
+[<h1 align = "center">:rocket: Bagging :facepunch:</h1>][1]
 
 ---
 > Bootstraping，即自助法：它是一种有放回的抽样方法（可能抽到重复的样本）
@@ -14,3 +14,4 @@ B）每次使用一个训练集得到一个模型，k个训练集共得到k个�
 C）对分类问题：将上步得到的k个模型采用投票的方式得到分类结果；对回归问题，计算上述模型的均值作为最后的结果。（所有模型的重要性相同）
 
 ---
+[1]: http://blog.csdn.net/good_boyzq/article/details/54730004
