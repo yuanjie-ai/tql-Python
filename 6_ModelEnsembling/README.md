@@ -1,4 +1,4 @@
-<h1 align = "center">:rocket: 模型融合 :facepunch:</h1>
+[<h1 align = "center">:rocket: Ensemble Learning :facepunch:</h1>][0]
 
 ---
 ## 1. 结合策略
@@ -22,3 +22,4 @@
         - OVO/ECOC
 
 ---
+[0]: http://www.cnblogs.com/jasonfreak/p/5657196.html
