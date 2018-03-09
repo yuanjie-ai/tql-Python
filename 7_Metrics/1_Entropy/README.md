@@ -1,7 +1,7 @@
 <h1 align = "center">:rocket: 常用指标 :facepunch:</h1>
 
 ---
-熵、联合熵、条件熵、互信息的关系
+## 信息熵、联合熵、条件熵、信息增益的关系：
 
 ![熵、联合熵、条件熵、互信息的关系][5]
 
@@ -38,4 +38,4 @@
 [2]: https://pic2.zhimg.com/80/v2-f925bd0dba2f4584ebd78efea6c9864c_hd.jpg
 [3]: https://images0.cnblogs.com/blog2015/605905/201506/161909021542396.png
 [4]: http://images0.cnblogs.com/blog2015/605905/201506/162013009355725.png
-[5]: https://images0.cnblogs.com/blog/578668/201311/14182621-ce5ce1f71f0d4e8d984330677d878835.png
+[5]: https://images2015.cnblogs.com/blog/788753/201610/788753-20161027151210843-745348026.png
