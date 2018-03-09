@@ -21,7 +21,7 @@
 
 ![信息增益][4]
 
-- 信息增益比(Infomation Gain Ratio)：gr = IG(X)/H(X)
+- 信息增益比(Infomation Gain Ratio)：gr = IG(Y|X)/H(X)
 
 - Gini系数：一种与信息熵类似的做特征选择的方式，可以用来数据的不纯度
 
