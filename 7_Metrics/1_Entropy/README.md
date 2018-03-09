@@ -1,4 +1,4 @@
-<h1 align = "center">:rocket: 常用指标 :facepunch:</h1>
+[<h1 align = "center">:rocket: 熵 :facepunch:</h1>][0]
 
 ---
 ## 信息熵、联合熵、条件熵、信息增益的关系：
@@ -30,10 +30,16 @@
 
 > 在决策树算法中，ID3使用信息增益，C4.5使用信息增益比，CART使用Gini系数。
 
+- 联合熵
+- 交叉熵（类比信息熵）：-SUM(q*logp)
+- 相对熵（KL散度）：KL散度/距离是衡量两个分布的距离
+
+
 
 
 
 ---
+[0]: http://blog.csdn.net/haolexiao/article/details/70142571
 [1]: https://pic2.zhimg.com/80/v2-a9f081eff039a7e65f51515d4aacb34b_hd.jpg
 [2]: https://pic2.zhimg.com/80/v2-f925bd0dba2f4584ebd78efea6c9864c_hd.jpg
 [3]: https://images0.cnblogs.com/blog2015/605905/201506/161909021542396.png
