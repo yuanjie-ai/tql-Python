@@ -37,7 +37,7 @@
 
 - 相对熵（KL散度）：KL散度/距离是衡量两个分布的距离
 
-
+![KL][7]
 
 
 
@@ -49,3 +49,4 @@
 [4]: http://images0.cnblogs.com/blog2015/605905/201506/162013009355725.png
 [5]: https://images2015.cnblogs.com/blog/788753/201610/788753-20161027151210843-745348026.png
 [6]: http://img.blog.csdn.net/20170907162730719
+[7]: http://colah.github.io/posts/2015-09-Visual-Information/img/CrossEntropyQP.png
