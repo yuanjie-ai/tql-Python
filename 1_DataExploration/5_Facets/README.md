@@ -1,11 +1,14 @@
 [<h1 align = "center">:rocket: Facets :facepunch:</h1>][1]
 
 ---
+## 1. Enabling Usage in Jupyter Notebooks
 ```sh
 git clone https://github.com/PAIR-code/facets
 cd facets
+jupyter nbextension install facets-dist/
 ```
 
+## 2. Dive demo Jupyter notebook
 ```python
 # Display the Dive visualization for this data
 def facets_display(df):
