@@ -1,6 +1,7 @@
 # :rocket: PopularAlgorithm :facepunch:
 ---
-
+商品打包购算法
+https://mp.weixin.qq.com/s/diIzbc0tpCW4xhbIQu8mCw
 [PRML算法实现][1]
 [各种算法优缺点][3]
 
