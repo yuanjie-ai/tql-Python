@@ -1,4 +1,4 @@
-<h1 align = "center">:rocket: [聚类][1] :facepunch:</h1>
+[<h1 align = "center">:rocket: 聚类 :facepunch:</h1>][1]
 
 ---
 
