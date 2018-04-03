@@ -26,7 +26,7 @@
   - `from sklearn.svm import LinearSVC`
 
 ---
-## Genetic
+## 4. Genetic
 - [sklearn-genetic][3]
 
 ---
