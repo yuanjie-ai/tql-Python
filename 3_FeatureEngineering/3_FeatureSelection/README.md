@@ -25,6 +25,9 @@
 - L1特征选择
   - `from sklearn.svm import LinearSVC`
 
+---
+## Genetic
+- [sklearn-genetic][3]
 
 ---
 - 降噪编码器
@@ -33,3 +36,4 @@
 ---
 [1]: https://www.cnblogs.com/stevenlk/p/6543628.html
 [2]: https://github.com/Jie-Yuan/DataMining/edit/master/3_FeatureEngineering/3_FeatureSelection/RFE.md
+[3]: https://github.com/manuel-calzolari/sklearn-genetic
