@@ -8,6 +8,7 @@ https://mp.weixin.qq.com/s/diIzbc0tpCW4xhbIQu8mCw
 
 ---
 - [skope-rules][4]
+- [forest-confidence-interval][5]
 ---
 ## 经验参数
 ![经验参数][2]
@@ -20,6 +21,7 @@ https://mp.weixin.qq.com/s/diIzbc0tpCW4xhbIQu8mCw
 [2]: https://github.com/Jie-Yuan/GithubPicture/raw/master/ExperienceParameters.jpg
 [3]: http://blog.csdn.net/u012422446/article/details/53034260
 [4]: https://github.com/scikit-learn-contrib/skope-rules
+[5]: https://github.com/scikit-learn-contrib/forest-confidence-interval
 
 
 
