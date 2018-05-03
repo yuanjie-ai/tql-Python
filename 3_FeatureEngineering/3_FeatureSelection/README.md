@@ -1,6 +1,8 @@
 [<h1 align = "center">:rocket: 特征选择 :facepunch:</h1>][1]
 
 ---
+https://github.com/duxuhao/Feature-Selection
+---
 ## 目标
 - 提高预测的准确性
 - 构造更快，消耗更低的预测模型
