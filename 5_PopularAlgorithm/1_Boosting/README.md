@@ -4,6 +4,8 @@
 ## Parameters
 - [Xgboost][1]
 - [LightGBM][2]
+- [GBDT-PL][7]
+- [LinXGBoost][8]
 
  http://dwz.cn/74863J
 ---
@@ -37,3 +39,5 @@
 [4]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/2_xgb/README.md#2-sk%E6%8E%A5%E5%8F%A3
 [5]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/1_lgb/README.md#1-%E5%8E%9F%E7%94%9F%E6%8E%A5%E5%8F%A3
 [6]: https://github.com/Jie-Yuan/DataMining/blob/master/5_PopularAlgorithm/1_Boosting/1_lgb/README.md#2-sk%E6%8E%A5%E5%8F%A3
+[7]: https://github.com/GBDT-PL/GBDT-PL
+[8]: https://github.com/ldv1/LinXGBoost
