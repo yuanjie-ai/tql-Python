@@ -7,6 +7,7 @@ https://mp.weixin.qq.com/s/diIzbc0tpCW4xhbIQu8mCw
 [各种算法优缺点][3]
 
 ---
+- lightning: 大规模线性回归、分类和排名库
 - [skope-rules][4]
 - [forest-confidence-interval][5]
 ---
