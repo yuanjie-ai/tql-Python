@@ -1,9 +1,7 @@
 <h1 align = "center">:rocket: 数据预处理 :facepunch:</h1>
 
 ---
-## 原始数据存在的几个问题：不一致；重复；含噪声；维度高
-### 常用预处理方法
-
+## [不平衡数据][1]
 ---
 # DataReshape
 
@@ -47,3 +45,7 @@ id	col_explode
 2	3	NaN
 ```
 - 一列变多列: df.a.str.split('|', expand=True)
+
+
+---
+[1]: https://www.jeremyjordan.me/imbalanced-data/
