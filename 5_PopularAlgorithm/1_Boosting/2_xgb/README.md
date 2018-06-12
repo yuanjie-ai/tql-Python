@@ -4,6 +4,9 @@
 ## 1. 原生接口
 - 分类
 ```python
+"""
+max_delta_step: 类别不平衡有助于逻辑回归
+"""
 params = {
     'booster': 'gbtree', #  'dart' # 'rank:pairwise'对排序友好
     'objective': 'binary:logistic', # 'objective': 'multi:softmax', 'num_class': 3,
