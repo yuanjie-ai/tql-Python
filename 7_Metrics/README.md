@@ -16,7 +16,7 @@
 |F1 Score (F1)|
 |Gini|
 |Levenshtein|
-|Log Loss (LL)|
+|Log Loss (LL)| ![logloss][3]
 |Mean Log Loss (LogLoss)|
 |Mean Absolute Error (MAE)|
 |Mean Average Precision at K (MAPK, MAP@K)|
@@ -38,6 +38,7 @@
  [0]: https://github.com/benhamner/Metrics/tree/master/Python
  [1]: http://img.blog.csdn.net/20150924153157802
  [2]: http://third.datacastle.cn/pkbigdata/master.other.img/7372d308-8d38-4e45-8ab7-ffab7763096a.png
- 
+ [3]: https://github.com/Jie-Yuan/DataMining/raw/master/7_Metrics/Pictures/11.png
  [11]: http://scikit-learn.org/stable/modules/model_evaluation.html#common-cases-predefined-values
  [12]: http://www.cnblogs.com/harvey888/p/6964741.html
+
