@@ -9,8 +9,8 @@
 
 |**评估指标**|**公式**|
 |:--|:--:|
-|Kolmogorov-Smirnov (KS)|
-|AbsoluteError (AE)| ![][13]
+|[Kolmogorov-Smirnov (KS)][14]| ![][13]
+|AbsoluteError (AE)|
 |Average Precision at K (APK, AP@K)|
 |[Area Under the ROC (AUC)][2] | ![AUC][1]
 |Classification Error (CE)| 
