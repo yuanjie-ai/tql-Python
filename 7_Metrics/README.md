@@ -9,7 +9,8 @@
 
 |**评估指标**|**公式**|
 |:--|:--:|
-|AbsoluteError (AE)|
+|Kolmogorov-Smirnov (KS)|
+|AbsoluteError (AE)| ![][13]
 |Average Precision at K (APK, AP@K)|
 |[Area Under the ROC (AUC)][2] | ![AUC][1]
 |Classification Error (CE)| 
@@ -41,4 +42,4 @@
  [3]: https://github.com/Jie-Yuan/DataMining/raw/master/7_Metrics/Pictures/11.png
  [11]: http://scikit-learn.org/stable/modules/model_evaluation.html#common-cases-predefined-values
  [12]: http://www.cnblogs.com/harvey888/p/6964741.html
-
+ [13]: https://img-blog.csdn.net/20171012171557401?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzQyMTYyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast
