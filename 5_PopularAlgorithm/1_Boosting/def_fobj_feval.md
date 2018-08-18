@@ -4,16 +4,17 @@
 ## 自定义函数装饰器
 ```python
 import functools
+import numpy as np
 
 
 def feval_lgb(multiclass=None, is_bigger_better=True):
     def wrapper(func):
         @functools.wraps(func)
-        def _wrapper(y_pred, y_true):
+        def _wrapper(y_pred, y_true, *args, **kwargs):
             y_true = y_true.get_label()
             if multiclass:
                 y_pred = np.array(y_pred).reshape(multiclass, -1).argmax(0)
-            return func.__name__, func(y_pred, y_true), is_bigger_better
+            return func.__name__, func(y_pred, y_true, *args, **kwargs), is_bigger_better
         return _wrapper
     return wrapper
 ```
