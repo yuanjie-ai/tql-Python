@@ -30,7 +30,7 @@ def lgb_f1(y_pred, y_true):
     num_class = len(set(y_true))
     y_pred = np.array(y_pred).reshape(num_class, -1).argmax(0)
     
-    score = f1_score(y_true, y_pred, average='weighted')
+    score = f1_score(y_true, y_pred, average='macro')
     return 'f1_score', score, True
     
 # LGBMClassifier().fit(X, y,eval_metric=feval) # 待实验
