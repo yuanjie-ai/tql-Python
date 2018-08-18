@@ -20,8 +20,19 @@ xgb.cv(feval=feval, maximize=False) # 目标最大化可选
 def feval(y_pred, y_true):
     from ml_metrics import auc
     y_true = y_true.get_label()
-    return 'auc', auc(y_true, y_pred), True# maximize=False比xgb多返回一项
+    return 'auc', auc(y_true, y_pred), True# maximize=False比xgb多返回一项
+    
+# 多分类
+from sklearn.metricse import f1_score
 
+def lgb_f1(y_pred, y_true):
+    y_true = y_true.get_label()
+    num_class = len(set(y_true))
+    y_pred = np.array(y_pred).reshape(num_class, -1).argmax(0)
+    
+    score = f1_score(y_true, y_pred, average='weighted')
+    return 'f1_score', score, True
+    
 # LGBMClassifier().fit(X, y,eval_metric=feval) # 待实验
 lgb.train(feval=feval)
 lgb.cv(feval=feval)
