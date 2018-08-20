@@ -10,7 +10,7 @@ import numpy as np
 def feval(multiclass=None, is_bigger_better=True, model='lgb'):
     """example
     @feval_lgb(3)
-    def feval(y_true, y_pred):
+    def f1_score(y_true, y_pred):
         return f1_score(y_true, y_pred, average='macro')
     """
 
@@ -18,15 +18,15 @@ def feval(multiclass=None, is_bigger_better=True, model='lgb'):
     def wrapper(wrapped, instance, args, kwargs):
         y_pred, y_true = args
         y_true = y_true.get_label()
-        if multiclass:
-            y_pred = np.array(y_pred).reshape(multiclass, -1).argmax(0)
+       
         if model == 'lgb':
-            return wrapped.__name__, wrapped(y_true, y_pred), is_bigger_better
-        elif model == 'xgb':
-            if is_bigger_better:
-                return '-' + wrapped.__name__, - wrapped(y_true, y_pred)
-            else:
-                return wrapped.__name__, wrapped(y_true, y_pred)
+            if multiclass:
+                y_pred = np.array(y_pred).reshape(multiclass, -1).argmax(0)
+            return wrapped.__name__, wrapped(y_pred, y_true), is_bigger_better
+        elif is_bigger_better:
+            return '-' + wrapped.__name__, - wrapped(y_pred, y_true)
+        else:
+            return wrapped.__name__, wrapped(y_pred, y_true)
 
     return wrapper
 ```
