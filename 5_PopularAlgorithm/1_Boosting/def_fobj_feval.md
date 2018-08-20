@@ -10,7 +10,8 @@ import numpy as np
 def feval(multiclass=None, is_bigger_better=True, model='lgb'):
     """example
     @feval_lgb(3)
-    def f1_score(y_true, y_pred):
+    def f1_score(y_pred, y_true):
+        '注意入参顺序'
         return f1_score(y_true, y_pred, average='macro')
     """
 
