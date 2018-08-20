@@ -24,6 +24,7 @@ def feval(multiclass=None, is_bigger_better=True, model='lgb'):
                 y_pred = np.array(y_pred).reshape(multiclass, -1).argmax(0)
             return wrapped.__name__, wrapped(y_pred, y_true), is_bigger_better
         elif is_bigger_better:
+            """xgb评估指标默认越小越好"""
             return '-' + wrapped.__name__, - wrapped(y_pred, y_true)
         else:
             return wrapped.__name__, wrapped(y_pred, y_true)
