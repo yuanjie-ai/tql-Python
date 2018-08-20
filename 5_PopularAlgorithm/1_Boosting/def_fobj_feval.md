@@ -7,15 +7,27 @@ import functools
 import numpy as np
 
 
-def feval_lgb(multiclass=None, is_bigger_better=True):
-    def wrapper(func):
-        @functools.wraps(func)
-        def _wrapper(y_pred, y_true, *args, **kwargs):
-            y_true = y_true.get_label()
-            if multiclass:
-                y_pred = np.array(y_pred).reshape(multiclass, -1).argmax(0)
-            return func.__name__, func(y_pred, y_true, *args, **kwargs), is_bigger_better
-        return _wrapper
+def feval(multiclass=None, is_bigger_better=True, model='lgb'):
+    """example
+    @feval_lgb(3)
+    def feval(y_true, y_pred):
+        return f1_score(y_true, y_pred, average='macro')
+    """
+
+    @wrapt.decorator
+    def wrapper(wrapped, instance, args, kwargs):
+        y_pred, y_true = args
+        y_true = y_true.get_label()
+        if multiclass:
+            y_pred = np.array(y_pred).reshape(multiclass, -1).argmax(0)
+        if model == 'lgb':
+            return wrapped.__name__, wrapped(y_true, y_pred), is_bigger_better
+        elif model == 'xgb':
+            if is_bigger_better:
+                return '-' + wrapped.__name__, - wrapped(y_true, y_pred)
+            else:
+                return wrapped.__name__, wrapped(y_true, y_pred)
+
     return wrapper
 ```
 
