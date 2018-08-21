@@ -40,7 +40,7 @@ https://www.cnblogs.com/5poi/p/7240601.html
 
 ---
 ## 特征提取(傻瓜式)
-- [featuretools][3]
+- [featuretools][3]: https://mp.weixin.qq.com/s/1Zj_pQDBqBJKSrtt9HsKXg
 - DAE等
 - GBDT
 - [spherical k-means][5]
