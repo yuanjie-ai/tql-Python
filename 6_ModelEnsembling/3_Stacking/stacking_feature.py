@@ -1,4 +1,4 @@
-def stacking_feature(X, y, nb_cv=3):
+def stacking_feature(clf, X, y, nb_cv=3):
     """种子扰动
     tfidf_lr = make_pipeline(TfidfVectorizer(), LogisticRegression())
     tfidf_lr.fit(X, y)
@@ -7,7 +7,7 @@ def stacking_feature(X, y, nb_cv=3):
     pred_list_stack = []
     for i in range(nb_cv):
         
-        clf = LogisticRegression(random_state=i)
+        clf.set_params(random_state=i)
         
         pred_list = []
         auc_loss = []
