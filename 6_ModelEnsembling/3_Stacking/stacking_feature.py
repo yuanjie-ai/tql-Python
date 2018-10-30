@@ -1,3 +1,5 @@
+## 用cross_val_predict改写
+
 def stacking_feature(clf, X, y, nb_cv=3):
     """种子扰动
     tfidf_lr = make_pipeline(TfidfVectorizer(), LogisticRegression())
