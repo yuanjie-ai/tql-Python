@@ -8,9 +8,6 @@ def stacking_feature(clf, X, y, nb_cv=3):
     """
     pred_list_stack = []
     for i in range(nb_cv):
-        
-        clf.set_params(random_state=i)
-        
         pred_list = []
         auc_loss = []
         kf = StratifiedKFold(nb_cv, True).split(X, y)
@@ -23,3 +20,7 @@ def stacking_feature(clf, X, y, nb_cv=3):
         pred_list_stack.append(pred_list)
         print("Auc-CV-Score: %0.5f (+/- %0.3f)" % (np.mean(auc_loss), np.std(auc_loss)))
     return np.column_stack(pred_list_stack)
+
+
+
+cross_val_predict(lr, X, y, cv=StratifiedKFold(5, True, random_state=2018+i), method='predict_proba')
