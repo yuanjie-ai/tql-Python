@@ -27,12 +27,8 @@ skplt.classifiers.plot_roc_curve_with_cv
 skplt.decomposition.plot_pca_2d_projection
 skplt.decomposition.plot_pca_component_variance
 ```
-
-
-
-
-
-
+## [sklearn-evaluation][2]
 
 ---
 [1]: https://github.com/reiinakano/scikit-plot
+[2]: https://github.com/edublancas/sklearn-evaluation
