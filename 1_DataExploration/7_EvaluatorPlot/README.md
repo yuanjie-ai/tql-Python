@@ -4,9 +4,6 @@
 ## [scikit-plot][1]
 ```
 import scikitplot as skplt
-skplt.estimators.plot_feature_importances
-skplt.estimators.plot_learning_curve
-
 
 skplt.metrics.plot_calibration_curve
 skplt.metrics.plot_cumulative_gain
