@@ -27,17 +27,14 @@ sns.clustermap(corrMatrix.ix[:10, :10], fmt="d",cmap='YlGnBu')
 ```python
 import matplotlib.pyplot as plt
 class Matplotlib(object):
-    def __init__(self):
-        """
-        https://www.programcreek.com/python/example/4890/matplotlib.rcParams
-        """
-        pass
+    """
+    https://www.programcreek.com/python/example/4890/matplotlib.rcParams
+    """
 
-    def init_matplotlib(self):
-        """初始化设置"""
+    def __init__(self):
         plt.style.use('ggplot')
-        plt.rcParams['font.sans-serif'] = ['Microsoft YaHei'] # 中文乱码的处理
-        plt.rcParams['axes.unicode_minus'] = False # 负号
+        plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']  # 中文乱码的处理
+        plt.rcParams['axes.unicode_minus'] = False  # 负号
         plt.rcParams["text.usetex"] = False
         plt.rcParams["legend.numpoints"] = 1
         plt.rcParams["figure.figsize"] = (10, 5)
@@ -53,7 +50,7 @@ class Matplotlib(object):
 
 ---
 ## 色系
-xx
+
 ![色系][4]
 
 
