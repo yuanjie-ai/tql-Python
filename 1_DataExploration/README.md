@@ -33,11 +33,12 @@ class Matplotlib(object):
 
     def __init__(self):
         plt.style.use('ggplot')
-        plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']  # 中文乱码的处理
+        plt.rcParams['font.sans-serif'] = ['Simhei']  # 中文乱码的处理
+        plt.rcParams['font.family']='sans-serif'
         plt.rcParams['axes.unicode_minus'] = False  # 负号
         plt.rcParams["text.usetex"] = False
         plt.rcParams["legend.numpoints"] = 1
-        plt.rcParams["figure.figsize"] = (10, 5)
+        plt.rcParams["figure.figsize"] = (10, 5) # (8, 6)
         plt.rcParams["figure.dpi"] = 100
         plt.rcParams["savefig.dpi"] = plt.rcParams["figure.dpi"]
         plt.rcParams["font.size"] = 10
@@ -47,6 +48,9 @@ class Matplotlib(object):
         plt.close('all')
         plt.rcdefaults()
 ```
+## 中文问题
+
+将中文字体`simhei.ttf`放入`~/desktop/software/intelpython3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf`
 
 ---
 ## 色系
