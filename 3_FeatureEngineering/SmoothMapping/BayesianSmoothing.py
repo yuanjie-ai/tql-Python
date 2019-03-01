@@ -43,4 +43,14 @@ class BayesianSmoothing(object):
  
  
 
+def p():
+    bs = BayesianSmoothing(1, 1)
+    I, C = bs.sample(500, 500, 1000, 10000)
+    print(I, C)
+    bs.update(I, C, 1000, 0.0000000001)
+    print(bs.alpha, bs.beta)
+
+
+if __name__ == '__main__':
+    p()
 
