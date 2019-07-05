@@ -1,0 +1,1 @@
+curl -G --data-urlencode "var=吃吃吃" http://10.234.196.9:9955/cut/jieba? 

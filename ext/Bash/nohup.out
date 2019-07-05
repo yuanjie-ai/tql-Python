@@ -1,0 +1,37 @@
+[I 16:19:01.737 NotebookApp] 把notebook 服务cookie密码写入 /run/user/1001/jupyter/notebook_cookie_secret
+[I 16:19:03.472 NotebookApp] JupyterLab extension loaded from /home/yuanjie/desktop/software/intelpython3/lib/python3.6/site-packages/jupyterlab
+[I 16:19:03.472 NotebookApp] JupyterLab application directory is /home/yuanjie/desktop/software/intelpython3/share/jupyter/lab
+[I 16:19:03.474 NotebookApp] 启动notebooks 在本地路径: /home/yuanjie/desktop/jupyterlab
+[I 16:19:03.474 NotebookApp] 本程序运行在: http://localhost:8888/?token=7a1ed935bf0190cd7add6f187bc7d86785bbdd82f89751e3
+[I 16:19:03.474 NotebookApp] 使用control-c停止此服务器并关闭所有内核(两次跳过确认).
+[C 16:19:03.476 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=7a1ed935bf0190cd7add6f187bc7d86785bbdd82f89751e3
+Using PPAPI flash.
+[I 16:19:12.507 NotebookApp] Accepting one-time-token-authenticated connection from 127.0.0.1
+[W 16:19:26.826 NotebookApp] Notebook WordBase/Trie.ipynb is not trusted
+[W 16:19:27.388 NotebookApp] 404 GET /nbextensions/codefolding/main.js?v=20181205161425 (127.0.0.1) 89.29ms referer=http://localhost:8888/notebooks/WordBase/Trie.ipynb
+[W 16:19:27.441 NotebookApp] 404 GET /nbextensions/codefolding/main.js?v=20181205161425 (127.0.0.1) 3.68ms referer=http://localhost:8888/notebooks/WordVectors/WordVectors.ipynb
+[I 16:19:27.969 NotebookApp] Kernel started: 854e24a4-b855-4921-b6b4-443b3497e87d
+[W 16:19:28.589 NotebookApp] 404 GET /nbextensions/codefolding/main.js?v=20181206161901 (127.0.0.1) 4.44ms referer=http://localhost:8888/notebooks/BaiduSDK/BaiduSDK.ipynb
+[W 16:19:28.670 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20181205161425 (127.0.0.1) 3.47ms referer=http://localhost:8888/notebooks/WordVectors/WordVectors.ipynb
+[I 16:19:29.277 NotebookApp] Kernel started: b1fa0fa3-05ac-4233-adbf-4073303d73e7
+[W 16:19:29.410 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20181206161901 (127.0.0.1) 3.98ms referer=http://localhost:8888/notebooks/BaiduSDK/BaiduSDK.ipynb
+[I 16:19:30.251 NotebookApp] Kernel started: 6ae54161-c163-4ba2-b9f8-f464e75d1c29
+[W 16:19:30.673 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20181205161425 (127.0.0.1) 3.10ms referer=http://localhost:8888/notebooks/WordBase/Trie.ipynb
+[I 16:19:31.195 NotebookApp] Adapting to protocol v5.1 for kernel 854e24a4-b855-4921-b6b4-443b3497e87d
+[I 16:19:31.212 NotebookApp] Adapting to protocol v5.1 for kernel b1fa0fa3-05ac-4233-adbf-4073303d73e7
+[I 16:19:31.444 NotebookApp] Adapting to protocol v5.1 for kernel 6ae54161-c163-4ba2-b9f8-f464e75d1c29
+[I 16:19:39.711 NotebookApp] Starting buffering for 854e24a4-b855-4921-b6b4-443b3497e87d:56aff87e04bb4604832c8392ff60135b
+[I 16:19:41.832 NotebookApp] Kernel shutdown: 854e24a4-b855-4921-b6b4-443b3497e87d
+[I 16:21:29.265 NotebookApp] Saving file at /BaiduSDK/BaiduSDK.ipynb
+[I 16:21:57.433 NotebookApp] Starting buffering for 6ae54161-c163-4ba2-b9f8-f464e75d1c29:3c708460a8e043348faff4bd399460ab
+[C 16:24:24.533 NotebookApp] 接受信号 15, 正在停止
+[I 16:24:24.533 NotebookApp] 关闭 2 服务
+[I 16:24:24.836 NotebookApp] Kernel shutdown: b1fa0fa3-05ac-4233-adbf-4073303d73e7
+[I 16:24:24.937 NotebookApp] Kernel shutdown: 6ae54161-c163-4ba2-b9f8-f464e75d1c29
+[3223:3223:1206/162436.670050:ERROR:input_method_base.cc(146)] Not implemented reached in virtual ui::InputMethodKeyboardController *ui::InputMethodBase::GetInputMethodKeyboardController()Using InputMethodKeyboardControllerStub
+Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+[3223:3223:1206/164947.605207:ERROR:textfield.cc(1767)] Not implemented reached in virtual bool views::Textfield::ShouldDoLearning()
