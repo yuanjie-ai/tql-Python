@@ -1,0 +1,5 @@
+- woe
+- scorecard 
+- ScoreCardModel
+- mdlp
+- https://data-science-tools.github.io/ScoreCardModel/ScoreCardModel.html#id2

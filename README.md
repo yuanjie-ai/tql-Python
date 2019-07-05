@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align = "center">:rocket: TQL :facepunch:</h1>
 
 ---
@@ -13,6 +14,12 @@ pip install tql
 
 ---
 - [mlcrate](https://github.com/mxbi/mlcrate)
+=======
+<h1 align = "center">:rocket: DataScience :facepunch:</h1>
+
+---
+- [mlcrate][https://github.com/mxbi/mlcrate]
+>>>>>>> 2f3e6bd39310b5eb8e6af29ce0ee598b209340cb
 <br/>
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/README_1200x800.gif">
@@ -447,4 +454,7 @@ The content developed by Donne Martin is distributed under the following license
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2f3e6bd39310b5eb8e6af29ce0ee598b209340cb
