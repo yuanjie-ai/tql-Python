@@ -32,6 +32,7 @@ EMAIL=$AUTHOR
 --conf spark.yarn.alert.phone.number=$PHONE \
 --conf spark.yarn.alert.mail.address=$EMAIL \
 --conf spark.driver.maxResultSize=4g \
+--conf spark.sql.catalogImplementation=in-memory \
 --class $MAINCLASS $JAR
 
 #######################################################

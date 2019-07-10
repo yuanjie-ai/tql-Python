@@ -15,16 +15,29 @@ import fire
 
 
 class Calculator(object):
+    """doc"""
 
     def __init__(self, arg=0):
-        self._arg = arg
+        """
+
+        :param arg:
+        """
+        self.arg = arg
 
     def add(self, x, y):
+        """add"""
         return x + y
 
     def multiply(self, x, y):
-        return x * y + self._arg
+        """add"""
+        return x * y + self.arg
 
+    def get_list(self, x):
+        print(type(x))
+        return x
+
+def cli():
+    fire.Fire(Calculator)
 
 if __name__ == '__main__':
     # calculator = Calculator()

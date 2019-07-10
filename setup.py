@@ -65,5 +65,9 @@ setup(
         'Programming Language :: Python :: Implementation',
     ],
 
-    install_requires=get_requirements()
+    install_requires=get_requirements(),
+
+    entry_points={'console_scripts': [
+        'tql-cli=tql.utils.cli:cli'
+    ]}
 )

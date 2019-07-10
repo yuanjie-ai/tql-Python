@@ -1,0 +1,6 @@
+tuple: (1, 2) # 不支持
+list: [1, 2]
+dict: {'dict': 666}
+int: 666
+float: 666.666
+bool: True
