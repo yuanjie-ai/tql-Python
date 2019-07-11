@@ -5,7 +5,7 @@
 #        m)
 #        update_info=$OPTARG;;
 #        b)
-#        echo "参数b的值$OPTARG";;
+#        echo "参数b的值$OPTARG"≤;;
 #        c)
 #        echo "参数c的值$OPTARG";;
 #        ?)

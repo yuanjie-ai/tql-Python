@@ -14,6 +14,7 @@
 
 import pandas as pd
 
+
 df0 = pd.read_excel('./neg.xls', names=['text']).assign(label=0)
 df1 = pd.read_excel('./pos.xls', names=['text']).assign(label=1)
 
