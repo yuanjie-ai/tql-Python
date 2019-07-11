@@ -14,6 +14,12 @@ from sklearn.utils import shuffle
 
 
 class DataIter(Sequence):
+    """
+    dataset = tf.data.Dataset.from_tensor_slices((X, y))
+    dataset = dataset.shuffle(len(X))
+    dataset = dataset.batch(128)
+    dataset = dataset.repeat()
+    """
 
     def __init__(self, x, y, batch_size=128, data_processor=lambda *args: args, data_shuffle=False):
         self.x, self.y = x, y

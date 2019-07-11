@@ -23,4 +23,5 @@ options.add_argument("--proxy-server=http://proxy.pt.xiaomi.com:80")
 driver = webdriver.Chrome(options=options)
 url = "http://zjy-hadoop-prc-ct12.bj:20701"
 driver.get(url)
+# driver.page_source
 # driver.implicitly_wait(10)

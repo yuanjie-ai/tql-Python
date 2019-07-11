@@ -10,7 +10,7 @@
 
 from pathlib import Path
 from abc import abstractmethod
-from tensorflow.python.keras.utils import plot_model as _plot_model
+from tensorflow.python.keras.utils import plot_model as plot_model_keras
 from tensorflow.python.keras.layers import Embedding
 
 
@@ -24,7 +24,8 @@ class BaseModel(object):
     """
 
     @abstractmethod
-    def __init__(self, max_tokens=20000, maxlen=128, embedding_size=None, num_class=1, weights=None, **kwargs):
+    def __init__(self, max_tokens=20000, maxlen=128, embedding_size=None, num_class=1, weights=None,
+                 best_model_weights=None, **kwargs):
         self.max_tokens = max_tokens
         self.maxlen = maxlen
         self.embedding_size = embedding_size if embedding_size else min(50, (max_tokens + 1) // 2)  # 经验值
@@ -33,15 +34,19 @@ class BaseModel(object):
         self.last_activation = 'softmax' if num_class > 1 else 'sigmoid'
 
         self.weights = weights
+        self.best_model_weights = best_model_weights
 
-    def __call__(self, plot_model=None, dir='.', **kwargs):
+    def __call__(self, summary=False, plot_model=False, dir='.', **kwargs):
         model = self.get_model()
-        model.summary()
+        if self.best_model_weights is not None:
+            model.load_weights(self.best_model_weights, by_name=True)
+        if summary:
+            model.summary()
         if plot_model:
             image_file = Path(dir) / ('%s.png' % self._class_name)
             image_file = image_file.absolute().__str__()
-            try:  # 必须return才能show图
-                _plot_model(model, to_file=image_file, show_shapes=True, dpi=128)
+            try:  # 必须return才能显示图
+                plot_model_keras(model, to_file=image_file, show_shapes=True, dpi=128)
             except Exception as e:
                 print(e)
                 print("brew install graphviz or apt-get install graphviz")
