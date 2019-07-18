@@ -101,3 +101,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+examples/yaml_temp.yml

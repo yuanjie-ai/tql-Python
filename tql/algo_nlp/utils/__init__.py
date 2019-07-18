@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-from .Translater import Translater
 from .Sent2Vec import Sent2Vec
 from .Sequence import Sequence
 from .Text2Sequence import Text2Sequence

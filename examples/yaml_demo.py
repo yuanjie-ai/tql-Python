@@ -8,8 +8,9 @@
 # @Software     : PyCharm
 # @Description  : 
 
-from pprint import pprint
 import yaml
+from pprint import pprint
+
 """
 https://www.cnblogs.com/klb561/p/9326677.html
 https://blog.csdn.net/zhusongziye/article/details/80024426
@@ -21,6 +22,8 @@ https://blog.csdn.net/zhusongziye/article/details/80024426
 #     print(k, ":", type(v).__name__, ':', v)
 
 
-dic = yaml.safe_load(open('yaml_demo.yaml'))
+dic = yaml.load(open('yaml_demo.yaml'))
 
 pprint(dic)
+
+yaml.dump(dic, open('yaml_temp.yml', 'w'))

@@ -36,6 +36,8 @@ class BaseModel(object):
         self.weights = weights
         self.best_model_weights = best_model_weights
 
+        # self.model = None
+
     def __call__(self, summary=False, plot_model=False, dir='.', **kwargs):
         model = self.get_model()
         if self.best_model_weights is not None:
@@ -54,6 +56,11 @@ class BaseModel(object):
 
     @abstractmethod
     def get_model(self):
+        # # TODO: 基模型直接编译
+        # """build
+        # self.model = ...
+        # self.model.compile()
+        # """
         pass
 
     def plot_show(self, image_file=None):
@@ -76,6 +83,21 @@ class BaseModel(object):
         else:
             return Embedding(self.max_tokens, self.embedding_size, input_length=self.maxlen)
 
+    # def __call__(self, summary=False, plot_model=False, dir='.', **kwargs):
+    #     model = self.get_model()
+    #     if self.best_model_weights is not None:
+    #         model.load_weights(self.best_model_weights, by_name=True)
+    #     if summary:
+    #         model.summary()
+    #     if plot_model:
+    #         image_file = Path(dir) / ('%s.png' % self._class_name)
+    #         image_file = image_file.absolute().__str__()
+    #         try:  # 必须return才能显示图
+    #             plot_model_keras(model, to_file=image_file, show_shapes=True, dpi=128)
+    #         except Exception as e:
+    #             print(e)
+    #             print("brew install graphviz or apt-get install graphviz")
+    #     return model
 
 if __name__ == '__main__':
     bm = BaseModel()

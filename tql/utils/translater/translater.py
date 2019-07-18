@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+__title__ = 'translate'
+__author__ = 'JieYuan'
+__mtime__ = '19-3-1'
+"""
+import requests
+import random
+import hashlib
+
+"""
+https://www.cnblogs.com/fanyang1/p/9414088.html
+"""
+
+from .tencent import trans_tencent
+
+
+def trans_google(q='苹果', fromLang='auto', toLang='en'):
+    url = "http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=%s&tl=%s" % (fromLang, toLang)
+    r = requests.get(url, {'q': q}, timeout=3)
+    return r.json()['sentences'][0]['trans']
+
+
+def trans_baidu(q='苹果', fromLang='auto', toLang='en'):
+    """
+
+    :param q:
+    :param fromLang:
+    :param toLang: cht繁体 ch简体 en英文
+    :return:
+    """
+    url = "http://api.fanyi.baidu.com/api/trans/vip/translate"
+    appid = '20190718000319131'  # 你的appid
+    secretKey = 'goP6CsXs6sVamHtRGdBa'  # 你的密钥
+    salt = str(random.randint(32768, 65536))
+    # 生成签名
+    sign = appid + q + salt + secretKey
+    sign = hashlib.md5(sign.encode()).hexdigest()
+    data = {
+        "appid": appid,
+        "q": q,
+        "from": fromLang,
+        "to": toLang,
+        "salt": salt,
+        "sign": sign,
+    }
+    r = requests.post(url, data=data, timeout=3)
+    return r.json().get('trans_result')[0].get("dst")
+
+
+if __name__ == '__main__':
+    print(trans_tencent())
+    print(trans_google())
+    print(trans_baidu())

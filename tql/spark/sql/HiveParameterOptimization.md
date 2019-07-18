@@ -145,8 +145,9 @@ set hive.groupby.skewindata = true;
     - 默认值：200
     - 说明： metastore默认的最小的处理线程数
     
-    
-   
+- set mapreduce.jobtracker.split.metainfo.maxsize = -1
+   - 如果输入文件过多，会造成split源文件超过默认值，需要调整该参数。
+
 # 参考
 - [Hive常用优化参数][1]
 

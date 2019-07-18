@@ -56,7 +56,6 @@ setup(
         'Topic :: CV',
         'Topic :: NLP',
 
-        'Development Status :: Beta',
         'Operating System :: OS Independent',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',

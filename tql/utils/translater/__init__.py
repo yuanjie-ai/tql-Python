@@ -1,21 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Project      : tql-Python.
-# @File         : colors
-# @Time         : 2019-07-04 14:03
+# @File         : __init__.py
+# @Time         : 2019-07-18 15:00
 # @Author       : yuanjie
 # @Email        : yuanjie@xiaomi.com
 # @Software     : PyCharm
 # @Description  : 
 
 
-class Colors:
-    ok = '\033[92m'
-    fail = '\033[91m'
-    close = '\033[0m'
-
-
-
-import csv
-
-print(csv.QUOTE_NONE)
+from .translater import *
