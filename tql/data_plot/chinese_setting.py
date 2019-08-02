@@ -13,7 +13,7 @@ from pathlib import Path
 from matplotlib.font_manager import _rebuild
 
 
-def chinese_setting(url=None):
+def chinese_setting(url="http://cnbj1.fds.api.xiaomi.com/browser-algo-nanjing/data/SimHei.ttf"):
     """
     :param url: SimHei字体下载链接
     :return:

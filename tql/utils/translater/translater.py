@@ -9,17 +9,36 @@ import requests
 import random
 import hashlib
 
-"""
+"""可以通过docker增加并发
 https://www.cnblogs.com/fanyang1/p/9414088.html
-"""
+https://github.com/ssut/py-googletrans
 
+https://github.com/openlabs/Microsoft-Translator-Python-API
+https://github.com/cognitect/transit-python
+"""
 from .tencent import trans_tencent
+from googletrans import Translator
+
+translator = Translator(service_urls=['translate.google.cn', 'translate.google.com'],
+                        timeout=3)
 
 
 def trans_google(q='苹果', fromLang='auto', toLang='en'):
+    """
+
+    :param q:
+    :param fromLang:
+    :param toLang: zh
+    :return:
+    """
     url = "http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=%s&tl=%s" % (fromLang, toLang)
-    r = requests.get(url, {'q': q}, timeout=3)
-    return r.json()['sentences'][0]['trans']
+    try:
+        r = requests.get(url, {'q': q}, timeout=3)
+        text = r.json()['sentences'][0]['trans']
+    except Exception as e:
+        print(e)
+        text = translator.translate(q, toLang, fromLang).text
+    return text
 
 
 def trans_baidu(q='苹果', fromLang='auto', toLang='en'):
@@ -27,7 +46,7 @@ def trans_baidu(q='苹果', fromLang='auto', toLang='en'):
 
     :param q:
     :param fromLang:
-    :param toLang: cht繁体 ch简体 en英文
+    :param toLang: zh简体 en英文
     :return:
     """
     url = "http://api.fanyi.baidu.com/api/trans/vip/translate"
@@ -51,5 +70,5 @@ def trans_baidu(q='苹果', fromLang='auto', toLang='en'):
 
 if __name__ == '__main__':
     print(trans_tencent())
-    print(trans_google())
-    print(trans_baidu())
+    print(trans_google('apple', 'en', 'zh'))
+    print(trans_baidu('apple', 'en', 'zh'))

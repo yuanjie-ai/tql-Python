@@ -40,9 +40,11 @@ def trans_tencent(q="苹果", fromLang='auto', toLang='en'):
     data["Signature"] = sign_str(secret_key, s, hashlib.sha1)
 
     # 此处会实际调用，成功后可能产生计费
-    r = requests.get("https://" + endpoint, params=data, timeout=10)
+    r = requests.get("https://" + endpoint, params=data, timeout=3)
+    # print(r.json())
     return r.json()['Response']['TargetText']
 
 
 if __name__ == '__main__':
     print(trans_tencent())
+    print(trans_tencent('apple', 'auto', 'zh'))

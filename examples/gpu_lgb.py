@@ -43,4 +43,6 @@ param = {
     'gpu_device_id': 0,
     'gpu_use_dp':True
 }
-lgb.cv(param, lgb.Dataset(X, y))
+
+data = lgb.Dataset(X, y)
+_ = lgb.cv(param, data, num_boost_round=10000, verbose_eval=1000)

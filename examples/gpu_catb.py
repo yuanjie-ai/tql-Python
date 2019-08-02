@@ -14,6 +14,10 @@ from sklearn.datasets import make_classification
 
 X, y = make_classification(100000)
 
+# object 无需数值化直接 train
+# cats = X.dtypes[X.dtypes == object].index
+# for i in cats:
+#     X[i] = X[i].astype(str)
 model = CatBoostClassifier(loss_function="Logloss",
                            eval_metric="AUC",
                            task_type="GPU",

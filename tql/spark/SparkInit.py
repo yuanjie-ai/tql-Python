@@ -15,15 +15,23 @@ class SparkInit(object):
     import pyspark.sql.functions as F
     """
 
-    def __init__(self):
+    def __init__(self, load_mmlspark=False):
         """
         sc, spark = SparkInit()()
         """
-        self.spark = SparkSession.builder \
-            .appName("Yuanjie") \
-            .config('log4j.rootCategory', "WARN") \
-            .enableHiveSupport() \
-            .getOrCreate()
+        if load_mmlspark:
+            self.spark = (SparkSession.builder
+                          .appName("Yuanjie")
+                          .config('log4j.rootCategory', "WARN")
+                          .config("spark.jars.packages", "Azure:mmlspark:0.17")
+                          .enableHiveSupport()
+                          .getOrCreate())
+        else:
+            self.spark = (SparkSession.builder
+                          .appName("Yuanjie")
+                          .config('log4j.rootCategory', "WARN")
+                          .enableHiveSupport()
+                          .getOrCreate())
 
         self.sc = self.spark.sparkContext
         print('Spark Version: %s' % self.spark.version)

@@ -11,18 +11,46 @@
 
 import jieba
 from restful_api import Api
+import requests
+
+from lxml.etree import HTML
+from googletrans import Translator
+
+translator = Translator(service_urls=['translate.google.cn', 'translate.google.com'],
+                        timeout=3)
 
 
-pred1 = lambda **kwargs: kwargs['x'] + kwargs['y']
-pred2 = lambda x=1, y=1: x + y
-pred3 = lambda text='小米是家不错的公司': jieba.lcut(text)
+def trans_google(q='苹果', fromLang='auto', toLang='en'):
+    """
 
-# 多服务堆叠
-api = Api('/post1', pred1)
-api = Api('/post2', pred2, app=api.app)
-api = Api('/post3', pred3, app=api.app)
+    :param q:
+    :param fromLang:
+    :param toLang: zh
+    :return:
+    """
+    url = "http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=%s&tl=%s" % (fromLang, toLang)
+    try:
+        r = requests.get(url, {'q': q}, timeout=3)
+        text = r.json()['sentences'][0]['trans']
+    except Exception as e:
+        print(e)
+        text = translator.translate(q, toLang, fromLang).text
+    return text
+
+
+def get_title(url='https://baijiahao.baidu.com/s?id=1604534610481479105&wfr=spider&for=pc&isFailFlag=1'):
+    r = requests.get(url, headers={'user-agent': 'Mozilla/5.0'})
+    r.encoding = r.apparent_encoding
+    # soup = BeautifulSoup(r.text)
+    dom_tree = HTML(r.text)
+    title = dom_tree.xpath('//title/text()')
+    return title[0]
+
+
+api = Api('/ctr/trans', trans_google, method='GET', verbose=False)
+api = Api('/get_title', get_title, api.app)
+
 api.app.run('0.0.0.0')
-
 
 # import requests
 # json = {'x': 1, 'y': 10}

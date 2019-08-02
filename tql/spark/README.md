@@ -1,4 +1,5 @@
 [Spark-jupyter][1]
+- `pip install toree`
 - `jupyter toree install --spark_home=/Users/yuanjie/Desktop/intelpython3/lib/python3.7/site-packages/pyspark`
 
 

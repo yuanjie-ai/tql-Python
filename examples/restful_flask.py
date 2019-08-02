@@ -18,7 +18,6 @@ from restful_api import Api
 app = flask.Flask(__name__)
 
 
-
 # 我们需要重新定义我们的度量函数，
 # 从而在加载模型时使用它
 

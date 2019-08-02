@@ -8,7 +8,7 @@
 # @Software     : PyCharm
 # @Description  : 
 
-
+# TODO: 爬虫服务
 from selenium import webdriver
 
 options = webdriver.ChromeOptions()
@@ -25,3 +25,13 @@ url = "http://zjy-hadoop-prc-ct12.bj:20701"
 driver.get(url)
 # driver.page_source
 # driver.implicitly_wait(10)
+
+
+# url = "https://m.weibo.cn/"
+# driver.get(url)
+# d = driver.find_element_by_xpath('//*[@id="app"]/div[1]/div[1]/div[2]/div/div[1]/div/div/ul/li[9]/span')
+#
+# d.click()
+# from lxml.etree import HTML
+# dom_tree = HTML(driver.page_source)
+# title = dom_tree.xpath('//div[@class="weibo-text"]//text()')

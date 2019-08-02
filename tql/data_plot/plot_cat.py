@@ -19,14 +19,6 @@ def plot_count(df, cat='rentType', figsize=(9, 4)):
     plt.show()
 
 
-def plot_count(df, cat='rentType', figsize=(9, 4)):
-    f, ax = plt.subplots(1, 2, figsize=figsize)
-    df[cat].value_counts().plot.pie(autopct='%1.2f%%', ax=ax[0], shadow=True)
-    sns.countplot(cat, data=df, ax=ax[1])
-    for _ax in ax:
-        _ax.set_title(cat)
-    plt.show()
-
 
 def distplot(data, x, y, figsize=(20, 8)):
     """

@@ -16,7 +16,13 @@ rgf_python
 bayesian-optimization
 statsmodels
 gensim
+h2o
+mlxtend
 
+
+missingno
+pandas_summary
+scikit-plot
 tables
 eli5
 shap
