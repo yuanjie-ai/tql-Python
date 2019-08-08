@@ -18,6 +18,7 @@ https://github.com/cognitect/transit-python
 """
 from .tencent import trans_tencent
 from googletrans import Translator
+from .youdao import trans_youdao
 
 translator = Translator(service_urls=['translate.google.cn', 'translate.google.com'],
                         timeout=3)
