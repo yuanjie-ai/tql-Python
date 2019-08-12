@@ -10,6 +10,7 @@
 
 
 """
+
 # spark 模型可导出 py能调用的模型
 val nativeModelPath = "/tmp/nativeModel"
 xgbClassificationModel.nativeBooster.saveModel(nativeModelPath)

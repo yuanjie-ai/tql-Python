@@ -21,8 +21,7 @@ https://blog.csdn.net/zhusongziye/article/details/80024426
 # for k, v in dic.items():
 #     print(k, ":", type(v).__name__, ':', v)
 
-
-dic = yaml.load(open('yaml_demo.yaml'))
+dic = yaml.full_load(open('yaml_demo.yaml'))
 
 pprint(dic)
 
