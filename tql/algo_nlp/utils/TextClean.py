@@ -36,7 +36,7 @@ class TextClean(object):
                     yield p if with_flag else p.word
 
     def _get_stopwords(self):
-        with open(get_module_path('.../_data/stop_words.txt', __file__), encoding='utf8') as f:
+        with open(get_module_path('../../_data/stop_words.txt', __file__), encoding='utf8') as f:
             return set(f.read().split())
 
 # def remove_special_characters(text):
