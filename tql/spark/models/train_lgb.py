@@ -8,7 +8,6 @@
 # @Software     : PyCharm
 # @Description  : 
 
-
 from tql.spark import SparkInit
 import pyspark
 from pyspark.sql.types import *

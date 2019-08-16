@@ -15,9 +15,14 @@ from fake_useragent import UserAgent
 
 class HotSpider(object):
 
-    def __init__(self, query='news', categories=['news', 'tech', 'ent', 'shopping', 'community']):
+    def __init__(self, query='news'):
+        """
+
+        :param query:
+        :param categories:
+        """
         self.query = query
-        self.categories = categories
+        self.categories = ['news', 'tech', 'ent', 'shopping', 'community']
         self.ua = UserAgent()
 
     def df_sites_info(self):

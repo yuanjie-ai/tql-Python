@@ -17,7 +17,7 @@ from setuptools import find_packages, setup
 # rename
 package_name = 'tql'
 project_name = 'tql-Python'
-version = '0.0.%d' % time.time()
+version = time.ctime()
 # with open('./%s/__init__.py' % package_name, encoding='utf-8') as f:
 #     version = re.search(r'__version__ = \'(.*?)\'', f.read()).group(1)
 
