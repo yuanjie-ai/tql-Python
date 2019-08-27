@@ -5,12 +5,23 @@ __title__ = 'fm_data'
 __author__ = 'JieYuan'
 __mtime__ = '2019/4/4'
 """
-
+"""
+https://www.cnblogs.com/wkang/p/9788012.html
+https://blog.csdn.net/songbinxu/article/details/79662665
+"""
 import os
 from collections import defaultdict
 from csv import DictReader
 import math
 
+
+class DF2FFM(object):
+
+    def __init__(self):
+        pass
+
+    def transform(self, input, output, exclude, excluse):
+        pass
 
 train_path = '../input/train.csv'
 
@@ -19,9 +30,10 @@ dont_use = ['MachineIdentifier',
             'Census_OEMModelIdentifier',
             'CityIdentifier']
 
-num_cols = []
-cat_cols = []
-
+cols_num = []
+cols_cat = []
+cols_multi_cat = []
+# 大值平滑
 too_many_vals = ["Census_PrimaryDiskTotalCapacity",
                  "Census_SystemVolumeTotalCapacity",
                  "Census_TotalPhysicalRAM",
@@ -32,6 +44,7 @@ too_many_vals = ["Census_PrimaryDiskTotalCapacity",
 
 categories = [k for k, v in dtypes.items() if k not in dont_use]
 categories_index = dict(zip(categories, range(len(categories))))
+
 field_features = defaultdict()
 
 max_val = 1
@@ -58,6 +71,7 @@ with open('train.libffm', 'a') as the_file:
                         ff = field + '_____' + str(int(round(math.log(1 + float(feature)))))
                     else:
                         ff = field + '_____' + str(int(round(float(feature))))
+
             if ff not in field_features:
                 if len(field_features) == 0:
                     field_features[ff] = 1

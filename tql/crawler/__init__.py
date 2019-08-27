@@ -6,3 +6,4 @@ __author__ = 'JieYuan'
 __mtime__ = '2019-04-30'
 """
 from .hotnews import HotNews
+from .HotSpider import HotSpider
