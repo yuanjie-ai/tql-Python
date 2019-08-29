@@ -12,14 +12,14 @@ import numpy as np
 
 
 # 时间戳 转 时间字符串
-def timestamp2str(timestamp, format='%Y-%m-%d %H:%M:%S'):
+def timestamp2str(timestamp, format=''):
     """
     t = pd.datetime.now().timestamp()
     ts = pd.Series([t]*10, name='t')
 
     # 时间戳 转 时间字符串
     ts = ts.map(timestamp2str) # 会有时区问题
-
+%Y-%m-%d %H:%M:%S
     # 时间字符串 转 时间
     ts = ts.astype('datetime64[ns]') # 慢一些 pd.to_datetime(ts, errors='coerce', infer_datetime_format=True)
 

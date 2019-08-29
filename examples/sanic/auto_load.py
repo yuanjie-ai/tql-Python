@@ -13,22 +13,16 @@ from iapp import App
 import time
 
 
+app = App()
 
-##############update
-a = 666
+f1 = lambda **kwargs: 666
 
-def update(**kwargs):
-    time.sleep(10)
+def f2(**kwargs):
+    with open('./log.txt') as f:
+        f.read()
+    return
+app.add_route("/f1", f1, time=time.ctime())
+app.add_route("/f2", f2, time=time.ctime())
 
-    global a
-    a = kwargs
-    return a
-##############
 
-app = App(1, workers=2)
-# update
-app.add_route("/update", update, time=time.ctime())
-
-f = lambda **kwargs: a
-app.add_route("/f", f, time=time.ctime())
 app.run()

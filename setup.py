@@ -10,16 +10,13 @@
 
 
 import os
-import re
 import time
 from setuptools import find_packages, setup
 
 # rename
 package_name = 'tql'
 project_name = 'tql-Python'
-version = time.ctime()
-# with open('./%s/__init__.py' % package_name, encoding='utf-8') as f:
-#     version = re.search(r'__version__ = \'(.*?)\'', f.read()).group(1)
+version = time.strftime("%Y.%m.%d.%H.%M.%S", time.localtime())
 
 with open("README.md", encoding='utf-8') as f:
     long_description = f.read()

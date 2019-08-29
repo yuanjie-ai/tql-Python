@@ -25,4 +25,3 @@ cnn = TextCNN(len(ts.word2index) + 1, maxlen=128, embedding_size=64)(1)
 cnn.compile('adam', 'binary_crossentropy', metrics=['accuracy', tf.metrics.AUC()])
 cnn.fit_generator(DataIter(X, y, batch_size=128), epochs=10)
 # cnn.fit(X, y, batch_size=128, epochs=10, validation_split=0.3)
-

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# @Project      : tql-Python
+# @Time         : 2019-08-28 14:29
+# @Author       : yuanjie
+# @Email        : yuanjie@xiaomi.com
+# @Software     : PyCharm
+# @Description  : ${DESCRIPTION}
+
+
+sudo add-apt-repository ppa:pypy/ppa -y  ## 安装pypy
+sudo apt-get update  # 更新pypy
+sudo apt-get install pypy3 # pip_pypy install xx
+
+
+apt-get install python-software-properties -y
+apt-get install software-properties-common -y
+add-apt-repository ppa:jonathonf/python-3.6 -y
+apt-get update
+apt-get install python3.6 -y
+apt-get install python3-pip -y
+ls -l /usr/bin | grep python
+ln -sf /usr/bin/python3.6 /usr/bin/python
+ln -sf /usr/bin/pip3 /usr/bin/pip
+
+
+# locales bug
+sudo apt-get update
+sudo apt-get install locales -y
+sudo locale-gen en_US.UTF-8
+sudo dpkg-reconfigure locales
+
+sudo update-locale LC_ALL=en_US.UTF-8

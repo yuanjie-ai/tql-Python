@@ -22,6 +22,16 @@ class DataIter(Sequence):
     """
 
     def __init__(self, x, y, batch_size=128, data_processor=lambda *args: args, data_shuffle=False):
+        """
+
+        :param x:
+        :param y:
+        :param batch_size:
+        :param data_processor:
+        :param data_shuffle:
+
+            keras_model.fit_generator(DataIter(X, y, batch_size=128), epochs=10)
+        """
         self.x, self.y = x, y
         self.batch_size = batch_size
         self.data_shuffle = data_shuffle

@@ -6,6 +6,8 @@
 # @Software     : PyCharm
 # @Description  : ${DESCRIPTION}
 
-hdfspath=hdfs://zjyprc-analysis/user/sql_prc/warehouse/kudu_demo.db/h_fenqun_3844_20190827
-hdfs --cluster zjyprc-hadoop dfs -getmerge $hdfspath ./ata
-hdfs --cluster zjyprc-hadoop dfs -put -f ./data  /user/h_browser/algo/yuanjie/UserGroups/军事
+cd /home/work/yuanjie/checkpoint
+dateStr=`date -d "-1 day" +"%Y%m%d"`
+hdfspath=hdfs://zjyprc-analysis/user/sql_prc/warehouse/kudu_demo.db/h_fenqun_3844_$dateStr
+hdfs --cluster zjyprc-hadoop dfs -getmerge $hdfspath ./data
+hdfs --cluster zjyprc-hadoop dfs -put -f ./data  /user/h_browser/algo/yuanjie/UserGroups/军事/date=$dateStr
