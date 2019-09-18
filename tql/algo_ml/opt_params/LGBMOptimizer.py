@@ -27,4 +27,4 @@ class LGBMOptimizer(Optimizer):
 
         # 核心逻辑
         self.clf = LGBMClassifierCV(_params, self.cv, self.random_state)
-        return self.clf.fit(self.X, self.y, early_stopping_rounds=300)
+        return self.clf.fit(self.X, self.y, early_stopping_rounds=300, verbose=0)
