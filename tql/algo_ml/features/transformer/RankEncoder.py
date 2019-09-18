@@ -13,26 +13,33 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 class RankEncoder(BaseEstimator, TransformerMixin):
 
-    def __init__(self, topn=None, verbose=True):
-        self.topn = (topn if topn else 10000)
-        self.verbose = verbose
+    def __init__(self, topn=None):
+        """
+
+        :param topn: 仅保留topn个类别
+        """
+        self.topn = topn
         self.mapper = None
 
-    def fit(self, series: pd.Series):
-        _ = series.value_counts(True)[:self.topn]
-        print("Coverage: %.2f %%" % (_.sum() * 100))
-        self.mapper = (_.rank(method='first') - 1).to_dict(OrderedDict)
-        if self.verbose:
-            print(self.mapper)
+    def fit(self, y):
+        ce = pd.Series(y).value_counts(True, dropna=False)  # 计数编码
+        if self.topn:
+            ce = ce[:self.topn]
+            print(f"Coverage: {ce.sum() * 100:.2f}%")
+
+        self.mapper = ce.rank(method='first').to_dict(OrderedDict)  # rank 合理？
         return self
 
-    def transform(self, series: pd.Series):
-        return series.map(self.mapper).fillna(0)  # 不在训练集里的补0
+    def transform(self, y):
+        """不在训练集的补0，不经常出现补0"""
+        return pd.Series(y).map(self.mapper).fillna(0)
 
 
 if __name__ == '__main__':
-    s = pd.Series(['a', 'a', 'b', 'b', 'c'])
+    import numpy as np
 
-    re = RankEncoder()
+    s = ['a', 'a', 'b', 'b', 'c'] + [np.nan] * 6
+    re = RankEncoder(2)
 
     print(re.fit_transform(s))
+    print(re.mapper)
