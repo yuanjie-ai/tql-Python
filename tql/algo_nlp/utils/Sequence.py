@@ -6,7 +6,7 @@ __author__ = 'JieYuan'
 __mtime__ = '18-12-28'
 """
 
-from tensorflow.python.keras.preprocessing.text import Tokenizer
+from tensorflow.python.keras.preprocessing.text import Tokenizer, one_hot
 from tensorflow.python.keras.preprocessing.sequence import pad_sequences
 
 
@@ -42,7 +42,8 @@ class Sequence(object):
     def transform(self, docs):
         print('Docs To Sequences ...')
         sequences = self.tokenizer.texts_to_sequences(docs)
-        pad_docs = pad_sequences(sequences, self.maxlen, padding='post')
+        # 补后面 截断后面
+        pad_docs = pad_sequences(sequences, self.maxlen, padding='post', truncating='post')
         if self.maxlen is None:
             self.maxlen = pad_docs.shape[1]
         return pad_docs

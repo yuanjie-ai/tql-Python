@@ -142,7 +142,7 @@ class BayesOptLGB(object):
                 .sort_values('target', ascending=False)
                 .reset_index(drop=True)[:self.topk])
 
-        for _, (i, p, _) in self.params_opt_df.iterrows():
+        for _, (i, _, p) in self.params_opt_df.iterrows():
             params_sk = {**self.__params_sk, **p, **{'n_estimators': i}}
 
             params_sk['num_leaves'] = int(params_sk['num_leaves'])

@@ -9,7 +9,7 @@ __mtime__ = '19-1-2'
 import xgboost as xgb
 
 
-class BaselineXGB(object):
+class   BaselineXGB(object):
     """
     待补充: https://xgboost.readthedocs.io/en/release_0.81/tutorials/feature_interaction_constraint.html
     新版xgb支持交叉特征interaction_constraints

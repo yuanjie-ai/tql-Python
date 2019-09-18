@@ -48,10 +48,6 @@ setup(
     platforms=["all"],
     python_requires='>=3.5',
     classifiers=[
-        'Topic :: ML',
-        'Topic :: DL',
-        'Topic :: CV',
-        'Topic :: NLP',
 
         'Operating System :: OS Independent',
         'Intended Audience :: Developers',

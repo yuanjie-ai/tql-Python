@@ -1,0 +1,7 @@
+xgb: {'min_child_weight': (1, 100),
+ 'colsample_bytree': (0.1, 1),
+ 'max_depth': (2, 9),
+ 'subsample': (0.5, 1),
+ 'gamma': (0, 10),
+ 'alpha': (0, 10),
+}

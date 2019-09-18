@@ -28,6 +28,7 @@ class BaseModel(object):
                  best_model_weights=None, **kwargs):
         self.max_tokens = max_tokens
         self.maxlen = maxlen
+        # 6 * int(pow(feat.dimension, 0.25)
         self.embedding_size = embedding_size if embedding_size else min(50, (max_tokens + 1) // 2)  # 经验值
 
         self.num_class = num_class

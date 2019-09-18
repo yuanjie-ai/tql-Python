@@ -1,0 +1,1 @@
+int: ('max_depth', 'depth', 'num_leaves', 'subsample_freq', 'min_child_samples')

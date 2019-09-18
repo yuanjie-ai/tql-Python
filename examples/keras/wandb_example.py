@@ -53,9 +53,9 @@ labels = ["T-shirt/top", "Trouser", "Pullover", "Dress",
           "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]
 
 X_train = X_train.astype('float32')
-X_train /= 255.
+X_train /= 255
 X_test = X_test.astype('float32')
-X_test /= 255.
+X_test /= 255
 
 # reshape input data
 X_train = X_train.reshape(X_train.shape[0], img_width, img_height, 1)

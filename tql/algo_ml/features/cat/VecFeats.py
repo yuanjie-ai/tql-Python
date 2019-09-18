@@ -5,6 +5,7 @@ __title__ = 'VecFeats'
 __author__ = 'JieYuan'
 __mtime__ = '19-2-18'
 """
+from sklearn.model_selection import cross_val_predict
 
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 

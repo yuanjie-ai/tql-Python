@@ -8,9 +8,11 @@
 # @Software     : PyCharm
 # @Description  : 
 
+"""默认参数https://www.kaggle.com/c/home-credit-default-risk/discussion/59347#latest-542068"""
 import lightgbm as lgb
 
 from sklearn.datasets import make_classification
+
 
 X, y = make_classification(10000)
 param = {

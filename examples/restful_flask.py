@@ -12,7 +12,6 @@ import flask
 import pandas as pd
 
 import tensorflow as tf
-from restful_api import Api
 
 # 实例化 flask
 app = flask.Flask(__name__)

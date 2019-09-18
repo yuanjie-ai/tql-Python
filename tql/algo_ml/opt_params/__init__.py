@@ -7,4 +7,6 @@ __mtime__ = '19-2-18'
 """
 
 from .Optimizer import Optimizer
-from .ParamsBounds import ParamsBounds
+from .LGBMOptimizer import LGBMOptimizer
+from .XGBOptimizer import XGBOptimizer
+from .CatBoostOptimizer import CatBoostOptimizer

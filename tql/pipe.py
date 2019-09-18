@@ -9,8 +9,8 @@ from .utils.xx import xx
 from .utils import cprint
 from .utils.config import _in_notebook
 
-cprint("Please Fork And Star:", 'black')
-print("\thttps://github.com/Jie-Yuan/tql-Python")
+# cprint("Please Fork And Star:", 'black')
+# print("\thttps://github.com/Jie-Yuan/tql-Python")
 
 import warnings
 

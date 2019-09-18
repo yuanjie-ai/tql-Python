@@ -6,13 +6,18 @@
 # @Author       : yuanjie
 # @Email        : yuanjie@xiaomi.com
 # @Software     : PyCharm
-# @Description  : 
+# @Description  :
 
+"""
+https://m.imooc.com/article/30122读大数据
+https://blog.csdn.net/lujiandong1/article/details/54869170
+https://blog.csdn.net/foreseerwang/article/details/80572182
+"""
 import tensorflow as tf
 from tql.pipe import *
 from tql.algo_nlp.utils import Text2Sequence
 from tql.algo_dl.keras.utils import DataIter
-from tql.algo_dl.keras.models import TextCNN
+from tql.algo_dl.keras.models import TextCNN, TextFast
 
 jieba.initialize()
 

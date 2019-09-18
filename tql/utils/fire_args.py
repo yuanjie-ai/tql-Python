@@ -28,5 +28,5 @@ def gen(**kwargs):
 
 
 if __name__ == '__main__':
-    fire.Fire()
-    #  python ./fire_args.py gen --x 100
+    fire.Fire()  # python ./fire_args.py gen --x 100
+    # fire.Fire() # python fire_args.py --x 10000

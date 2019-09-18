@@ -14,6 +14,10 @@ from tqdm import tqdm
 
 
 class InformationValue(object):
+    """
+    小于0.02预测能力无
+    大于0.30预测能力强
+    """
     def __init__(self, df: pd.DataFrame, label: str):
         """
         :param df:

@@ -38,7 +38,7 @@ def get_embed(x_input, x_size, k_latent):
     return embed
 
 
-def build_model_1(X, f_size):
+def build_model_1(f_size):
     dim_input = len(f_size)
 
     input_x = [Input(shape=(1,)) for i in range(dim_input)]
