@@ -97,7 +97,7 @@ class LGBMClassifierCV(object):
     def oof_save(self, file='./oof_train_and_test.csv'):
         pd.DataFrame(self.oof_train_and_test, columns=['oof_train_and_test']).to_csv(file, index=False)
 
-    def plot_feature_importances(self, feature_names=None, topk=20, figsize=(10, 6), pic_name='lgbm_importances.png'):
+    def plot_feature_importances(self, feature_names=None, topk=20, figsize=(10, 6), pic_name=None):
         columns = ['Importances', 'Features']
         importances = self.clf.feature_importances_.tolist()
         if feature_names is None:
@@ -109,7 +109,8 @@ class LGBMClassifierCV(object):
         sns.barplot(*columns, data=df[:topk])
         plt.title('Features Importances\n')
         plt.tight_layout()
-        plt.savefig(pic_name)
+        if pic_name is None:
+            plt.savefig(f'importances_{self.oof_score}.png')
 
 
 if __name__ == "__main__":
@@ -117,7 +118,6 @@ if __name__ == "__main__":
 
     X, y = make_classification()
     X_test, _ = make_classification()
-
 
     clf = LGBMClassifierCV()
     clf.fit(X, y, X_test)

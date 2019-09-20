@@ -24,6 +24,7 @@ class XGBOptimizer(Optimizer):
             dict(n_estimators=100,
                  max_depth=(5, 16),
                  learning_rate=(0.001, 1),
+                 max_delta_step=(0, 2), # 极端不平衡的时候有用
 
                  gamma=(0.001, 1),  # 描述分裂的最小 gain, 控制树的有用的分裂
                  min_child_weight=(0.001, 100),  # 决定最小叶子节点样本权重和,使一个结点分裂的最小权值之和, 避免过拟合
@@ -32,8 +33,8 @@ class XGBOptimizer(Optimizer):
                  colsample_bytree=(0.1, 1),  # 每棵树的列数
                  # colsample_bylevel=(0.3, 1),  # 每一层的列数
 
-                 reg_alpha=(0, 100),
-                 reg_lambda=(0, 100),
+                 reg_alpha=(0, 6),
+                 reg_lambda=(0, 6),
 
                  scale_pos_weight=1,
 

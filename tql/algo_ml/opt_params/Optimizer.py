@@ -24,11 +24,12 @@ class Optimizer(object):
 
         self.params_bounds = params_bounds if params_bounds else \
             dict(
+                # cat_smooth
                 metric='auc',
                 n_estimators=100,
                 class_weight=None,  # 'balanced'
                 boosting_type='gbdt',
-                num_leaves=(2 ** 2, 2 ** 8),
+                num_leaves=(2 ** 2, 2 ** 7),
                 learning_rate=(0.001, 1),
                 min_split_gain=(0.001, 1),
                 min_child_weight=(0.001, 1),  # 终点节点最小样本占比的和 TODO 确定范围
@@ -36,8 +37,8 @@ class Optimizer(object):
                 subsample=(0.1, 1),
                 colsample_bytree=(0.1, 1),
                 subsample_freq=(2, 6),
-                reg_alpha=(0, 100),
-                reg_lambda=(0, 100),
+                reg_alpha=(0, 6),
+                reg_lambda=(0, 6),
                 random_state=666,
                 n_jobs=-1,
                 importance_type='split',  # 'gain'

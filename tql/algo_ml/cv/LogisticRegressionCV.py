@@ -20,7 +20,7 @@ from scipy.sparse.csr import csr_matrix
 class LogisticRegressionCV(object):
 
     def __init__(self, cv=5, random_state=None, n_repeats=None):
-        self.clf = LogisticRegression(n_jobs=-1)
+        self.clf = LogisticRegression(random_state=random_state, n_jobs=-1)
 
         if n_repeats:
             self._kf = RepeatedStratifiedKFold(cv, True, random_state)

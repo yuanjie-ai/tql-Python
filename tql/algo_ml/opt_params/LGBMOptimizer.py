@@ -11,6 +11,7 @@ from .Optimizer import Optimizer
 
 
 class LGBMOptimizer(Optimizer):
+    """https://www.jianshu.com/p/1100e333fcab"""
 
     def __init__(self, X, y, cv=5, workers=5, random_state=None, params_bounds=None):
         super().__init__(X, y, cv, workers, random_state, params_bounds)
