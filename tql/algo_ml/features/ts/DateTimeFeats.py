@@ -8,6 +8,9 @@
 # @Software     : PyCharm
 # @Description  : 
 import pandas as pd
+from tqdm import tqdm
+
+tqdm.pandas()
 
 
 class DateTimeFeats(object):
@@ -21,21 +24,29 @@ class DateTimeFeats(object):
     pd.to_datetime(ts, 'coerce', unit='s', infer_datetime_format=True)
     """
 
-    def __init__(self):
+    def __init__(self, include_feats=None):
+        """
+        :param include_feats: 默认
+            ("year", "quarter", "month", "day", "hour", "minute", "week", "weekday", "weekofyear")
+        """
         self.time_granularity = ("year", "quarter", "month",
                                  "day", "hour", "minute",
                                  "week", "weekday", "weekofyear")
 
-    def transform(self, s: pd.Series, include=None):
-        feats = include if include else self.time_granularity
+        self.feats = include_feats if include_feats else self.time_granularity
 
-        if isinstance(s[0], (int, float)):  # 时间戳
+    def transform(self, s: pd.Series, add_prefix=None):
+        if add_prefix is None:
+            add_prefix = s.name
+        feats = self.feats
+
+        if isinstance(s[:1].values[0], (int, float)):  # 时间戳
             ts = self.timestamp2date(s)
         else:
             ts = self.dateStr2date(s)
 
-        ts = ts.map(lambda t: list(self._func(t, feats)))
-        return pd.DataFrame(ts.tolist(), columns=feats)
+        ts = ts.progress_map(lambda t: list(self._func(t, feats)))
+        return pd.DataFrame(ts.tolist(), columns=feats).add_prefix(add_prefix)
 
     def _func(self, t, feats):
         for feat in feats:

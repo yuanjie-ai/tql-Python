@@ -30,7 +30,6 @@ from sklearn.model_selection import StratifiedKFold, RepeatedStratifiedKFold
 from statsmodels.api import GLM, families
 from xgboost import XGBClassifier
 
-from tensorflow.python.keras.wrappers.scikit_learn import KerasClassifier
 
 
 """

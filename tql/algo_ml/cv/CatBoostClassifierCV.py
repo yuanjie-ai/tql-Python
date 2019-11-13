@@ -49,14 +49,14 @@ class CatBoostClassifierCV(object):
                 print("\033[94mFold %s started at %s\033[0m" % (n_fold + 1, time.ctime()))
             X_train, y_train = X[train_index], y[train_index]
             X_valid, y_valid = X[valid_index], y[valid_index]
-            eval_set = [(X_train, y_train), (X_valid, y_valid)]
+            # eval_set = [(X_train, y_train), (X_valid, y_valid)]
 
             ########################################################################
             self.clf.fit(X_train, y_train,
                          cat_features=cat_features,
                          sample_weight=sample_weight,
                          use_best_model=True,
-                         eval_set=eval_set,
+                         eval_set=(X_valid, y_valid),
                          verbose=verbose,
                          logging_level=logging_level,
                          plot=plot,

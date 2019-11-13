@@ -19,3 +19,9 @@ class Colors:
 import csv
 
 print(csv.QUOTE_NONE)
+
+
+from sklearn import semi_supervised
+
+semi_supervised.LabelPropagation
+semi_supervised.LabelSpreading

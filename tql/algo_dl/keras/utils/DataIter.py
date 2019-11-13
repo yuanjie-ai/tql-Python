@@ -9,7 +9,10 @@
 # @Description  :
 
 import numpy as np
-from tensorflow.python.keras.utils import Sequence
+# from tensorflow.python.keras.utils import Sequence
+import tensorflow as tf
+
+
 from sklearn.utils import shuffle
 
 

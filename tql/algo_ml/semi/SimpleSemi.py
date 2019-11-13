@@ -7,7 +7,7 @@ __mtime__ = '19-1-11'
 """
 import numpy as np
 import pandas as pd
-from ....pipe import tqdm, cprint
+from tql.pipe import tqdm, cprint
 
 
 class SimpleSemi(object):

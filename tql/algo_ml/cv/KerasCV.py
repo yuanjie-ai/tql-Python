@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold, KFold
 from sklearn.metrics import roc_auc_score
-
+# from tensorflow.python.keras.models import clone_and_build_model
 
 class KerasCV(object):
     """cross_val_predict"""

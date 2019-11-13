@@ -12,10 +12,19 @@
 # from keras_bert import load_trained_model_from_checkpoint, Tokenizer
 
 
-import pandas as pd
+# import pandas as pd
+#
+#
+# df0 = pd.read_excel('./neg.xls', names=['text']).assign(label=0)
+# df1 = pd.read_excel('./pos.xls', names=['text']).assign(label=1)
+#
+# df0.append(df1).to_csv('./sentiment.tsv', '\t', index=False)
 
 
-df0 = pd.read_excel('./neg.xls', names=['text']).assign(label=0)
-df1 = pd.read_excel('./pos.xls', names=['text']).assign(label=1)
 
-df0.append(df1).to_csv('./sentiment.tsv', '\t', index=False)
+# from pypegasus.pgclient import Pegasus
+#
+#
+# p = Pegasus("10.38.162.231:31601")
+#
+# p.set("a", "b", "c")

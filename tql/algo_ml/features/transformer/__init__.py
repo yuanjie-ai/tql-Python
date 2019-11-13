@@ -7,6 +7,7 @@ __mtime__ = '19-1-10'
 """
 
 from .CountEncoder import CountEncoder
-from .CountRankEncoder import RankEncoder
+from .RankEncoder import RankEncoder
+from .CountRankEncoder import CountRankEncoder
 from .OutlierEncoder import OutlierEncoder
 from .DataAugment import DataAugment

@@ -15,3 +15,4 @@ from .TextRNN import TextRNN
 from .TextRNNBi import TextRNNBi
 from .TextRCNN import TextRCNN
 from .TextRCNNVariant import TextRCNNVariant
+from .KerasFM import KerasFM

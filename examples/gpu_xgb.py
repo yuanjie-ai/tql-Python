@@ -21,15 +21,15 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 
 clf = XGBClassifier(learning_rate=0.01,
-                    n_estimators=10000,
-                    tree_method='gpu_hist',
-                    predictor='gpu_predictor',
+                    n_estimators=1000,
+                    # tree_method='gpu_hist',
+                    # predictor='gpu_predictor',
                     verbosity=0,
                     n_jobs=8,
                    )
 
 clf.fit(X, y,
-        eval_metric='auc',
+        eval_metric='logloss',
         eval_set=[(X_train, y_train), (X_test, y_test)],
         early_stopping_rounds=300,
         verbose=100)

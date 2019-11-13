@@ -8,10 +8,10 @@
 # @Software     : PyCharm
 # @Description  : 
 
+from .LogisticRegressionCV import LogisticRegressionCV
 from .LGBMClassifierCV import LGBMClassifierCV
 from .XGBClassifierCV import XGBClassifierCV
 from .CatBoostClassifierCV import CatBoostClassifierCV
 from .KerasCV import KerasCV
-from .OOF import OOF
 
 # TODO: 各种默认参数

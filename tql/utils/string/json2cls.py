@@ -13,6 +13,8 @@ class CreateOrder(object):
     def __init__(self):
         self.success = None
         self.item = None
+        self.a = None
+
 
 
 co = CreateOrder()
@@ -33,4 +35,8 @@ co.__dict__ = {'success': True,
                         'bizIndexName': 'BROWSER_NEWS'}}
 
 print(co.success)
-print(co.item)
+print(type(co.item['keywords']))
+
+import requests
+requests.post()
+

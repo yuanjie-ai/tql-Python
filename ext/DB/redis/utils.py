@@ -11,12 +11,20 @@
 
 from redis import StrictRedis, ConnectionPool
 
-# 多个Redis实例共享一个连接池，避免每次建立、释放连接的开销。
-pool = ConnectionPool(host='10.38.164.94', port=7001, decode_responses=True)
-redis = StrictRedis(connection_pool=pool)
 
-print(redis.randomkey())
-for _, v in enumerate(redis.keys('br:bd:ark:*')):
-    print(v)
-    if _ > 5:
-        break
+# 多个Redis实例共享一个连接池，避免每次建立、释放连接的开销。
+
+def redis_client(host, port):
+    pool = ConnectionPool(host=host, port=port, decode_responses=True)
+    r = StrictRedis(connection_pool=pool)
+    print("randomkey: ", r.randomkey())
+    return r
+
+# for _, v in enumerate(r.keys('br:bd:ark:*')):
+#     print(v)
+#     if _ > 5:
+#         break
+
+
+if __name__ == '__main__':
+    print(redis_client('10.118.31.33', 25773))
