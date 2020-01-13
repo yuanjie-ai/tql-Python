@@ -1,9 +1,9 @@
 <h1 align = "center">:rocket: DataScience :facepunch:</h1>
 
----
 [![PyPI release](https://img.shields.io/pypi/v/scorecardpy.svg)](https://pypi.python.org/pypi/tql)
 [![Downloads](http://pepy.tech/badge/tql)](http://pepy.tech/project/tql)
 [![PyPI version](https://img.shields.io/pypi/pyversions/tql.svg)](https://pypi.python.org/pypi/tql)
+---
 
 - [mlcrate](https://github.com/mxbi/mlcrate)
 
