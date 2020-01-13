@@ -3,9 +3,9 @@
 [![Downloads](http://pepy.tech/badge/tql)](http://pepy.tech/project/tql)
 [![Downloads](https://pepy.tech/badge/tql/month)](https://pepy.tech/project/tql/month)
 [![Downloads](https://pepy.tech/badge/tql/week)](https://pepy.tech/project/tql/week)
-
 [![PyPI release](https://img.shields.io/pypi/v/scorecardpy.svg)](https://pypi.python.org/pypi/tql)
 [![PyPI version](https://img.shields.io/pypi/pyversions/tql.svg)](https://pypi.python.org/pypi/tql)
+
 ---
 
 - [mlcrate](https://github.com/mxbi/mlcrate)
