@@ -5,7 +5,7 @@
 [![Downloads](http://pepy.tech/badge/tql)](http://pepy.tech/project/tql)
 [![PyPI version](https://img.shields.io/pypi/pyversions/tql.svg)](https://pypi.python.org/pypi/tql)
 
-- [mlcrate][https://github.com/mxbi/mlcrate]
+- [mlcrate](https://github.com/mxbi/mlcrate)
 
 
 <br/>
