@@ -24,12 +24,15 @@ class WeightInit(object):
             init.xavier_normal_(model.weight.data)
             init.constant_(model.bias.data, 0.0)
 
+s = "1:2 2:3"
+f"{ {s.replace(' ', ',')} }"
 
 if __name__ == '__main__':
     from torch import nn
 
 
     class Net(nn.Module):
+        """https://zhuanlan.zhihu.com/p/100937718?utm_source=qq"""
         pass
 
 

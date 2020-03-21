@@ -15,7 +15,7 @@ class A:
         self.a = a
         self.b = b
 
-        print(self.a + self.b)
+        print("A:", self.a + self.b)
 
     @property
     def f(self):
@@ -26,6 +26,7 @@ class B(A):
 
     def __init__(self, a=100000, **kwargs):
         self.a = a+11111
+        print("B:", self.a)
         super().__init__(**kwargs)
 
         print(self.a)
@@ -34,6 +35,7 @@ class B(A):
 
 
 if __name__ == '__main__':
-    print(B(a=1,b=111))
+    o = B(a=1,b=111)
+    print(list(o.f))
 
 

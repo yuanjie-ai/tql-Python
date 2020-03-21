@@ -20,11 +20,10 @@ def redis_client(host, port):
     print("randomkey: ", r.randomkey())
     return r
 
-# for _, v in enumerate(r.keys('br:bd:ark:*')):
-#     print(v)
-#     if _ > 5:
-#         break
-
 
 if __name__ == '__main__':
-    print(redis_client('10.118.31.33', 25773))
+    r = redis_client('10.118.31.33', 25773)
+    for _, v in enumerate(r.keys('br:bd:ark:*')):
+        print(v)
+        if _ > 5:
+            break

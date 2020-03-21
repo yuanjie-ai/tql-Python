@@ -23,4 +23,4 @@ train['s2'] = round(np.log(abs(train['s2'] + 1))).map(str)
 train['clicked'] = y
 
 dump_svmlight_file(pd.get_dummies(train), y, 'svm_output.libsvm', zero_based=False)  # 从1开始编码
-dump_svmlight_file(pd.get_dummies(train[['s1', 's2']]), y, 'svm_output.libsvm', zero_based=False)  # 从1开始编码
+dump_svmlight_file(pd.get_dummies(train[['s1', 's2']]), y, 'svm_output_.libsvm', zero_based=False)  # 从1开始编码

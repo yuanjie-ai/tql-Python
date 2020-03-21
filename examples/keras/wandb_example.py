@@ -9,17 +9,19 @@
 # @Description  : 
 
 
-from tensorflow.python.keras.datasets import fashion_mnist
-from tensorflow.python.keras.models import Sequential
-from tensorflow.python.keras.layers import Conv2D, MaxPooling2D, Dropout, Dense, Flatten
+
+from tensorflow.keras.datasets import fashion_mnist
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dropout, Dense, Flatten
 from tensorflow.python.keras.utils import np_utils
-from tensorflow.python.keras.optimizers import SGD
-from tensorflow.python.keras.callbacks import TensorBoard
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.callbacks import TensorBoard
 import random
 
 # Import wandb libraries
 import wandb
 from wandb.keras import WandbCallback
+from wandb import magic
 
 # Initialize wandb
 wandb.init(project="example")
@@ -84,4 +86,5 @@ model.add(Dense(num_classes, activation='softmax'))
 # Add Keras WandbCallback
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=config.epochs,
-          callbacks=[WandbCallback(data_type="image", labels=labels)])
+          callbacks=[WandbCallback(data_type="image", labels=labels)]
+          )

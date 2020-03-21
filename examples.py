@@ -28,3 +28,6 @@
 # p = Pegasus("10.38.162.231:31601")
 #
 # p.set("a", "b", "c")
+
+
+from sklearn.feature_extraction.text import HashingVectorizer

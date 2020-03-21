@@ -15,12 +15,14 @@ from .utils.config import _in_notebook
 import warnings
 
 warnings.filterwarnings("ignore")
-if _in_notebook():
-    from tqdm import tqdm_notebook as tqdm
-else:
-    from tqdm import tqdm
+# if _in_notebook():
+#     from tqdm import tqdm_notebook as tqdm
+# else:
+#     from tqdm import tqdm
+from tqdm.auto import tqdm
 #########################################################################
 import os
+import re
 import json
 import pickle
 import inspect
@@ -35,6 +37,7 @@ from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 #########################################################################
 
+TOP_DIR = os.path.realpath(os.path.dirname("."))
 
 # p = Path(__file__)
 get_module_path = lambda path, file=__file__: \
@@ -126,6 +129,15 @@ xtuple, xlist, xset = xx(tuple), xx(list), xx(set)
 xjoin = xx(lambda s, sep=' ': sep.join(s))
 xcut = xx(lambda s, cut_all=False: jieba.lcut(s, cut_all=cut_all))
 xtfidf = xx(lambda s, topK=20: ja.tfidf(s, topK=topK))
+
+
+@xx
+def hump_str(string="a_b", pattern='_'):
+    """驼峰式转换"""
+    reg = re.compile(pattern)
+    _ = reg.sub('', string.title())
+    return _.replace(_[0], _[0].lower())
+
 
 # list transform
 xgroup_by_step = xx(lambda ls, step=3: [ls[idx: idx + step] for idx in range(0, len(ls), step)])

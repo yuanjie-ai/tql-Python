@@ -29,7 +29,7 @@ class DataTrick(object):
 
         :param df:
         :param cols: 列表 or 字符串
-        :return:
+        :return: 变多列
         """
         df_ = df[:1]
 

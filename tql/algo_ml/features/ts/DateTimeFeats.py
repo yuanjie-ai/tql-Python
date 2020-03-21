@@ -9,6 +9,7 @@
 # @Description  : 
 import pandas as pd
 from tqdm import tqdm
+from datetime import timedelta
 
 tqdm.pandas()
 
@@ -28,6 +29,11 @@ class DateTimeFeats(object):
         """
         :param include_feats: 默认
             ("year", "quarter", "month", "day", "hour", "minute", "week", "weekday", "weekofyear")
+            weekofyear == week?
+            TODO: + "DayOfWeekInMonth": 当月第几周
+            利用python获取某年中每个月的第一天和最后一天
+
+
         """
         self.time_granularity = ("year", "quarter", "month",
                                  "day", "hour", "minute",
@@ -66,6 +72,16 @@ class DateTimeFeats(object):
             print("astype('datetime64[ns]'): %s" % e)
             _ = pd.to_datetime(ts, 'coerce', infer_datetime_format=True)
         return _
+
+    def DayOfWeekInMonth(self, t):
+        """
+        获取指定的某天是某个月的第几周
+        周一为一周的开始
+        实现思路：就是计算当天在本年的第y周，本月一1号在本年的第x周，然后求差即可。
+        """
+        b = int((t - timedelta(t.day - 1)).strftime("%W"))
+        e = int(t.strftime("%W"))
+        return e - b + 1
 
 
 if __name__ == '__main__':

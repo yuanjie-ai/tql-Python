@@ -30,7 +30,7 @@ params = {
 - 回归
 ```python
 params = {
-    'booster': 'gbtree', # 'dart', 'gblinear' 
+    'booster': 'gbtree', # 'dart', 'gblinear' 
     'objective': 'reg:linear', # 'reg:tweedie', 'reg:gamma'
     'eta': 0.1,
     'max_depth': 7,
