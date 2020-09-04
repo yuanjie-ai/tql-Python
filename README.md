@@ -1,7 +1,15 @@
 <h1 align = "center">:rocket: DataScience :facepunch:</h1>
 
+[![Downloads](http://pepy.tech/badge/tql)](http://pepy.tech/project/tql)
+[![Downloads](https://pepy.tech/badge/tql/month)](https://pepy.tech/project/tql/month)
+[![Downloads](https://pepy.tech/badge/tql/week)](https://pepy.tech/project/tql/week)
+[![PyPI release](https://img.shields.io/pypi/v/tql.svg)](https://pypi.python.org/pypi/tql)
+[![PyPI version](https://img.shields.io/pypi/pyversions/tql.svg)](https://pypi.python.org/pypi/tql)
 ---
-- [mlcrate][https://github.com/mxbi/mlcrate]
+
+- [mlcrate](https://github.com/mxbi/mlcrate)
+
+
 <br/>
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/README_1200x800.gif">
