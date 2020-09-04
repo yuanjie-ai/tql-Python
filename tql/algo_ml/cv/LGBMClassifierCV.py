@@ -81,6 +81,7 @@ class LGBMClassifierCV(object):
 
             # best info
             self.best_info.setdefault('best_iteration', []).append(self.clf.best_iteration_)
+            # todo: 支持多分类
             self.best_info.setdefault('best_score_train', []).append(self.clf.best_score_['Train']['auc'])
             self.best_info.setdefault('best_score_valid', []).append(self.clf.best_score_['Valid']['auc'])
 

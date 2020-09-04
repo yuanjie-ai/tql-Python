@@ -51,8 +51,10 @@ class XGBClassifierCV(object):
             eval_set = [(X_train, y_train), (X_valid, y_valid)]
 
             ########################################################################
-            self.clf.fit(X_train, y_train, sample_weight, eval_set, eval_metric, early_stopping_rounds, verbose,
-                         xgb_model, sample_weight_eval_set, callbacks)
+            self.clf.fit(X_train, y_train, sample_weight, eval_set=eval_set, eval_metric=eval_metric,
+                         early_stopping_rounds=early_stopping_rounds, verbose=verbose,
+                         xgb_model=xgb_model, sample_weight_eval_set=sample_weight_eval_set,
+                         callbacks=callbacks)
 
             self.oof_train[valid_index] = self.clf.predict_proba(X_valid)[:, 1]
             self.oof_test[:, n_fold] = self.clf.predict_proba(X_test)[:, 1]

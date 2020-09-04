@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Project      : tql-Python.
+# @Project      : Python.
 # @File         : __init__.py
-# @Time         : 2019-07-18 15:00
+# @Time         : 2020/4/21 2:00 下午
 # @Author       : yuanjie
 # @Email        : yuanjie@xiaomi.com
 # @Software     : PyCharm
-# @Description  : https://transmart.qq.com/index
+# @Description  : 
 
 
-from .translater import *

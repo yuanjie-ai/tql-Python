@@ -59,3 +59,5 @@ st.image(image, caption='Sunrise by the mountains', use_column_width=False)
 
 # info
 st.success('This is a success message!')
+
+

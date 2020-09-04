@@ -48,7 +48,3 @@ param = {
 
 data = lgb.Dataset(X, y)
 _ = lgb.cv(param, data, num_boost_round=10000, verbose_eval=1000)
-
-from lightgbm import LGBMClassifier
-clf = LGBMClassifier()
-clf.predict()

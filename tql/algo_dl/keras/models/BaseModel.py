@@ -10,7 +10,7 @@
 
 from pathlib import Path
 from abc import abstractmethod
-from tensorflow.python.keras.utils import plot_model as plot_model_keras
+from tensorflow.keras.utils import plot_model as plot_model_keras
 from tensorflow.python.keras.layers import Embedding
 
 

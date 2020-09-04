@@ -20,12 +20,16 @@ warnings.filterwarnings("ignore")
 # else:
 #     from tqdm import tqdm
 from tqdm.auto import tqdm
+
+tqdm.pandas()
+
 #########################################################################
 import os
 import re
 import json
 import pickle
 import inspect
+import socket
 import numpy as np
 import pandas as pd
 import jieba
@@ -43,6 +47,12 @@ TOP_DIR = os.path.realpath(os.path.dirname("."))
 get_module_path = lambda path, file=__file__: \
     os.path.normpath(os.path.join(os.getcwd(), os.path.dirname(file), path))
 
+hostname = socket.getfqdn(socket.gethostname())
+localhost = socket.gethostbyname(hostname)
+ip = localhost
+local_info = {'hostname': hostname, 'localhost': localhost, 'ip': localhost}
+
+is_dev = True if hostname.__contains__("yuanjie") else False
 ###################################################################
 
 

@@ -15,7 +15,7 @@ from ...pipe import tqdm
 
 class Text2SequenceByFastText(BaseEstimator, TransformerMixin):
     """
-    word2id['<PAD>'] = 0
+    ['<PAD>'] = 0
     word2id['<START>'] = 1
     word2id['<UNK>'] = 2
     word2id['<UNUSED>'] = 3
