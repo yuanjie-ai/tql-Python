@@ -39,6 +39,11 @@ class TextClean(object):
         with open(get_module_path('../../_data/stop_words.txt', __file__), encoding='utf8') as f:
             return set(f.read().split())
 
+    def is_noun(w='潮玩'):
+        for p in jp.lcut(w):
+            if 'n' in p.flag:
+                return True
+
 # def remove_special_characters(text):
 #     tokens = tokenize_text(text)
 #     pattern = re.compile('[{}]'.format(re.escape(string.punctuation)))

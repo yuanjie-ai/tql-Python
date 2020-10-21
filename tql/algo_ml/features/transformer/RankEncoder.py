@@ -50,6 +50,7 @@ if __name__ == '__main__':
     import numpy as np
 
     s = ['a', 'a', 'b', 'b', 'c'] + [np.nan] * 6
-    re = RankEncoder()
+    re = RankEncoder(na_option='keep')
+
 
     print(re.transform(s))

@@ -3,6 +3,7 @@
 ---
 ## 自定义函数装饰器
 ```python
+import wrapt
 import functools
 import numpy as np
 

@@ -6,12 +6,14 @@ __author__ = 'JieYuan'
 __mtime__ = '19-3-18'
 """
 import wrapt
+import numpy as np
 
 def feval(multiclass=None, is_bigger_better=True, model='lgb'):
     """example
     @feval(3)
     def f1_score(y_pred, y_true):
         '注意入参顺序'
+        preds = np.where(y_pred>0.216, 1, 0)
         return f1_score(y_true, y_pred, average='macro')
     """
 

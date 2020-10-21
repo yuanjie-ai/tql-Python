@@ -6,7 +6,7 @@
 # @Author       : yuanjie
 # @Email        : yuanjie@xiaomi.com
 # @Software     : PyCharm
-# @Description  : 
+# @Description  : featuretools
 
 import featuretools as ft
 from featuretools.selection import remove_low_information_features

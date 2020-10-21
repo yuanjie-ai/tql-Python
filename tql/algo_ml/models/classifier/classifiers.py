@@ -43,6 +43,8 @@ if __name__ == '__main__':
     from mlxtend.classifier import StackingCVClassifier
     from sklearn.model_selection import StratifiedKFold
 
+    from sklearn.ensemble import StackingClassifier
+
     sclf = StackingCVClassifier(
         classifiers,
         meta_classifier,

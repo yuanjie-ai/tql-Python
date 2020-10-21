@@ -7,6 +7,7 @@ __mtime__ = '19-3-11'
 """
 
 import scipy
+import numpy as np
 
 
 class GaussRankScaler():

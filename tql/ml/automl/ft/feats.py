@@ -31,20 +31,18 @@ es.entity_from_dataframe('df_test',
                          time_index=None,
                          secondary_time_index=None,
                          already_sorted=False)
-es.normalize_entity # 拆表
+es.normalize_entity  # 拆表
 print(es['df_test'].df)
 
 # Primitive：agg_primitives: 20 个, trans_primitives: 55 个, where_primitives
 # 重写：https://docs.featuretools.com/automated_feature_engineering/primitives.html#defining-custom-primitives
 from featuretools.primitives import make_agg_primitive, make_trans_primitive
+
 primitives = ft.list_primitives()
 pd.options.display.max_colwidth = 100
 primitives[primitives['type'] == 'aggregation'].head(10)
 
 from featuretools.selection import remove_low_information_features
 
-
-
-
-
+# 自定义
 

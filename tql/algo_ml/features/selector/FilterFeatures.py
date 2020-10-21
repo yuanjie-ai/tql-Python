@@ -32,12 +32,20 @@ class FilterFeatures(object):
     """
 
     def __init__(self, df: pd.DataFrame, exclude=None):
+        self.to_drop_dict = {}
+        if exclude is None:
+            exclude = []
+
         assert isinstance(exclude, list)
         assert isinstance(df, pd.DataFrame)
 
         self.df = df
+
+        exclude += df.select_dtypes(['datetime64[ns]', object]).columns.tolist()
+        print(f"Exclude Fetures: {exclude}")
+
         if exclude:
-            self.feats = df.columns.difference(exclude)
+            self.feats = df.columns.difference(exclude).tolist()
         else:
             self.feats = df.columns.tolist()
 
@@ -45,14 +53,12 @@ class FilterFeatures(object):
         df = self.df.copy()
 
         with timer('干掉高缺失'):
-            to_drop = self.filter_missing()
-            if to_drop:
-                df.drop(to_drop, 1, inplace=True)
+            self.to_drop_dict['filter_missing'] = self.filter_missing()
+
 
         with timer('干掉低方差'):
-            to_drop = self.filter_variance()
-            if to_drop:
-                df.drop(to_drop, 1, inplace=True)
+            self.to_drop_dict['filter_variance'] = self.filter_variance()
+
 
         with timer('干掉高相关'):
             pass
@@ -69,7 +75,7 @@ class FilterFeatures(object):
         if feats is None:
             feats = self.feats
 
-        to_drop = (self.df[feats].isna().sum() / len(self.df))[lambda x: x > threshold].index.tolist()
+        to_drop = self.df[feats].isna().mean()[lambda x: x > threshold].index.tolist()
         print('%d features with greater than %0.2f missing values.' % (len(to_drop), threshold))
         return to_drop
 

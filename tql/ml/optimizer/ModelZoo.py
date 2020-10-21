@@ -18,14 +18,14 @@ from xgboost import XGBClassifier
 from catboost import CatBoostClassifier
 
 
-class ModeZoo(object):
+class ModelZoo(object):
 
     def __init__(self, model_name="RandomForestClassifier",
-                 direction='maximize',
+                 higher_is_better=True,
                  params={'random_state': 666, 'n_jobs': 8}):
         self.model_name = model_name
+        self.higher_is_better = higher_is_better
         self.params = params  # 精简调参，也可以通过parms覆盖/固定参数
-        self.direction = direction
 
     def __call__(self, trial: optuna.trial.Trial):
         return self.__getattribute__(f"model{self.model_name}")(trial)

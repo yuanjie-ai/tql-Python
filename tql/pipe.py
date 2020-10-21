@@ -7,38 +7,35 @@ __mtime__ = '18-12-14'
 """
 from .utils.xx import xx
 from .utils import cprint
-from .utils.config import _in_notebook
-
-# cprint("Please Fork And Star:", 'black')
-# print("\thttps://github.com/Jie-Yuan/tql-Python")
-
-import warnings
-
-warnings.filterwarnings("ignore")
-# if _in_notebook():
-#     from tqdm import tqdm_notebook as tqdm
-# else:
-#     from tqdm import tqdm
-from tqdm.auto import tqdm
-
-tqdm.pandas()
+from .utils.time import timer
+from .utils.pandas_utils import reduce_mem_usage
 
 #########################################################################
 import os
+import gc
 import re
+import sys
 import json
 import pickle
 import inspect
 import socket
+import warnings
+import joblib
 import numpy as np
 import pandas as pd
 import jieba
 import jieba.analyse as ja
 
+from pathlib import Path
+from tqdm.auto import tqdm
 from functools import reduce
+from functools import lru_cache
 from collections import Counter, OrderedDict
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+from sklearn.metrics.pairwise import cosine_similarity
 
+warnings.filterwarnings("ignore")
+tqdm.pandas()
 #########################################################################
 
 TOP_DIR = os.path.realpath(os.path.dirname("."))
@@ -46,15 +43,34 @@ TOP_DIR = os.path.realpath(os.path.dirname("."))
 # p = Path(__file__)
 get_module_path = lambda path, file=__file__: \
     os.path.normpath(os.path.join(os.getcwd(), os.path.dirname(file), path))
+try:
+    hostname = socket.getfqdn(socket.gethostname())
+    localhost = socket.gethostbyname(hostname)
+    ip = localhost
+    local_info = {'hostname': hostname, 'localhost': localhost, 'ip': localhost}
 
-hostname = socket.getfqdn(socket.gethostname())
-localhost = socket.gethostbyname(hostname)
-ip = localhost
-local_info = {'hostname': hostname, 'localhost': localhost, 'ip': localhost}
+    is_dev = True if hostname.__contains__("yuanjie") else False
 
-is_dev = True if hostname.__contains__("yuanjie") else False
+except Exception as e:
+    print(e)
+
+getsize = lambda obj: sys.getsizeof(obj) / 1024 ** 2  # M
+
+getsize_df = lambda df: df.memory_usage().sum() / 1024 ** 2
+
+try:
+    import tensorflow as tf
+
+    gpu_list = tf.config.list_physical_devices('GPU')
+    if gpu_list:
+        use_gpu = int(os.environ.get('USE_GPU', '0'))
+    else:
+        use_gpu = 0
+
+except Exception as e:
+    use_gpu = 0
+
 ###################################################################
-
 
 import seaborn as sns
 
@@ -66,16 +82,22 @@ sns.set_context('paper')
 # sns.axes_style()
 # plt.style.use('ggplot')
 
-
 #########################################################################
 
-
 # 序列化
-# df.to_hdf('./data.h5', 'w', complib='blosc', complevel=8)
+def df2hdf(df, file='./data.h5'):
+    df.to_hdf(file, 'w', complib='blosc', complevel=8)
+
+
 def reader(fname='./tmp.txt', sep=',', mode='r'):
     with open(fname, mode) as f:
         for l in f:
             yield l.strip().split(sep)
+
+
+def xpickle_load(file):
+    with open(file, 'rb') as f:
+        return pickle.load(f)
 
 
 @xx
@@ -86,15 +108,9 @@ def xwrite(iterable, fname, mode='w', glue='\n'):
 
 
 @xx
-def xpickle_dump(obj, file='tmp.pkl'):
+def xpickle_dump(objs, file='tmp.pkl'):
     with open(file, 'wb') as f:
-        pickle.dump(obj, f)
-
-
-@xx
-def xpickle_load(file):
-    with open(file, 'rb') as f:
-        return pickle.load(f)
+        pickle.dump(objs, f)
 
 
 # 统计函数: 待补充groupby.agg
@@ -108,6 +124,7 @@ xsum, xmin, xmax, xabs, xlen, xmean, xmedian = [xx(i) for i in __funcs]
 xnorm = xx(lambda iterable, ord=2: np.linalg.norm(iterable, ord))
 xl1 = xx(lambda iterable: np.linalg.norm(iterable, 1))
 xl2 = xx(lambda iterable: np.linalg.norm(iterable, 2))
+xcosine = xx(lambda pair_vector: cosine_similarity(pair_vector)[0][1])
 
 xcount = xx(lambda iterable: Counter(list(iterable)))
 
@@ -117,6 +134,13 @@ xsort = xx(lambda iterable, reverse=False, key=None: sorted(list(iterable), key=
 xmax_index = xx(lambda x: max(range(len(x)), key=x.__getitem__))  # 列表中最小和最大值的索引
 xmin_index = xx(lambda x: min(range(len(x)), key=x.__getitem__))  # 列表中最小和最大值的索引
 xmost_freq = xx(lambda x: max(set(x), key=x.count))  # 查找列表中频率最高的值, key作用于set(x), 可类推出其他用法
+
+
+# gc
+@xx
+def xgc(iterable):
+    del iterable
+    gc.collect()
 
 
 # print
@@ -139,6 +163,8 @@ xtuple, xlist, xset = xx(tuple), xx(list), xx(set)
 xjoin = xx(lambda s, sep=' ': sep.join(s))
 xcut = xx(lambda s, cut_all=False: jieba.lcut(s, cut_all=cut_all))
 xtfidf = xx(lambda s, topK=20: ja.tfidf(s, topK=topK))
+
+xsame_key_dict_merge = xx(lambda dics: pd.DataFrame(dics))
 
 
 @xx

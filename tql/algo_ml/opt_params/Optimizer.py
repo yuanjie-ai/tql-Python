@@ -83,6 +83,6 @@ class Optimizer(object):
 if __name__ == '__main__':
     from sklearn.datasets import make_classification
 
-    X, y = make_classification(10000)
+    X, y = make_classification(10000, shift=0.33)
     opt = Optimizer(X, y)
     print(opt.maximize(1))

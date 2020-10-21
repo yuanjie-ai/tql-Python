@@ -23,7 +23,8 @@ import matplotlib.pyplot as plt
 
 class FeatureSelector(object):
 
-    def __init__(self, estimator=LGBMClassifier(n_jobs=-1), scoring='roc_auc', selector_name='rfe', cv_worker=5):
+    def __init__(self, estimator=LGBMClassifier(n_jobs=30), scoring='roc_auc', selector_name='rfe', cv_worker=1,
+                 step=1):
         """
 
         :param estimator:
@@ -78,26 +79,36 @@ class FeatureSelector(object):
                 n_jobs=cv_worker,
                 verbose=2,
 
-                step=1 / 64,  # 每次迭代要删除的特征数/占比
+                step=step,  # 每次迭代要删除的特征数/占比
             )
 
-    def fit(self, X, y, model_name=None):
-        self.dim = X.shap[1]
+    def fit(self, X, y, saved_selector_name=None):
+        self.dim = X.shape[1]
         self.selector.fit(X, y)  # 可重写 fit
-        if model_name:
-            joblib.dump(self.selector, model_name)
+        if saved_selector_name:
+            joblib.dump(self.selector, saved_selector_name)
 
     def plot(self):
         if self.selector_name == 'rfe':
-            step = self.selector.sep if self.selector.sep > 1 else int(self.selector.sep * self.dim)
+            step = self.selector.step if self.selector.step > 1 else int(self.selector.step * self.dim)
             plt.figure(figsize=(12, 9))
             plt.xlabel(f'Number of features tested x {step}')
             plt.ylabel('Cross-validation score')
             plt.plot(range(1, len(self.selector.grid_scores_) + 1), self.selector.grid_scores_)
             # plt.savefig('ELO-lgbmcv-02.png', dpi=150)
-            plt.show()
 
-        plot_sfs(self.selector.get_metric_dict(), kind='std_dev')
-        plt.ylim([0.8, 1])
-        plt.title('Sequential Forward Selection (w. StdDev)')
+        else:
+            plot_sfs(self.selector.get_metric_dict(), kind='std_dev')
+            plt.ylim([0.8, 1])
+            plt.title('Sequential Forward Selection (w. StdDev)')
+
         plt.show()
+
+
+if __name__ == '__main__':
+    from sklearn.datasets import make_classification
+
+    X, y = make_classification(10000, shift=0.33, random_state=42)
+
+    fs = FeatureSelector()
+    fs.fit(X, y)

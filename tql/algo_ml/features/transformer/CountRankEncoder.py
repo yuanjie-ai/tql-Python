@@ -39,7 +39,7 @@ if __name__ == '__main__':
     import numpy as np
 
     s = ['a', 'a', 'b', 'b', 'c'] + [np.nan] * 6
-    re = CountRankEncoder(2)
+    re = CountRankEncoder()
 
     print(re.fit_transform(s))
     print(re.mapper)

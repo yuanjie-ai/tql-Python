@@ -43,6 +43,9 @@ es.entity_from_dataframe(
     make_index=True,
     # variable_types={'Sex': ft.variable_types.Boolean}
 )
+
+# relation = ft.Relationship(es['df_1']['id'], es['df_2']['id'])
+# es = es.add_relationship(relation)
 # 若要对类别变量做聚合表征需要拆分实体
 es.normalize_entity # 可以考虑把强特分离出来做交叉特征【专注】Creating a normalized entity to cross throught our main interest table¶
 # es = es.normalize_entity(base_entity_id='entity_id', new_entity_id='new_entity_id', index='Pclass')
@@ -57,6 +60,7 @@ feature_matrix, feature_names = ft.dfs(entityset=es,
                                        features_only=True # debug 生成的特征
                                        )
 
+# 针对分组统计，NUM_UNIQUE, MODE
 
 class Featurer(object):
 

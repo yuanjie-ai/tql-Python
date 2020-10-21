@@ -13,15 +13,14 @@ jieba
 lightgbm
 catboost
 rgf_python
-bayesian-optimization
 statsmodels
 gensim
-h2o
 mlxtend
 
 
 missingno
 pandas_summary
+scikit-learn
 scikit-plot
 tables
 eli5
@@ -30,3 +29,6 @@ seaborn
 pyecharts
 
 jovian
+graphviz
+
+gpustat

@@ -8,3 +8,4 @@ __mtime__ = '19-1-24'
 
 from .FeatureSelector import FeatureSelector
 from .info_value import InformationValue
+from .FilterFeatures import FilterFeatures

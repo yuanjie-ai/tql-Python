@@ -14,17 +14,17 @@ class MDLP_Discretizer(object):
             computes initial entropy (before any splitting)
             self._features = features to be discretized
             self._classes = unique classes in raw_data
-            self._class_name = label of class in pandas dataframe
+            self._class_name = label of class in pandas_utils dataframe
             self._data = partition of data with only features of interest and class
             self._cuts = dictionary with cut points for each feature
-        :param dataset: pandas dataframe with data to discretize
+        :param dataset: pandas_utils dataframe with data to discretize
         :param class_label: name of the column containing class in input dataframe
         :param features: if !None, features that the user wants to discretize specifically
         :return:
         '''
 
-        if not isinstance(dataset, pd.core.frame.DataFrame):  # class needs a pandas dataframe
-            raise AttributeError('input dataset should be a pandas data frame')
+        if not isinstance(dataset, pd.core.frame.DataFrame):  # class needs a pandas_utils dataframe
+            raise AttributeError('input dataset should be a pandas_utils data frame')
 
         self._data_raw = dataset #copy or original input data
 
@@ -137,7 +137,7 @@ class MDLP_Discretizer(object):
         '''
         From the collection of all cut points for all features, find cut points that fall within a feature-partition's
         attribute-values' range
-        :param data: data partition (pandas dataframe)
+        :param data: data partition (pandas_utils dataframe)
         :param feature: attribute of interest
         :return: points within feature's range
         '''
@@ -147,7 +147,7 @@ class MDLP_Discretizer(object):
     def best_cut_point(self, data, feature):
         '''
         Selects the best cut point for a feature in a data partition based on information gain
-        :param data: data partition (pandas dataframe)
+        :param data: data partition (pandas_utils dataframe)
         :param feature: target attribute
         :return: value of cut point with highest information gain (if many, picks first). None if no candidates
         '''

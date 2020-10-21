@@ -12,7 +12,7 @@
 # from keras_bert import load_trained_model_from_checkpoint, Tokenizer
 
 
-# import pandas as pd
+# import pandas_utils as pd
 #
 #
 # df0 = pd.read_excel('./neg.xls', names=['text']).assign(label=0)

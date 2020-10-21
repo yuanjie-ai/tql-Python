@@ -12,3 +12,7 @@ xgb = H2OXGBoostEstimator(backend="gpu",
 xgb.train(x = x, y = y,
           training_frame = train)
 ```
+
+
+### FT
+TODO: count特征 rank特征

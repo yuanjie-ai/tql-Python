@@ -16,7 +16,7 @@ tqdm.pandas()
 
 class DateTimeFeats(object):
     """
-    pandas 时间/日期特征工程
+    pandas_utils 时间/日期特征工程
     常见格式：
         1. 时间戳
         2. 时间字符串
@@ -32,8 +32,6 @@ class DateTimeFeats(object):
             weekofyear == week?
             TODO: + "DayOfWeekInMonth": 当月第几周
             利用python获取某年中每个月的第一天和最后一天
-
-
         """
         self.time_granularity = ("year", "quarter", "month",
                                  "day", "hour", "minute",
@@ -42,17 +40,24 @@ class DateTimeFeats(object):
         self.feats = include_feats if include_feats else self.time_granularity
 
     def transform(self, s: pd.Series, add_prefix=None):
+        if s.name is None:
+            s.name = 'time_str'
         if add_prefix is None:
-            add_prefix = s.name
+            add_prefix = f"{s.name}_"
         feats = self.feats
 
-        if isinstance(s[:1].values[0], (int, float)):  # 时间戳
+        _dtype = s.dtypes.__str__()
+        if _dtype.__contains__('int') or _dtype.__contains__('float'):  # 时间戳 10位是秒 13位是毫秒
+            print("infer_datetime_format: timestamp2date")
             ts = self.timestamp2date(s)
         else:
+            print('infer_datetime_format: dateStr2date')
             ts = self.dateStr2date(s)
 
-        ts = ts.progress_map(lambda t: list(self._func(t, feats)))
-        return pd.DataFrame(ts.tolist(), columns=feats).add_prefix(add_prefix)
+        _ = ts.progress_map(lambda t: list(self._func(t, feats)))
+        df_ts = pd.DataFrame(_.tolist(), columns=feats).add_prefix(add_prefix)
+        df_ts.insert(0, f'{s.name}2date', ts)
+        return df_ts
 
     def _func(self, t, feats):
         for feat in feats:

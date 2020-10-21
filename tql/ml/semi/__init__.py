@@ -7,3 +7,4 @@ __mtime__ = '19-1-11'
 """
 
 from .SimpleSemi import SimpleSemi
+from .pseudo import Pseudo

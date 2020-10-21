@@ -18,7 +18,7 @@ def entropy(data_classes, base=2):
     :return: value of entropy
     '''
     if not isinstance(data_classes, pd.core.series.Series):
-        raise AttributeError('input array should be a pandas series')
+        raise AttributeError('input array should be a pandas_utils series')
     classes = data_classes.unique()
     N = len(data_classes)
     ent = 0  # initialize entropy
@@ -35,14 +35,14 @@ def entropy(data_classes, base=2):
 def cut_point_information_gain(dataset, cut_point, feature_label, class_label):
     '''
     Return de information gain obtained by splitting a numeric attribute in two according to cut_point
-    :param dataset: pandas dataframe with a column for attribute values and a column for class
+    :param dataset: pandas_utils dataframe with a column for attribute values and a column for class
     :param cut_point: threshold at which to partition the numeric attribute
     :param feature_label: column label of the numeric attribute values in data
     :param class_label: column label of the array of instance classes
     :return: information gain of partition obtained by threshold cut_point
     '''
     if not isinstance(dataset, pd.core.frame.DataFrame):
-        raise AttributeError('input dataset should be a pandas data frame')
+        raise AttributeError('input dataset should be a pandas_utils data frame')
 
     entropy_full = entropy(dataset[class_label])  # compute entropy of full dataset (w/o split)
 

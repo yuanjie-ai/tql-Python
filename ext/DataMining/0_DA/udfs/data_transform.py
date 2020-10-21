@@ -49,7 +49,7 @@ class Agg(object):
     @classmethod
     def nmost(cls, df, by_name, col_name, n=3):
         """
-        col_name 最多的前几个
+        col_name 最多的前几个 pandas新加列名
         """
         df = df.groupby([by_name, col_name], as_index=False)[col_name].agg({'_count': 'count'})
         return df.pipe(cls.nlargest, by_name, '_count', n).drop('_count', 1).rename(
